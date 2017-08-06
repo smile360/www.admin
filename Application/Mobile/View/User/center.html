@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__CSS__mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+		<script src="__JS__mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-content ucenter">
+			<ul class="mui-table-view" style="margin-top: 0;">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="{:U('index')}">
+						<img class="mui-media-object mui-pull-left" src="{$Think.session.user.head_pic}" onerror="__IMG__pl_head.png" />
+						<div class="mui-media-body">
+							个人资料
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mui-table-view modify">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/myconsult')}"><img src="__IMG__u1.png" />我的咨询</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view modify">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('Cart/cart')}"><img src="__IMG__u2.png" />购物车</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view modify">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/myactivity')}"><img src="__IMG__u3.png" />我的课程</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/mycollect')}"><img src="__IMG__u4.png" />我的收藏</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view modify">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/mycomment')}"><img src="__IMG__u5.png" />评论消息</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/mymessages')}"><img src="__IMG__u6.png" />系统消息</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view modify">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('User/accountSet')}"><img src="__IMG__u7.png" />账户设置</a>
+				</li>
+				<!-- <li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="{:U('Public/contact')}"><img src="__IMG__u8.png" />关于我们</a>
+				</li> -->
+			</ul>
+
+		</div>
+		<nav class="mui-bar mui-bar-tab" id="bar-tab">
+			<a class="mui-tab-item" href="{:U('Index/index')}">
+				<span class="mui-icon"><img src="__IMG__bar_1.png"/></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="{:U('Goods/categoryList')}">
+				<span class="mui-icon"><img src="__IMG__bar_2.png"/></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="{:U('Goods/index')}">
+				<span class="mui-icon"><img src="__IMG__bar_3.png"/></span>
+				<span class="mui-tab-label">商城</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="{:U('User/center')}" style="border-right: 0;">
+				<span class="mui-icon"><img src="__IMG__bar_4.png"/></span>
+				<span class="mui-tab-label">个人</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				mui.openWindow({
+					url: targetTab,
+					id: targetTab,
+				})
+			});
+			mui('.ucenter').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				mui.openWindow({
+					url: targetTab,
+					id: targetTab,
+				})
+			});
+		</script>
+	</body>
+
+</html>

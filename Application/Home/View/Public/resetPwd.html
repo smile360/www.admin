@@ -1,0 +1,52 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container sign reg" style="margin-bottom: 290px;">
+			<h2>忘记密码</h2>
+			<form action="{:U('Public/resetPwd')}" method="post" onsubmit="return checkreg()">
+				<div class="info clearfix">
+					<span class="pull-left">设新密码</span>
+					<input id="passwordOne" type="password" name="passwordOne" class="pull-left">
+				</div>
+				<div class="info clearfix">
+					<span class="pull-left">确认密码</span>
+					<input id="passwordTwe" type="password" name="passwordTwe" class="pull-left">
+				</div>
+				<button type="submit" class="btn btn-default">确定</button>
+			</form>
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+			function checkreg() {
+				var passwordOne = $('#passwordOne').val();
+				var passwordTwe = $('#passwordTwe').val();
+				if(passwordOne == "" || passwordTwe == "") {
+					layer.msg("密码不能为空");
+					return false;
+				}
+
+				var reg=/^[A-Za-z0-9]+$/;
+				if(!reg.test(passwordOne)||passwordOne.length<6||passwordOne.length>15){
+				  	layer.msg('密码必须为6-15位的数字和字母的组合');
+				  	return false;
+				}
+				
+				if( passwordOne !== passwordTwe){
+					layer.msg("两次输入密码不一致");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

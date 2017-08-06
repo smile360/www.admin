@@ -1,0 +1,129 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__CSS__owl.carousel.css" />
+<!--------头部结束-------------->
+		<div class="container expert">
+			<div class="expert-scoll">
+				<div class="pre"></div>
+				<div class="expert-img">
+					<volist name="list" id="item">
+						<div class="item" data-id="{$item.cat_id}">
+							<!-- <img src="__IMG__expert.jpg" /> -->
+							<img src="{$item.cat_logo|default='__IMG__expert.jpg'}" />
+							<p class="text-center color66">{$item.cat_name}</p>
+						</div>
+					</volist>
+				</div>
+				<div class="next"></div>
+			</div>
+			
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left" id="myTab">
+					<li class="active">
+						<a href="#experience" data-toggle="tab">个人简介</a>
+					</li>
+					<li>
+						<a href="#article" data-toggle="tab">精选文章</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="expert-c-c pull-right tab-pane active" id="experience">
+						<!-- <h5>中国杭州设计师 1971年10月9日生于安徽</h5>
+						<span>现任职务</span>
+						<p>中国美术学院视觉传达系讲师</p>
+						<p>杭州美术学院视觉传达系主任助理</p>
+						<span>教育简历</span>
+						<p>1995 中国美术学院毕业，获学士学位</p>
+						<span>参展获奖</span>
+						<p>1998年 中国美术学院70周年校庆主题海报作品展</p>
+						<p>1998年 华人设计百杰展</p>
+						<p>1998年 首届中国设计艺术画展</p>
+						<p>1998年 设计博物馆“诞生”主题海报展</p> -->
+					</div>
+					<div id="article" class="article-list pull-right tab-pane">
+						<ul id="art-cont">
+							<!-- <li>
+								<a href="">
+									<h2>那座灯塔，20年的温暖守护——复旦万科实验学校迎来20年校庆</h2>
+									<p>2016年10月22日，复旦万科实验学校为迎接20年校庆而举办的系列庆祝活动上，一位从这里毕业的女孩洛伊为母校献上了她最新的画作和祝 福。洛伊目前正求学于英国一家艺术学院预科班，对于油画及艺术的自我理解，使得她的绘画风格大胆自由，热烈纯真。这个看起来温柔坚定的女 孩，一直坚守着自己宁静纯粹的艺术小世界，她笔下明亮的色块、简单的线条以及不同寻常的构图都赋予其画作一种独特的稚趣、自由的旋律和...
+									</p>
+									<span>2016-10-22 <i class="pull-right">详情 >></i></span>
+								</a>
+							</li> -->
+						</ul>
+					</div>
+					<nav>
+						<div class="pager" id="pager"></div>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+
+		<script src="__JS__owl.carousel.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+		<script>
+			$(".menu-list li").eq(7).attr("class","active");
+			$(".expert-img").owlCarousel({
+				items: 5,
+				smartSpeed: 1000,
+				loop: true,
+				margin: 0,
+				// autoplay: true,
+				autoplayHoverPause: true
+			})
+			$(".next").click(function() {
+				$(".expert-img").trigger('owl.next');
+			})
+			$(".pre").click(function() {
+				$(".expert-img").trigger('owl.prev');
+			})
+			$(".expert-img .item").click(function() {
+				$(this).parent().siblings().children().removeClass('active');
+				$(this).addClass("active");
+				var expert_id = $(this).data("id");
+
+				$.ajax({
+					data: {
+					id: expert_id
+					},
+					type: 'GET',
+					url: "{:U('Article/expertInfo')}",
+					success: function(data) {
+						var html='';
+						$("#experience").html(data.experience);	
+						$.each(data.art, function(index, item) {
+							html += '<li>';
+							html += '<a href='+"{:U('Article/detail')}?article_id="+item.article_id+'>';
+							html += '<h2>'+item.title+'</h2>';
+							html += '<p>'+item.content+'</p>';
+							html += '<span>'+item.publish_time+' <i class="pull-right">详情 >></i></span>';
+							html += '</a>';
+							html += '</li>';
+						});
+						$('#art-cont').html(html);						
+					}
+				});
+			})
+			$(".expert-img .item").eq(0).click();
+			//tab
+			$('#myTab a:first').tab('show');
+			$('.paginationjs').hide();
+			$("#myTab li").click(function() {
+				if($(this).index() == 1) {
+					$('.paginationjs').show();
+				} else {
+					$('.paginationjs').hide();
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

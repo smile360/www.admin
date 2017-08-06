@@ -1,0 +1,88 @@
+[ 2017-07-28T05:19:59+08:00 ] 14.215.176.134 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0006s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000123s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2017-07-28T09:13:59+08:00 ] 116.213.249.38 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000269s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000295s ]
+
+[ 2017-07-28T12:49:00+08:00 ] 140.205.204.74 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0006s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000152s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+

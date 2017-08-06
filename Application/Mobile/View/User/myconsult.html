@@ -1,0 +1,110 @@
+<title>我的咨询</title>
+<include file="Public/nav" />
+	<body>
+		<div class="mui-content consult">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control-inverted mui-segmented-control">
+					<a class="mui-control-item c-line mui-active" href="#item1mobile">
+						已解决咨询
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						待解决咨询
+					</a>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view modify">
+									<empty name="solve">
+										<li class="mui-table-view-cell"><span>暂时无相关信息</span></li>
+									<else />
+										<volist name="solve" id="vo" key="k">
+											<li class="mui-table-view-cell">
+												<a class="mui-navigate-right" href="{:U('Consult/detail',array('id'=>$vo['consult_id']))}"><span>[ 0{$k} ]</span>{$vo.tittle}</a>
+											</li>
+										</volist>
+									</empty> 
+									
+								</ul>
+
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view modify">
+									<empty name="unsolve">
+										<li class="mui-table-view-cell"><span>暂时无相关信息</span></li>
+									<else />
+										<volist name="unsolve" id="vo" key="k">
+											<li class="mui-table-view-cell">
+												<a class="mui-navigate-right" href="{:U('Consult/detail',array('id'=>$vo['consult_id']))}"><span>[ 0{$k} ]</span>{$vo.tittle}</a>
+											</li>
+										</volist>
+									</empty> 
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="__JS__mui.pullToRefresh.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+			    isnodata = false;
+				var deceleration = mui.os.ios ? 0.003 : 0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration: deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有上拉加载
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						var count = 0;
+						$(pullRefreshEl).pullToRefresh({
+							up: {
+								callback: function() {
+									var self = this;
+									isnodata = false;
+									setTimeout(function() {                                        
+										var ul = self.element.querySelector('.modify');	
+										var length = ul.querySelectorAll('li').length;			
+										mui.ajax("{:U('myconsult')}", {
+											data: {
+												start: length,
+												type: index,
+											},
+											dataType: 'json',
+											type: 'get',
+											timeout: 10000,
+											async: true,
+											success: function(data) {
+												if(data.code == 200) {
+													mui.each(data.result, function(i, item) {
+														li = document.createElement('li');
+														li.className = 'mui-table-view-cell';
+														li.innerHTML = '<a class="mui-navigate-right" href="'+"{:U('Consult/detail')}?id="+item.consult_id+'"><span>[ 0'+(length+i+1)+' ]</span>'+item.tittle+'</a>';
+														ul.appendChild(li);
+													});
+												}else{
+													isnodata = true;
+												}
+												self.endPullUpToRefresh(isnodata);												
+											}
+										})						 										
+									}, 1000);
+								}
+							}
+						});
+					});
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>

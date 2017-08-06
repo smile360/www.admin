@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>新三板</title>
+		<link href="__PUBLIC__/newsmedia/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/newsmedia/css/css.css" />
+	</head>
+
+	<body>
+		<div class="top">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="" class="wx">微信</a>
+<!--                     <a href="">微博</a> -->
+                </div>
+                <div class="pull-right">
+                    <notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="/index.php?m=Home&c=User&a=logout">退出</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="{:U('User/login')}">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    </notempty>
+                </div>
+            </div>
+        </div>
+		<div class="menu">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="/"><img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" /></a>
+                </div>
+                <ul class="menu-list pull-left">
+                    <li>
+                        <a href="{:U('home/index/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">阅读 v</a>
+                        <div class="popover fade bottom in" role="tooltip" id="popover232455" style="top:72px; left: -38px;">
+                            <div class="arrow" style="left: 50%;"></div>
+                            <div class="popover-content">
+                                <?php foreach ($one as $v): ?>
+                                    <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                                <?php endforeach ?>
+                            </div>
+                        </div>
+
+                    </li>
+                    <?php foreach ($twotwo as $v): ?>
+                        <li>
+                            <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                        </li>
+                    <?php endforeach ?>
+                    <li>
+                        <a href="{:U('Activity/index')}">活动</a>
+                    </li>
+                </ul>
+                <form class="search pull-right" action="{:U('index/aaa')}" method="post" onsubmit="return checkseach(this)">
+                    <button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+                </form>
+            </div>
+        </div>
+
+		<div class="article">
+			<h1>{$article['title']}</h1>
+			<div class="edit-name">
+				<img src="__PUBLIC__/newsmedia/img/edit.png" />　<span class="color-f0">{$article['author']|default="小雅"}</span> {$article['add_time']|date="Y-m-d H:i",###}
+				<span class="pull-right"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;">{$cat_name}</span>
+			</div>
+			<div class="content">
+				{$article['content']}
+				<!-- <img src="__PUBLIC__/newsmedia/img/art.jpg" alt="" width="100%" />
+				<p>最厉害的一次是今年6月30号，三位主要玩家的产品同时被下架。雷锋网记者忍不住去挖一挖，FM行业到底怎么了？</p>
+				<p>最厉害的一次是今年6月30号，三位主要玩家的产品同时被下架。雷锋网记者忍不住去挖一挖，FM行业到底怎么了？</p>
+				<p>最厉害的一次是今年6月30号，三位主要玩家的产品同时被下架。雷锋网记者忍不住去挖一挖，FM行业到底怎么了？</p>
+				<p>现在回顾起来，不论是PC时代，还是一年前的移动互联网时代，FM产品的市</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;margin-top: 40px;">文章为作者独立观点，不代表虎嗅网立场</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;">转载此文章须经作者同意，并请附上出处(新声)及本页链接</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;">原文链接http://www.newspost.cn/132121/1.html</p> -->
+				
+				<!--内容收费按钮-->
+				<!-- <div class="read-all">
+					<button type="button" class="btn btn-lg btn-block">阅读全文</button>
+				</div> -->
+			</div>
+			<div class="content-explain">
+				<p class="text-center bottom">本文来源于 {$article['source']|default="本站"}，作者 <span class="color-f0">@{$article['author']|default="小雅"}</span> ，如需转载请注明出外。</p>
+			</div>
+			<div class="collect clearfix">
+				<!--<a class="pull-left ds text-center" href="">打赏</a>-->
+				<a class="pull-right sc" href=""><img src="__PUBLIC__/newsmedia/img/colect.png" /> 收藏</a>
+			</div>
+			<div class="comment" id="conment">
+				<p class="text-center title">评论 ( {$comcount} )</p>
+				
+				<!--if 没有登录-->
+				<!-- <p class="need-reg text-center color-99">需要登录</p> -->
+				<!-- <a href="" class="sub text-center log">登录</a> -->
+				 <!--end if-->
+				 
+				
+				<!-- 登录后 -->
+					<p class="color-f0 uname">用户名</p>
+				<form action="{:U('Home/Article/articleComment')}" method="post">
+					<input type="hidden" name="article_id" value="{$article['article_id']}">
+					<input type="hidden" name="cat_id" value="{$article['cat_id']}">
+					<input type="hidden" name="title" value="{$article['title']}">
+					<textarea name="content" placeholder="请输入评论内容"></textarea>
+					<input type="submit" class="sub" value="发表评论" />
+				</form>
+				
+				
+				
+				<?php foreach ($comment as $v): ?>
+					
+				
+				<div class="media clearfix">
+					<img class="media-object media-left pull-left" src="{$v['head_pic']|default='__PUBLIC__/newsmedia/img/pl_head.png'}">
+					<div class="media-body pull-left">
+						<div class="media-heading"><span class="color-f0">{$v['nickname']|default="小雅"}</span> {$v['add_time']|date="Y-m-d H:i:s",###}</div> 
+						<p class="weiguan">{$v['content']}</p>
+						<ul class="list-type">
+						<li class="br">
+							<a href="#article" ><img src="__PUBLIC__/newsmedia/img/zan.png"/> </a>
+						</li>
+						<!-- <li class="text-right">
+							<a href="#activity"><img src="__PUBLIC__/newsmedia/img/hf.png"/> 回复</a>
+						</li> -->
+					</ul>
+					</div>
+				</div>
+				<?php endforeach ?>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-footer">
+				<div class="container">
+					<div class="text-center">
+						<img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" />
+					</div>
+					<ul class="text-center">
+						<li>
+							<a href="">关于新声</a>
+						</li>
+						<li>
+							<a href="">广告合作</a>
+						</li>
+						<li>
+							<a href="">创业求报道</a>
+						</li>
+						<li>
+							<a href="">移动客户端</a>
+						</li>
+						<li>
+							<a href="">帮助</a>
+						</li>
+						<li>
+							<a href="">RSS订阅</a>
+						</li>
+						<li>
+							<a href="">邮件订阅</a>
+						</li>
+						<li>
+							<a href="">意见与建议</a>
+						</li>
+						<li>
+							<a href="">友情链接</a>
+						</li>
+					</ul>
+					<p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+				</div>
+			</div>
+			<div class="footer-link text-center">
+				<a>合作伙伴：</a>
+				<a href="">平安信托</a>
+				<a href="">招商银行 </a>
+				<a href="">深媒会</a>
+				<a href="">平安银行</a>
+				<a href="">凤凰金融</a>
+			</div>
+		</div>
+
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				$('#myTab a:first').tab('show')
+			})
+		</script>
+	</body>
+
+</html>

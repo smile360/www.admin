@@ -1,0 +1,139 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__CSS__zyUpload.css" />
+<!--------头部结束-------------->
+		<div class="container consultation">
+			<h2>我要咨询</h2>
+			<form id="consultFrm" action="{:U('User/consult')}" method="post">
+				<div class="question-tit">
+					<span class="pull-left">咨询问题</span>
+					<input type="text" class="pull-left" id="question" name="question" />
+				</div>
+				<div class="question-con">
+					<label>问题描述</label>
+					<textarea id="question-con" name="question-con" rows="" cols=""></textarea>
+					<input type="hidden" id="picUrl" name="picUrl" />
+				</div>
+				<div id="upload-img" class="upload-img"></div>
+				<p class="text-center" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="__IMG__shang.png" id="shang" style="cursor: pointer;" /></p>
+				<p class="shang text-center">咨询打赏</p>
+				<!-- <button type="button" class="btn btn-default" disabled="disabled">提交</button> -->
+				<button type="button" id="submit-btn" class="btn btn-default">提交</button>
+			</form>
+		</div>
+
+		<div class="modal fade bs-example-modal-sm ds-modal" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title text-center" id="myModalLabel">咨询打赏</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-center head-img"><img src="__IMG__ds_head.png" alt="打赏" /></p>
+						<p class="text-center money"><span id="mm">￥</span><input type="text" class="" name="money" id="money" value="18.88" disabled="disabled" /><em><img id="change" src="__IMG__change.png"/></em></p>
+						<p class="text-center other"><button type="button" id="pay" class="btn btn-warning">支付</button><span id="other-money">其它金额</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script src="__JS__zyFile.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__JS__zyUpload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__/js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var IMG = "__IMG__add_img.png";
+			var UploadUrl = "{:U('Uploadify/UploadAction')}";
+			$("#upload-img").zyUpload({
+				width: "500px", // 宽度
+				height: "auto", // 宽度
+				itemWidth: "120px", // 文件项的宽度
+				itemHeight: "120px", // 文件项的高度
+				url: UploadUrl, // 上传文件的路径
+				multiple: false, // 是否可以多个文件上传
+				dragDrop: false, // 是否可以拖动上传文件
+				del: true, // 是否可以删除文件
+				finishDel: false, // 是否在上传文件完成后删除预览
+			});
+
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					layer.msg('请输入搜索关键字');
+					return false;
+				}
+			}
+
+			$("#submit-btn").click(function (){
+				checkform();
+			});
+
+			function checkform() {
+				var question = $("#question").val();
+				var question_con = $("#question-con").val();
+				if(question == "" || question_con == "") {
+					layer.msg('咨询标题或内容不能为空');
+					return false;
+				}
+				var pic=$("#uploadInf").html();    
+				if(pic==""){
+					layer.msg('请上传图片');
+					return false;
+				}				
+				$("#picUrl").val(pic);
+				payTour();
+			}
+			function payTour(){
+				$.ajax({
+					type : 'post',
+					url : "{:U('User/payTour')}?t="+Math.random(),
+					data : {payType:'pay_tour'},
+					dataType : 'json',
+					success : function(res){
+						if(res == '200'){
+							$("#consultFrm").submit();
+						}else{
+							layer.msg('大爷,先打赏吧');
+							$(".modal").modal();
+						}
+					},
+					error : function(XMLHttpRequest, textStatus, errorThrown) {
+						return false;
+					}
+				})
+			}
+
+			$("#change").click(function() {
+				$("#money").val((Math.random() * 5).toFixed(2));
+			})
+			$("#other-money").click(function() {
+				$('#money').removeAttr("disabled");
+				$('#change').hide();
+				$('#mm').css('font-size', '35px');
+				$('#money').addClass("active");
+			})
+			$("#pay").click(function() {
+				var money = $('#money').val();
+				var exp = /^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/;
+				if(money == "") {
+					alert("输入金额不能为空")
+					return false;
+				}
+				if(!exp.test(money)) {
+					alert("输入金额不正确")
+					return false;
+				}
+				/*~~~~~~定制支付金额*/
+				$.post("{:U('payTourHandle')}",{money:money},function (data){
+					$(".modal").modal('hide');
+				});
+			});
+
+
+		</script>
+
+	</body>
+
+</html>

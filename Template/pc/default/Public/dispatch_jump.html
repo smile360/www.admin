@@ -1,0 +1,183 @@
+<title>系统提示-{$tpshop_config['shop_info_store_title']}</title>
+<!--------头部开始-------------->
+<!DOCTYPE html>
+<link rel="stylesheet" href="__STATIC__/css/base.css" type="text/css">
+<link href="__STATIC__/css/tsinformation.css" rel="stylesheet" type="text/css">
+<html lang="zh-cn">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="__PUBLIC__/new/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/new/css/css.css" />
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="{:U('Wechat/WechatAuth',array('type'=>pc,'id'=>session_id()))}" class="wx">微信</a>
+                    <!-- <a href="">微博</a> -->
+                </div>
+                <div class="pull-right">
+                    <notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="{:U('User/logout')}">退出</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="{:U('User/login')}">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    </notempty>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="/"><img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" /></a>
+                </div>
+                <ul class="menu-list pull-left">
+                    <li>
+                        <a href="{:U('home/index/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">阅读 v</a>
+                        <div class="popover fade bottom in" role="tooltip" id="popover232455" style="top:72px; left: -38px;">
+                            <div class="arrow" style="left: 50%;"></div>
+                            <div class="popover-content">
+                                <?php foreach ($one as $v): ?>
+                                    <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                                <?php endforeach ?>
+                            </div>
+                        </div>
+
+                    </li>
+                    <?php foreach ($twotwo as $v): ?>
+                        <li>
+                            <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                        </li>
+                    <?php endforeach ?>
+                    <li>
+                        <a href="{:U('Activity/index')}">活动</a>
+                    </li>
+                </ul>
+                <form class="search pull-right" action="{:U('index/aaa')}" method="post" onsubmit="return checkseach(this)">
+                    <button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+                </form>
+            </div>
+        </div>
+
+ 
+ 
+<!--中间内容-->
+<div id="warpper" class="clearfix">
+<?php if(isset($message)) {?>
+   <!-- 处理成功 -->
+   <div class="box-ts">
+    	<i><img src="__STATIC__/images/success_ts.png"></i>         
+        <ul>
+        	<li><h3> <?php echo($message); ?><h3></li>
+                <li><a href="javascript:void(0);">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></a></li>
+                <li>
+                    <a href="/">首页</a> <!-- <a href="/index.php?m=Home&c=Cart&a=cart">购物车</a> -->
+                    <a href="{:U('User/index')}">用户中心</a>
+                </li>
+        </ul>        
+    </div>
+<?php }else{?>        
+     <!-- 处理失败 -->
+     <div class="box-ts">
+    	<i><img src="__STATIC__/images/error_ts.png"></i>
+        <ul>
+            <li><h3><?php echo($error); ?></h3></li>
+            <li><a href="javascript:void(0);">页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b></a></li>
+            <li>
+                <a href="/">首页</a> <!-- <a href="/index.php?m=Home&c=Cart&a=cart">购物车</a> -->
+                    <a href="{:U('User/index')}">用户中心</a>
+            </li>
+        </ul>
+    </div>   
+<?php }?>            
+</div>
+<!--中间内容 end-->
+ 
+<!--------footer-开始-------------->
+<div class="footer">
+            <div class="footer-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <img src="__PUBLIC__/new/img/logo.jpg" alt="logo" />
+                    </div>
+                    <ul class="text-center">
+                        <li>
+                            <a href="">关于新声</a>
+                        </li>
+                        <li>
+                            <a href="">广告合作</a>
+                        </li>
+                        <li>
+                            <a href="">创业求报道</a>
+                        </li>
+                        <li>
+                            <a href="">移动客户端</a>
+                        </li>
+                        <li>
+                            <a href="">帮助</a>
+                        </li>
+                        <li>
+                            <a href="">RSS订阅</a>
+                        </li>
+                        <li>
+                            <a href="">邮件订阅</a>
+                        </li>
+                        <li>
+                            <a href="">意见与建议</a>
+                        </li>
+                        <li>
+                            <a href="">友情链接</a>
+                        </li>
+                    </ul>
+                    <p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+                </div>
+            </div>
+            <div class="footer-link text-center">
+                <a>合作伙伴：</a>
+                <a href="">平安信托</a>
+                <a href="">招商银行 </a>
+                <a href="">深媒会</a>
+                <a href="">平安银行</a>
+                <a href="">凤凰金融</a>
+            </div>
+        </div>
+
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script src="__PUBLIC__/new/js/bootstrap.min.js"></script>
+        <script>
+            $(function() {
+                $('#myTab a:first').tab('show');
+
+            })
+
+        </script>
+ 
+<!--------footer-结束-------------->
+<script type="text/javascript">
+ 
+(function(){
+var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+var interval = setInterval(function(){
+	var time = --wait.innerHTML;
+	if(time <= 0) {
+		location.href = href;
+		clearInterval(interval);
+	};
+}, 1000);
+})();
+ 
+</script>
+</div>
+</body>
+</html>

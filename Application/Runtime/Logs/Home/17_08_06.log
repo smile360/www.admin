@@ -1,0 +1,1123 @@
+[ 2017-08-06T07:57:43+08:00 ] 140.205.205.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T12:51:51+08:00 ] 140.205.205.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:13:41+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=5c09c7eb298054321962b9140f27ba30e5d8f516&timestamp=1501996421&nonce=313767407&openid=o6pmpxLVctmarbxnozV96nGNt7Ew
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2017-08-06T13:13:43+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=5089c99309a4bca604dd687e601d8331e53db8ae&timestamp=1501996423&nonce=1151478728&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:13:44+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=e77c14ac74bdd960707d83231028c054a7619cc6&timestamp=1501996424&nonce=2126808589&openid=o6pmpxLVctmarbxnozV96nGNt7Ew
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:13:46+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=17e1a4710cc6cccbe961dfc55fbc5cd949b400a8&timestamp=1501996426&nonce=2035997484&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:13:47+08:00 ] 223.104.63.36 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:13:47+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=d1cff277563831aa27c3fd79d395fec9fe26baae&timestamp=1501996427&nonce=1523729234&openid=o6pmpxLVctmarbxnozV96nGNt7Ew
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:13:49+08:00 ] 163.177.69.107 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:13:49+08:00 ] 183.232.118.14 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008362s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:13:50+08:00 ] 14.17.11.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:14:13+08:00 ] 14.17.11.196 /index.php?m=Home&c=Cart&a=header_cart_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0008s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3501 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3501 or session_id = 'gld31cp0eovkul35dtb4tatfj1') and prom_type = 0 [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 160 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  1 = 1  and user_id = 3501  )  [ RunTime:0.0008s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] Use of undefined constant num - assumed 'num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant total_fee - assumed 'total_fee' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant anum - assumed 'anum' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+NOTIC: [8] Undefined index: anum /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-08-06T13:14:15+08:00 ] 14.17.11.196 /index.php?m=Home&c=Cart&a=ajaxAddCart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3501 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3501 or session_id = 'gld31cp0eovkul35dtb4tatfj1') and prom_type = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 242 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`sku` FROM `tp_spec_goods_price` WHERE ( goods_id = 242 )  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_cart` WHERE (  session_id = 'gld31cp0eovkul35dtb4tatfj1'   or user_id= 3501  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 77 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 88 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  goods_id = 242 and spec_key = ''  and (session_id = 'gld31cp0eovkul35dtb4tatfj1' or user_id = 3501)  ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: spec_price /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 95 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 116 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 117 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 118 行.
+SQL: INSERT INTO `tp_cart` (`user_id`,`session_id`,`goods_id`,`goods_sn`,`goods_name`,`market_price`,`goods_price`,`member_goods_price`,`goods_num`,`spec_key`,`spec_key_name`,`sku`,`add_time`,`prom_type`,`prom_id`) VALUES ('3501','gld31cp0eovkul35dtb4tatfj1','242','DI060011X','纸/麻绳','0.00','3.50','3.50','1','','','','1501996455','0','0') [ RunTime:0.0003s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `tp_cart` WHERE (  session_id = 'gld31cp0eovkul35dtb4tatfj1'  or user_id = 3501  ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-08-06T13:14:27+08:00 ] 223.104.63.36 /index.php?m=Home&c=Cart&a=header_cart_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3500 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3500 or session_id = 'ujgdt443erm4ku1t6e6tdc0vl6') and prom_type = 0 [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 160 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  1 = 1  and user_id = 3500  )  [ RunTime:0.0007s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000117s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Use of undefined constant num - assumed 'num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant total_fee - assumed 'total_fee' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant anum - assumed 'anum' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+NOTIC: [8] Undefined index: anum /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-08-06T13:15:58+08:00 ] 14.17.11.196 /index.php?m=Home&c=Api&a=getRegion&level=2&parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `tp_region` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_region` WHERE ( parent_id=1 )  [ RunTime:0.0129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-08-06T13:16:40+08:00 ] 140.207.54.80 /index.php?m=Home&c=Wechat&a=valid&signature=6dde1f3bf829788b55484ed6c8cd6bc97ca39364&timestamp=1501996599&nonce=857010231&openid=o6pmpxLVctmarbxnozV96nGNt7Ew
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-08-06T13:45:12+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=f3aee04b11ac43fc9ed610b0dda9327790829524&timestamp=1501998312&nonce=1027295967&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:47:20+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=1d3a6a4f1599e72ffe415601c3a7a3092d422590&timestamp=1501998440&nonce=1438140783&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:47:24+08:00 ] 116.77.73.253 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:47:40+08:00 ] 14.215.176.10 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T13:48:30+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=a4d232c06aa9b3c625c6390a34c53973bf37112c&timestamp=1501998510&nonce=15238564&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+
+[ 2017-08-06T13:49:17+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=a87b804c315727279115236d078658cc075b6472&timestamp=1501998557&nonce=1323970542&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:49:29+08:00 ] 116.77.73.253 /index.php?m=Home&c=Cart&a=header_cart_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3502 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3502 or session_id = 'mcr0qekre3onv050nb2qrdn2p7') and prom_type = 0 [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 160 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  1 = 1  and user_id = 3502  )  [ RunTime:0.0007s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000153s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Use of undefined constant num - assumed 'num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant total_fee - assumed 'total_fee' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant anum - assumed 'anum' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+NOTIC: [8] Undefined index: anum /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2017-08-06T13:50:27+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=74f6a2a0cc075f78cf9c1f92bb31495a5feb696b&timestamp=1501998627&nonce=646585913&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000315s ]
+
+[ 2017-08-06T13:51:11+08:00 ] 140.207.54.79 /index.php?m=Home&c=Wechat&a=valid&signature=4f47aa35f3436932c09329fac0e710e959bac6a9&timestamp=1501998670&nonce=1719643736&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:56:56+08:00 ] 140.207.54.76 /index.php?m=Home&c=Wechat&a=valid&signature=8b4bb4afc04df8316e2f4209df1a00a4fdd609f5&timestamp=1501999016&nonce=311076684&openid=o6pmpxMEwlNnqiOCL1uy2T_cNDuk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2017-08-06T13:58:33+08:00 ] 140.207.54.76 /index.php?m=Home&c=Wechat&a=valid&signature=610c77ab30c61f40ad0a872d5143b15b7b32661e&timestamp=1501999113&nonce=1770278149&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:58:38+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=f69d92ce5d64cea32ab4ab9915ff19a2832e69a9&timestamp=1501999118&nonce=2091102526&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:58:43+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=21d9cbcdf2bd482a41a7779a640cbe6a16c1810d&timestamp=1501999123&nonce=1697013008&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T13:58:45+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=a2996dab46a18cc99ddd734845cf5b42bcec0b1e&timestamp=1501999125&nonce=1824763366&openid=o6pmpxGWVOll04yVc7qiLR7FV8Ys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T14:13:03+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=3b8b9a03e735f7786ff27bb719aed206ed0c10ca&timestamp=1501999982&nonce=667452293&openid=o6pmpxMEwlNnqiOCL1uy2T_cNDuk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2017-08-06T14:13:12+08:00 ] 140.207.54.76 /index.php?m=Home&c=Wechat&a=valid&signature=54f96b17325ef25115619cfdeffcd260bc28de6b&timestamp=1501999991&nonce=606719618&openid=o6pmpxMEwlNnqiOCL1uy2T_cNDuk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-08-06T14:13:20+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=bca831d7ca36004911dbd0d65db519488efc30b2&timestamp=1502000000&nonce=870388956&openid=o6pmpxMEwlNnqiOCL1uy2T_cNDuk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-08-06T14:13:20+08:00 ] 163.177.93.243 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017824s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0011s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0003s ]
+
+[ 2017-08-06T14:13:20+08:00 ] 183.232.118.15 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0006s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0006s ]
+
+[ 2017-08-06T14:13:22+08:00 ] 14.17.44.214 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T15:01:54+08:00 ] 140.207.54.80 /index.php?m=Home&c=Wechat&a=valid&signature=f673d1e8780bc99cbd17ea196ca32952d0c94b82&timestamp=1502002914&nonce=1783503773&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+
+[ 2017-08-06T15:02:14+08:00 ] 140.207.54.80 /index.php?m=Home&c=Wechat&a=valid&signature=d9ee3f01168130de19261369f1a70a1e5c46acf4&timestamp=1502002934&nonce=710530533&openid=o6pmpxL8EjXYbGwl0NsnwTNZTAkA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-08-06T17:20:32+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=6e29345c6097dedef68fe813d9994c1a77baebee&timestamp=1502011232&nonce=875461027&openid=o6pmpxG6Ymrg15n0yeIFWcT8tYxQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-08-06T17:20:33+08:00 ] 117.136.79.154 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-06T17:20:38+08:00 ] 140.207.54.75 /index.php?m=Home&c=Wechat&a=valid&signature=e1c4a121ac51a690d5b970fb799c4878c851311c&timestamp=1502011238&nonce=196668966&openid=o6pmpxG6Ymrg15n0yeIFWcT8tYxQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant openAppID - assumed 'openAppID' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant openAppSecret - assumed 'openAppSecret' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 31 行.
+NOTIC: [8] Undefined index: echostr /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/WechatController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000321s ]
+
+[ 2017-08-06T17:20:55+08:00 ] 117.136.79.154 /index.php?m=Home&c=Cart&a=header_cart_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3496 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3496 or session_id = 'dmtr5n6911pm7utsg6cdqm2mi0') and prom_type = 0 [ RunTime:0.0016s ]
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 160 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  1 = 1  and user_id = 3496  )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `store_count` FROM `tp_goods` WHERE ( goods_id = 154 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000121s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+SQL: SELECT `original_img` FROM `tp_goods` WHERE ( goods_id = 154 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: x /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Image/Driver/Gd.class.php 第 273 行.
+NOTIC: [8] Undefined variable: y /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Image/Driver/Gd.class.php 第 273 行.
+NOTIC: [8] Use of undefined constant goods_name - assumed 'goods_name' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 15 行.
+NOTIC: [8] Use of undefined constant member_goods_price - assumed 'member_goods_price' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 21 行.
+NOTIC: [8] Use of undefined constant goods_num - assumed 'goods_num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 23 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant total_fee - assumed 'total_fee' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 35 行.
+NOTIC: [8] Use of undefined constant anum - assumed 'anum' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+NOTIC: [8] Undefined index: anum /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Home/c2c5f09c3b7495f1e5bed3a1b597e8ef.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-08-06T17:21:00+08:00 ] 117.136.79.154 /index.php?m=Home&c=Cart&a=ajaxAddCart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3496 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3496 or session_id = 'dmtr5n6911pm7utsg6cdqm2mi0') and prom_type = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 245 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`sku` FROM `tp_spec_goods_price` WHERE ( goods_id = 245 )  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_cart` WHERE (  session_id = 'dmtr5n6911pm7utsg6cdqm2mi0'   or user_id= 3496  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 77 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 88 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  goods_id = 245 and spec_key = ''  and (session_id = 'dmtr5n6911pm7utsg6cdqm2mi0' or user_id = 3496)  ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: spec_price /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 95 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 116 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 117 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 118 行.
+SQL: INSERT INTO `tp_cart` (`user_id`,`session_id`,`goods_id`,`goods_sn`,`goods_name`,`market_price`,`goods_price`,`member_goods_price`,`goods_num`,`spec_key`,`spec_key_name`,`sku`,`add_time`,`prom_type`,`prom_id`) VALUES ('3496','dmtr5n6911pm7utsg6cdqm2mi0','245','WO040028X','玩具-9.9','0.00','9.90','9.90','1','','','','1502011260','0','0') [ RunTime:0.0003s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `tp_cart` WHERE (  session_id = 'dmtr5n6911pm7utsg6cdqm2mi0'  or user_id = 3496  ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-08-06T17:21:59+08:00 ] 117.136.79.154 /index.php?m=Home&c=Cart&a=ajaxAddCart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_users` WHERE ( user_id = 3496 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant discount - assumed 'discount' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant user_id - assumed 'user_id' /data/wwwroot/www.fengzakka.cn/Application/Home/Controller/CartController.class.php 第 38 行.
+SQL: update `tp_cart` set member_goods_price = goods_price * 1.00 where (user_id =3496 or session_id = 'dmtr5n6911pm7utsg6cdqm2mi0') and prom_type = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 238 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0004s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`sku` FROM `tp_spec_goods_price` WHERE ( goods_id = 238 )  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_cart` WHERE (  session_id = 'dmtr5n6911pm7utsg6cdqm2mi0'   or user_id= 3496  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 77 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 88 行.
+SQL: SELECT * FROM `tp_cart` WHERE (  goods_id = 238 and spec_key = ''  and (session_id = 'dmtr5n6911pm7utsg6cdqm2mi0' or user_id = 3496)  ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: spec_price /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 95 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 116 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 117 行.
+NOTIC: [8] Undefined variable: spec_key /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/CartLogic.class.php 第 118 行.
+SQL: INSERT INTO `tp_cart` (`user_id`,`session_id`,`goods_id`,`goods_sn`,`goods_name`,`market_price`,`goods_price`,`member_goods_price`,`goods_num`,`spec_key`,`spec_key_name`,`sku`,`add_time`,`prom_type`,`prom_id`) VALUES ('3496','dmtr5n6911pm7utsg6cdqm2mi0','238','WJ010069','笔（萝卜款）','0.00','5.00','5.00','1','','','','1502011319','0','0') [ RunTime:0.0002s ]
+SQL: SELECT SUM(goods_num) AS tp_sum FROM `tp_cart` WHERE (  session_id = 'dmtr5n6911pm7utsg6cdqm2mi0'  or user_id = 3496  ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-08-06T17:23:05+08:00 ] 117.136.79.154 /index.php?m=Home&c=Api&a=getRegion&level=2&parent_id=30164
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `tp_region` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_region` WHERE ( parent_id=30164 )  [ RunTime:0.0127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-08-06T17:23:15+08:00 ] 117.136.79.154 /index.php?m=Home&c=Api&a=getRegion&level=3&parent_id=30688
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `tp_region` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tp_region` WHERE ( parent_id=30688 )  [ RunTime:0.0135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-08-06T17:23:19+08:00 ] 117.136.79.154 /index.php?m=Home&c=Api&a=getTwon&parent_id=30690
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `tp_region` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_region` WHERE ( parent_id=30690 )  [ RunTime:0.0215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>新三板</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/app.css" />
+		<script src="__PUBLIC__/mobile/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="index">
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="{:U('Activity/index')}">
+				<span class="mui-icon"><i class="iconfont">&#xe617;</i></span>
+				<span class="mui-tab-label">活动</span>
+			</a>
+			<a class="mui-tab-item" href="{:U('Index/index')}">
+				<span class="mui-icon"><i class="iconfont">&#xf012b;</i></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="{:U('User/index')}">
+				<span class="mui-icon"><i class="iconfont">&#xe604;</i></span>
+				<span class="mui-tab-label">个人</span>
+			</a>
+		</nav>
+	<body>
+		<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+			<div class="mui-scroll">
+				<ul class="activity">
+					<volist name="aclist" id="vo">
+						<li>
+							<a href="{:U('Activity/detail',array('activity_id'=>$vo['activity_id']))}">
+								<img src="{$vo['activity_logo']}" />
+								<h5>{$vo['title']}</h5>
+								<div class="mui-table">
+									<div class="mui-table-cell">{$vo['start_time']}</div>
+									<if condition="$vo['signEnd'] eq 1">
+										<div class="mui-table-cell mui-text-right colorf0">报名已结束</div>
+									<else />
+										<div class="mui-table-cell mui-text-right colorf0">报名中</div>
+									</if>
+								</div>
+							</a>
+						</li>
+					</volist>
+				</ul>
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			//上拉加载
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+
+			function pullupRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.activity');
+					var cells = document.body.querySelectorAll('.activity li').length;
+					mui.ajax("{:U('Activity/index')}", {
+						data: {
+							start: cells
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							if(data.status == 200) {
+								var Html = "";
+								mui.each(data.result, function(i, item) {
+									Html += '<li>';
+									Html += '<a href="'+"{:U('Activity/detail')}?activity_id="+item.activity_id+'">';
+									Html += '<img src="'+item.activity_logo+'" />';
+									Html += '<h5>'+item.title+'</h5>';
+									Html += '<div class="mui-table">';
+									Html += '<div class="mui-table-cell">'+item.start_time+'</div>';
+									if(item.signEnd == 2){
+										Html += '<div class="mui-table-cell mui-text-right colorf0">报名中</div>';
+									}else{
+										Html += '<div class="mui-table-cell mui-text-right colorf0">报名已结束</div>';
+									}
+									Html += '</div>';
+									Html += '</a>';
+									Html += '</li>';
+									table.insertAdjacentHTML('beforeend', Html);
+								});
+							} else {
+								hasMore = true;
+							}
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(hasMore);
+						}
+					})
+				}, 1500);
+			}
+			mui('.activity').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				mui.openWindow({
+					url: targetTab,
+					id: targetTab,
+				})
+			});
+			
+			//底部tab
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				mui.openWindow({
+					url: targetTab,
+					id: targetTab,
+				})
+			});
+		</script>
+
+	</body>
+
+</html>

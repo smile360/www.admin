@@ -1,0 +1,36 @@
+<title>文章回复</title>
+<include file="Public/nav" />
+		<div class="mui-content-padded reply">
+			<div class="mui-input-row">
+				<textarea id="question"></textarea>
+			</div>
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="replay">提交</button>
+		</div>
+		<script type="text/javascript">
+			var question = document.getElementById("question");
+			document.getElementById("replay").addEventListener("tap", function() {
+				if(question.value == "") {
+					mui.toast("留言不能为空");
+					return false;
+				}
+				mui.post("{:U('addComment')}", {
+					question: question.value,
+					article_id:{$article_id},
+					title:"{$title}",
+				}, function(data) {
+					if(data.status == 1) {
+						mui.toast("评论成功！");
+						setTimeout(function() {
+							location.href = "{:U('detail',array('article_id'=>$article_id))}";
+							return false;
+						}, 500);
+					} else {
+						mui.toast("评论失败请稍后重试");
+						return false;
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

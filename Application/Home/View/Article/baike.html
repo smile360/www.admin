@@ -1,0 +1,84 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container i-content">
+			<h2 style="margin-top: 30px;"><span>热门推荐 <em>Popular recommendation</em></span></h2>
+			<ul class="baike clearfix">
+				<notempty name="data" >
+					<volist name="data" id="vo">
+						<li>
+							<a href="{:U('detail',array('article_id'=>$vo['article_id']))}">
+								<img src="{$vo.thumb|default='__IMG__p4.jpg'}" />
+								<p class="title">{$vo.title}</p>
+								<p class="cont color66">
+									<?php echo preg_replace ('/\<p\>\<\/p\>|\<p\><br\/>\<\/p\>/','',mb_substr( htmlspecialchars_decode($vo['content']),0,130)).'...';?>
+								</p>
+								<p class="date">{$vo.publish_time} <em class="pull-right">详情 >></em></p>
+							</a>
+						</li>
+					</volist>
+				</notempty>
+			</ul>
+
+			<ul class="baike-classify text-center" id="myTab">
+				<volist name="list" id="item">
+					<li id="gold_{$item.cat_id}">
+						<a href="{:U('baike',array('cat_id'=>$parent_id,'id'=>$item['cat_id']))}">
+							<img src="{$item.cat_logo|default='__IMG__bk_gold.png'}" />
+							<p>{$item.cat_name}</p>
+						</a>
+					</li>
+				</volist>
+			</ul>
+			<div class="baike-list tab-content">
+				<nav class="text-center">
+					{$page}
+				</nav>
+			</div>
+
+		</div>
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<script src="__JS__pagination.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(".menu-list li").eq(8).attr("class","active");
+			$("#gold_"+{$id}).attr("class","active");
+			//tab
+			// $('#myTab a:first').tab('show');
+
+			//自动分页
+			// $("#myTab li").click(function() {
+			// 	var item = $(this).attr("id");				
+			// 	$('#' + item + '-pager').pagination({
+			// 		dataSource: function(done) {
+			// 			$.ajax({
+			// 				data:{
+			// 					type:item
+			// 				},
+			// 				type: 'GET',
+			// 				url: 'url/test',
+			// 				success: function(response) {
+			// 					done(response);
+			// 				}
+			// 			});
+			// 		},
+			// 		pageSize: 10,
+			// 		callback: function(data, pagination) {
+			// 			var html;
+			// 			$.each(data, function(index, item) {
+			// 				html += '<tr>';
+			// 				html += '<td class="one"><img src="__IMG__item.png" alt="' + item + '" /></td>';
+			// 				html += '<td class="two">银钻戒的价格有哪些因素决定？' + item + '</td>';
+			// 				html += '<td class="three">付费</td>';
+			// 				html += '<td class="four"><a href="">详情 >></a></td>';
+			// 				html += '</tr>';
+			// 			});
+			// 			$('#' + item + '-table').html(html);
+			// 		}
+			// 	})
+			// })
+			// $("#myTab li:first").click()
+		</script>
+
+	</body>
+
+</html>

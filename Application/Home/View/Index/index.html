@@ -1,0 +1,52 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<!--------头部结束-------------->
+		<div class="i-banner">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators" style="text-align: right;width: 65%;">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<empty name="banner">
+						<div class="item active">
+							<img src="__IMG__banner.jpg" alt="banner">
+						</div>
+					<else />
+						<div class="item active">
+							<a href="{$banner.0.ad_link}">
+								<img src="{$banner.0.ad_code}" alt="banner">
+							</a>
+						</div>
+						<volist name="banner" id="vo" offset="1">
+							
+							<div class="item">
+								<a href="{$vo.ad_link}">
+									<img src="{$vo.ad_code}" alt="banner">
+								</a>
+							</div>
+							
+						</volist>
+					</empty>
+				</div>
+			</div>
+		</div>
+		<!--------底部开始-------------->
+		<include file="Public/footer" />
+		<!--------底部结束-------------->
+		<script>
+			var _url = "{:U('Consult/index')}";
+        	$(".search").attr("action", _url);
+			$(".menu-list li").eq(0).attr("class","active");
+			//定位背景 class="active"
+			// $(".menu-list li:first").attr("class","active");
+			// 返回顶部
+			$(".go-up").click(function() {
+				$("html,body").animate({
+					'scrollTop': '0px'
+				}, 300)
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>新三板</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/app.css" />
+	</head>
+
+	<body>
+		<div class="mui-content mui-scroll-wrapper activity-detail" id="pullrefresh">
+			<div class="mui-scroll">
+				<div class="title">
+					<input type="hidden" id="article_id" value="{$article['article_id']}">
+					<input type="hidden" id="user_id" value="{$userInfo}">
+					<h5>{$article['title']}</h4>
+					<p><span>{$article['cat_id']|getCateName}</span><em class="mui-pull-right">{$article['add_time']|date="Y-m-d H:i",###}</em></p>
+				</div>				
+				<div class="content">
+					{$article['content']}
+					<!-- <p>活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 活动肉容介绍 。 </p>
+				    <img src="__PUBLIC__/mobile/img/act-1.jpg"/>
+				    <p>文章详情介绍文章详情介绍文章详情介绍文章详情介绍文章详情介绍文章详情介绍</p>	 -->
+				    
+				    <!--if 付费文章显示按钮-->
+				    <!-- <div class="mui-text-center sign">
+				    	<button type="button" class="mui-btn mui-btn-warning" id="read-all">阅读全文</button>
+				    </div>	 -->
+				    <!--endif-->
+				</div>
+				<div class="copyright mui-text-center">
+					本文文字内容归本站版权所有，转载请注明来自<span>新三板指南</span>
+				</div>
+				
+				<!--if 打赏文章显示按钮-->
+				<div class="mui-text-center shang">
+					<a href="#middlePopover"><img src="__PUBLIC__/mobile/img/shang.png"/></a>
+				</div>
+				 <!--endif--> 
+				<div class="mui-table zan">
+					<div class="mui-table-cell mui-text-center"><i class="iconfont" style="font-size: 12px;">&#xe64a;</i>&nbsp;&nbsp;阅读({$article['click']})</div>
+					<div class="mui-table-cell mui-text-center" id="tap-comment"><i class="iconfont" style="font-size: 16px;vertical-align: middle;">&#xe629;</i>&nbsp;&nbsp;评论({$comcount})</div>
+					<div class="mui-table-cell mui-text-center" id="tap-collect"><i class="iconfont" id="collect-icon" style="font-size: 16px;">&#xe60d;</i>&nbsp;&nbsp;收藏(<span id="collect-num">22</span>)</div>
+				</div>
+				<ul class="mui-table-view comments" id="comments">
+						<?php foreach ($comment as $key => $v): ?>
+						
+						<li class="mui-table-view-cell mui-media mui-active">
+							<img class="mui-media-object mui-pull-left" src="{$v['head_pic']|default='__PUBLIC__/mobile/img/pl_head.png'}">
+							<div class="mui-media-body">
+								<div class="username">{$v['nickname']|default="小雅"}</div>
+								<p class="comments-c">{$v['content']}</p>
+								<div class="mui-table">
+									<div class="mui-table-cell">{$v['add_time']|date="Y-m-d H:i",###}</div>
+									<div class="mui-table-cell mui-text-right comments-input" data-comment-id="{$v['article_comment_id']}" data-id="{$v['user_id']}" data-name='{$v['nickname']|default="小雅"}'>回复</div>
+									
+								</div>
+								
+									
+									<?php if ($v['repeatInfo']): ?>
+																						
+									<div class="replay">
+										<p>{$v['repeatInfo']['person_name']} <span>回复</span>{$v['repeatInfo']['user_name']}</p>
+										<p class="replay-c"><span>{$v['repeatInfo']['replay']}</span></p>
+										<div class="mui-table">
+											<div class="mui-table-cell">{$v['repeatInfo']['add_time']|date="Y-m-d H:i"}</div>
+											<div class="mui-table-cell mui-text-right comments-input" data-comment-id="{$v['repeatInfo']['comment_id']}" data-id="{$v['repeatInfo']['person_id']}" data-name="{$v['repeatInfo']['person_name']}">回复</div>
+										</div>
+									</div>
+								<?php endif ?>		
+							</div>
+						</li>
+						
+						<?php endforeach ?>
+						<!-- <li class="mui-table-view-cell mui-media">
+							<img class="mui-media-object mui-pull-left" src="__PUBLIC__/mobile/img/pl_head.png">
+							<div class="mui-media-body">
+								<div class="username">睡觉的猫</div>
+								<p class="comments-c">用户评论内容，显示所有评论文字。用户评论内容，显示所有评论文字。</p>
+								<div class="mui-table">
+									<div class="mui-table-cell">2016-06-07 18:33</div>
+									<div class="mui-table-cell mui-text-right">回复</div>
+								</div>
+							</div>
+						</li> -->
+					</ul>				
+			</div>
+			
+				<div class="replay-input" id="replay-input">
+				<input type="hidden" id="input-id"/>	
+				<input type="hidden" id="comment-id"/>	
+				<input type="text" id="input-in" placeholder="回复" />
+				<button id="replay-btn">回复</button>
+			</div>
+		</div>
+		
+		<div id="middlePopover" class="mui-popover shang-pay">
+			<div id="gys-pay">
+				<div class="close" id="close"><img src="__PUBLIC__/mobile/img/shang_close.png" width="12px" /></div>
+				<div class="paylogo"><img src="__PUBLIC__/mobile/img/shang_logo.png" width="125px"/></div>
+				<div class="tks">感谢您的支持！</div>
+				<div class="input"><span>￥</span><input type="number" id="input" oninput="inputjudge()" /></div>
+				<button onclick="callpay()" class="confirm" id="confirm" disabled="disabled">确认</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+	//调用微信JS api 支付
+    function jsApiCall()
+    {
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',
+            <?php echo $jsApiParameters; ?>,
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                // alert(res.err_code+res.err_desc+res.err_msg);
+                window.location.href="{:U('User/index')}";   
+                // alert(222);
+            }
+        );
+    }
+
+    function callpay()
+    {
+        alert(222);
+    }
+		
+	</script>
+		<script src="__PUBLIC__/mobile/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//上拉加载
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+			function pullupRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('#comments');
+					var cells = document.body.querySelectorAll('#comments li').length;
+					var article_id = document.getElementById("article_id").value;
+					mui.ajax("{:U('Article/replayAjax')}", {
+						data: {
+							start: cells,
+							num: 5,
+							article_id:article_id,
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							var Html = "";
+							if(data.status == 1) {
+								mui.each(data.result, function(i, item) {							
+	                                Html += '<li class="mui-table-view-cell mui-media mui-active">';
+									Html += '<img class="mui-media-object mui-pull-left" src="'+item.head_pic+'">';
+									Html += '<div class="mui-media-body">';
+									Html += '<div class="username">'+item.user_name+'</div>';
+									Html += '<p class="comments-c">'+item.content+'</p>';
+									Html += '<div class="mui-table">';
+									Html += '<div class="mui-table-cell">'+item.add_time+'</div>';
+									Html += '<div class="mui-table-cell mui-text-right comments-input" data-id="'+item.user_id+'" data-name="'+item.user_name+'">回复</div>';
+									Html += '</div>';
+										if(data.replay){
+											Html += '<div class="replay">';
+											Html += '<p>天上仙 <span>回复</span> 牙齿晒太阳</p>';
+											Html += '<p class="replay-c"><span>回复评论回复评论回复评论回复评论回复评论回复评论回复评论回复评论回复评论回复评论回复评论回~~</span></p>';
+											Html += '<div class="mui-table">';
+											Html += '<div class="mui-table-cell">2016-06-07 18:33</div>';
+											Html += '<div class="mui-table-cell mui-text-right">回复</div>';
+											Html += '</div>';
+											Html += '</div>';
+										}
+									Html += '</div>';
+									Html += '</li>';
+								});
+									table.insertAdjacentHTML('beforeend', Html);
+							} else {
+								hasMore = true;
+							}
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(hasMore);
+						}
+					})
+				}, 1500);
+			}			
+			document.getElementById("close").addEventListener('tap',function(){				
+				document.getElementById("middlePopover").style.display="none"; 
+				document.getElementsByClassName("mui-backdrop")[0].style.display="none";
+			})	
+			function inputjudge(){
+				 var inputvalue = document.getElementById("input").value;
+				if(parseFloat(inputvalue)>=0.01){
+					document.getElementById("confirm").removeAttribute("disabled");					
+				}else{
+					document.getElementById("confirm").setAttribute("disabled", "disabled");
+				}				
+			}
+			
+			document.getElementById("confirm").addEventListener('tap',function(){				
+				var inputvalue = document.getElementById("input").value;								
+					mui.post("url", {
+					money: inputvalue,
+				},function(data) {
+					if(data.code == 200) {
+						mui.toast("打赏成功");
+						setTimeout(function() {
+							window.location.href = "";
+						}, 1000);
+					}else{
+						mui.toast("打赏失败，请稍后再试");
+						return false;
+					}
+				});		
+			})
+			//收藏
+			document.getElementById("tap-collect").addEventListener('tap',function(){				
+			 mui.post("http://sever.xxx.com/", {
+					id: id,
+				},function(data) {
+					if(data.code == 200) {
+						document.getElementById("collect-icon").innerHTML="&#xf0003;"
+						document.getElementById("collect-icon").style.color="#f08200";
+				        document.getElementById("collect-num").innerText=data.num;
+					}else{
+						mui.toast("收藏失败失败，请稍后再试");
+						return false;
+					}
+				});	
+				
+			})
+			//评论
+			document.getElementById("tap-comment").addEventListener('tap',function(){	
+				var article_id = document.getElementById("article_id").value;
+				var user_id = document.getElementById("user_id").value;
+ 				location.href="{:U('Article/comment')}?article_id="+article_id+"&user_id="+user_id;
+			})
+			//回复
+			mui("#comments").on('tap','.comments-input',function(){ //点击含有该css属性事件
+				document.getElementById("replay-input").style.display="block"; //显示对应属性的html
+                document.getElementById("input-in").focus(); //给input获取焦点
+				var name = this.getAttribute('data-name'); //获取当下该属性的值
+				document.getElementById("input-id").value = this.getAttribute('data-id');
+				document.getElementById("comment-id").value = this.getAttribute('data-comment-id');
+				document.getElementById("input-in").setAttribute('placeholder','回复@'+name); //设置一个p属性
+			})
+			document.getElementById("replay-btn").addEventListener('tap',function(){
+				var rcontent = document.getElementById("input-in").value;
+				var article_id = document.getElementById("article_id").value;
+				var user_id = document.getElementById("input-id").value;
+				var comment_id = document.getElementById("comment-id").value;
+				if(rcontent==""){
+					mui.toast("回复内容不能为空");
+					return false;
+				}
+			    mui.post("{:U('Article/repeatComment')}", {
+				     replay: rcontent,
+				     article_id: article_id,
+				     user_id: user_id,
+				     comment_id:comment_id,
+				},function(data) {
+					if(data.code == 200) {
+						mui.toast("回复成功");
+						document.getElementById("replay-input").style.display="none";
+						setTimeout(function(){
+							location.reload();
+						},2000);
+					}else{
+						mui.toast("回复失败，请稍后再试");
+						return false;
+					}
+				});	
+				
+			})
+
+		</script>
+	</body>
+</html>

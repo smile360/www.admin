@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>发布咨询</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__CSS__mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+	</head>
+
+	<body>
+		<div class="mui-content consult-form">
+			<form id="consultFrm" action="{:U('consult')}" method="post">
+				<div class="mui-input-row">
+                                    <label>咨询标题</label>
+                                    <input id="title" name="title" placeholder="填写标题" autofocus type="text" />
+				</div>
+				<div class="item">问题描述</div>
+				<div class="publish-content">
+                                    <textarea name="question" id="question" placeholder="填写描述"></textarea>
+				</div>
+
+				<div class="item">上传图片</div>
+				<div class="goods-pic">
+					<div class="image-item space" id="image-0" onclick="uploadImag(this)">
+                                            <div class="image-close" onclick="del(this)">X</div>
+                                            <input type="hidden" name="image[]" class="image-input" value="" />
+					</div>
+				</div>
+			</form>
+                    <div class="mui-text-center zxds" style="height: 86px;"> 
+<!--				<img id="shang" src="__IMG__shang.png" />
+				<p>咨询打赏</p>-->
+			</div>
+			<div class="mui-content-padded">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="submit">提交</button>
+			</div>
+
+			<!--上传图片插件-->
+			<div class="mui-backdrop upload" id="upload-div">
+				<nav class="mui-bar mui-bar-tab">
+					<a href="javascript:void(0)" id="concel" style="border-right:1px solid #898989;">
+						<span class="mui-tab-label">取消</span>
+					</a>
+					<a href="javascript:void(0)" id="clipBtn">
+						<span class="mui-tab-label">保存</span>
+					</a>
+				</nav>
+				<div id="clipArea" class="clipArea"></div>
+				<input type="file" id="file" class="file">
+				<input type="hidden" id="photoType">
+				<div class="loading-wait" id="loading-wait"><span class="mui-spinner"></span></div>
+			</div>
+
+			<!--打赏-->
+			<div class="modal-dialog" id="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="close" id="close-modal"><img src="__IMG__shang_close.png" /></div>
+						<h4 class="modal-title mui-text-center">咨询打赏</h4>
+					</div>
+					<div class="modal-body">
+						<p class="mui-text-center head-img"><img src="__IMG__shang_head.png" alt="打赏"></p>
+						<p class="mui-text-center money"><span id="mm">￥</span><input type="text" name="money" id="money" value="18.88" disabled="disabled"><em><img id="change" src="__IMG__shang_change.png"></em></p>
+						<p class="mui-text-center other"><button type="button" id="pay" class="mui-btn mui-btn-danger">支付</button><span id="other-money">其它金额</span></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="__JS__mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__JS__jquery-3.0.0.min.js"></script>
+		<!--裁切图片-->
+		<script src="__JS__iscroll-zoom.js"></script>
+		<script src="__JS__hammer.js"></script>
+		<script src="__JS__lrz.all.bundle.js"></script>
+		<script src="__JS__PhotoClip.min.js"></script>
+
+		<script type="text/javascript">
+			var index = 1;
+			function uploadImag(obj) {
+				imgId = obj.id;
+
+				var $elem = $("#"+obj.id);
+				document.getElementById("file").click();
+				$(".photo-clip-view").html("");
+			}
+			var clipArea = new PhotoClip("#clipArea", {
+				size: [260, 260],
+				outputSize: [640, 640],
+				file: "#file",
+				source: "",
+				view: "",
+				ok: "#clipBtn",
+				loadStart: function() {
+					$('.loading-wait').show();
+				},
+				loadComplete: function() {
+					$('.loading-wait').hide();
+				},
+				clipFinish: function(dataURL) {
+					var _this = imgId;
+
+					var $elem = $("#"+imgId);
+
+					if($(".image-item").length < 4){
+						$(".goods-pic").append('<div class="image-item space" id="image'+index+'" onclick="uploadImag(this)"><div class="image-close" onclick="del(this)">X</div><input type="hidden" name="image[]" class="image-input" value="" /></div>');
+						index++;
+					}
+
+					document.getElementById(_this).style.backgroundImage = 'url(' + dataURL + ')';
+					document.getElementById(_this).classList.remove('space');
+					$.ajax({
+						url: "{:U('Upload/upload')}",
+						data: {
+							imgData: dataURL,
+							imgID: _this
+						},
+						type: 'post',
+						timeout: 15000,
+						cache: false,
+						dataType: 'json',
+						success: function(data) {
+							if(!data) {
+								mui.toast("图片上传失败");
+							}
+							$elem.find(".image-input").val(data);
+						},
+						error: function() {
+							mui.toast("服务器异常");
+						}
+					})
+
+				}
+			});
+
+			function del(obj) { 
+				event.stopPropagation();
+				event.cancelBubble = true;
+				/* Image Close Id */
+				if($(".image-item").length >= 4){
+					$(".goods-pic").append('<div class="image-item space" id="image'+index+'" onclick="uploadImag(this)"><div class="image-close" onclick="del(this)">X</div><input type="hidden" name="image[]" class="image-input" value="" /></div>');
+					index++;
+				}
+				obj.parentNode.remove();
+				
+				return false;
+			}
+
+			document.getElementById("concel").addEventListener('click', function() {
+				document.getElementById("upload-div").style.display = "none";
+			})
+			document.getElementById("clipBtn").addEventListener('click', function() {
+				document.getElementById("upload-div").style.display = "none";
+			})
+
+			//表单处理
+			document.getElementById("submit").addEventListener('tap', function() {
+				var title = document.getElementById("title").value;
+				var question = document.getElementById("question").value;
+
+				if(title == "") {
+					mui.toast("咨询问题不能为空");
+					return false;
+				}
+				if(question == "") {
+					mui.toast("问题描述不能为空");
+					return false;
+				}
+				if($(".image-item").length <= 1) {
+					mui.toast("请至少上传一张图");
+					return false;
+				}
+                                $("#consultFrm").submit();
+				//payTour();
+			});
+
+			function payTour(){
+				$.ajax({
+					type : 'post',
+					url : "{:U('Home/User/payTour')}?t="+Math.random(),
+					data : {payType:'pay_tour'},
+					dataType : 'json',
+					success : function(res){
+						if(res == '200'){
+							$("#consultFrm").submit();
+						}else{
+							mui.toast('亲,先打赏吧');
+							$("#shang").click();
+						}
+					},
+					error : function(XMLHttpRequest, textStatus, errorThrown) {
+						return false;
+					}
+				})
+			}
+
+			//打赏
+			var mask = mui.createMask(function() {
+				$("#modal-dialog").slideUp(250)
+				$('#change').show();
+				$('#money').removeClass("active");
+				$('#money').attr("disabled","disabled");
+				$('#other-money').html("其它金额");
+			});
+			$("#close-modal").click(function() {
+				$("#modal-dialog").slideUp(250)
+				$('#change').show();
+				$('#money').removeClass("active");
+				$('#money').attr("disabled","disabled");
+				$('#other-money').html("其它金额");
+				mask.close();
+			})
+			$("#shang").click(function() {
+				$("#modal-dialog").slideDown(600);
+				mask.show();
+			})
+
+			$("#change").click(function() {
+				$("#money").val((Math.random() * 100).toFixed(2));
+			})
+			$("#other-money").click(function() {
+				$('#money').removeAttr("disabled");
+				$('#change').hide();
+				$('#money').addClass("active");
+				$(this).html("");
+			})
+			$("#pay").click(function() {
+				var money = $('#money').val();
+				var exp = /^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/;
+				if(money == "") {
+					alert("输入金额不能为空")
+					return false;
+				}
+				if(!exp.test(money)) {
+					alert("输入金额不正确")
+					return false;
+				}
+
+				$.post("{:U('Home/User/payTourHandle')}",{money:money},function (data){
+					$("#close-modal").click();
+				});
+			})
+		</script>
+
+	</body>
+
+</html>

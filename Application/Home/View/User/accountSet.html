@@ -1,0 +1,284 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li>
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li>
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					<li>
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycomment')}">评论消息</a>
+					</li>
+					<li>
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li class="active">
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+				<div class="personer pull-right modify-psd">
+					<h2 class="text-center">账户设置</h2>
+					<ul class="text-center clearfix" id="myTab">
+						<li class="active">
+							<a href="#modify_psd" data-toggle="tab">修改密码</a>
+						</li>
+						<li class="pull-right">
+							<a href="#modify_phone" data-toggle="tab">修改绑定手机</a>
+						</li>
+					</ul>
+					<div class="sign reg tab-content">
+						<form class="tab-pane active" role="tabpanel" id="modify_psd">
+							<div class="info clearfix">
+								<span class="pull-left">原密码</span>
+								<input type="password" class="pull-left" id="old-psd">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">新密码</span>
+								<input type="password" class="pull-left" id="new-psd">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">确认密码</span>
+								<input type="password" class="pull-left" id="confirm-psd">
+							</div>
+							<button type="button" id="changePsd" class="btn btn-default">确定</button>
+						</form>
+						<form class="tab-pane" id="modify_phone">
+							<div class="info clearfix">
+								<span class="pull-left">手机号</span>
+								<input type="text" id="tel-1" class="pull-left">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">验证码</span>
+								<input type="text" id="code-1" class="pull-left code">
+								<button type="button" class="get-code pull-left code-1" onClick="getCode(1,'code-1')">获取手机验证码</button>
+							</div>
+							<button type="button" id="bindingOne" class="btn btn-default">验证旧手机号</button>
+						</form>
+						<form id="modify_phone_2" style="display: none;">
+							<div class="info clearfix">
+								<span class="pull-left">新手机号</span>
+								<input type="text" id="tel-2" class="pull-left">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">验证码</span>
+								<input type="text" id="code-2" class="pull-left code">
+								<button type="button" class="get-code pull-left code-2" onClick="getCode(2,'code-2')">获取手机验证码</button>
+							</div>
+							<button type="button" id="bindingTwo" class="btn btn-default">确认修改</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			$(function() {
+				$('#myTab a:first').tab('show')
+			})
+
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					layer.msg("请输入搜索关键字");
+					return false;
+				}
+			}
+
+			$('#changePsd').click(function() {
+				var oldpsd = $('#old-psd').val();
+				var newpsd = $('#new-psd').val();
+				var confirmpsd = $('#confirm-psd').val();
+				if(oldpsd == "" || newpsd == "" || confirmpsd == "") {
+					layer.msg("输入不能为空");
+					return false;
+				}
+				if(oldpsd == newpsd || oldpsd == confirmpsd){
+					layer.msg("新密码不能与旧密码一致");
+					return false;
+				}
+				if(newpsd != confirmpsd) {
+					layer.msg("新密码两次输入不一致");
+					return false;
+				}
+				$.ajax({
+					type: 'post',
+					url: "{:U('User/accountSet')}",
+					data: {
+						oldpsd: oldpsd,
+						newpsd: newpsd,
+						confirmpsd: confirmpsd,
+					},
+					dataType: 'json',
+					success: function(res) {
+						if(res.status == 1) {
+							layer.msg('密码修改成功');
+							setTimeout(function() {
+								window.location.reload();
+							}, 1500)
+						} else {
+							layer.msg(res.msg);
+						}
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						layer.msg('网络失败，请刷新页面后重试');
+					}
+				})
+
+			})
+
+			$('#bindingOne').click(function() {
+				var Obj = $(this);
+				var phone = $('#tel-1').val();
+				var code = $('#code-1').val();
+				if(phone == "" || code == "") {
+					layer.msg("手机号或验证码不能为空");
+					return false;
+				}
+				if(!(/^1[34578]\d{9}$/.test(phone))) {
+					layer.msg("手机号码有误，请重填");
+					return false;
+				}
+				$(this).attr('disabled',"true");
+				$(this).text("正在验证...");
+				$.ajax({
+					type: 'post',
+					url: "{:U('Api/codeVerify')}",
+					data: {
+						phone: phone,
+						code: code,
+						findpwd:'findpwd',
+					},
+					dataType: 'json',
+					success: function(res) {
+						if(res.msg == 200) {
+							$(Obj).removeAttr('disabled');
+							layer.msg("验证成功！");
+							setTimeout(function() {
+								$("#modify_phone").css('display', 'none')
+								$("#modify_phone_2").css('display', 'block')
+							}, 1500)
+						} else {
+							$(Obj).removeAttr('disabled');
+							$(Obj).text("验证旧手机号");
+							layer.msg(res.msg);
+						}
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						$(Obj).removeAttr('disabled');
+						$(Obj).text("验证旧手机号");
+						layer.msg('网络失败，请刷新页面后重试');
+					}
+				})
+
+			})
+			$('#bindingTwo').click(function() {
+				var Obj = $(this);
+				var phone = $('#tel-2').val();
+				var code = $('#code-2').val();
+				if(phone == "" || code == "") {
+					layer.msg("手机号或验证码不能为空");
+					return false;
+				}
+				if(!(/^1[34578]\d{9}$/.test(phone))) {
+					layer.msg("手机号码有误，请重填");
+					return false;
+				}
+				$(this).attr('disabled',"true");
+				$(this).text("正在校验修改...");
+				$.ajax({
+					type: 'post',
+					url: "{:U('Api/codeVerify')}",
+					data: {
+						phone: phone,
+						code: code,
+						findpwd :'resetphone',
+					},
+					dataType: 'json',
+					success: function(res) {
+						if(res.msg == 200) {
+							$(Obj).removeAttr('disabled');
+							layer.msg('绑定手机修改成功');
+							setTimeout(function() {
+								window.location.reload();
+							}, 1500)
+						} else {
+							$(Obj).removeAttr('disabled');
+							$(Obj).text("确认修改");
+							layer.msg(res.msg);
+						}
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						$(Obj).removeAttr('disabled');
+						$(Obj).text("确认修改");
+						layer.msg('网络失败，请刷新页面后重试');
+					}
+				})
+
+			})
+
+			function getCode(obj, id) {
+				var phone = $("#tel-" + obj).val();
+				var myreg = /^1[3|4|5|7|8]\d{9}$/;
+				if(!myreg.test(phone)) {
+					layer.msg('手机号格式不正确！');
+					return false;
+				}
+				var flag = (id =='code-2') ? 'resetphone':'findpwd';
+				
+				$.ajax({
+					url: "{:U('Api/SendCode')}",
+					cache: false,
+					type: "post",
+					dataType: 'json',
+					data: {
+						phone: phone,
+						type:flag,
+					},
+					success: function(data) {
+						if(data.msg == 200) {
+							time(id);
+							layer.msg("短信发送成功");
+							return false;
+						} else {
+							layer.msg(data.msg);
+							return false;
+						}
+					}
+				});
+
+			}
+
+			var wait = 60;
+			function time(id) {
+				if(wait == 0) {
+					$('.'+id).attr('disabled', false);
+					$('.'+id).html("获取手机验证码");
+					wait = 60;
+				} else {
+					$('.'+id).attr('disabled', true);
+					$('.'+id).html(wait + "S");
+					wait--;
+					setTimeout(function() {
+						time(id);
+					}, 1000)
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

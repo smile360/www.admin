@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>新三板</title>
+		<link href="__PUBLIC__/new/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/new/css/css.css" />
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-left">
+					<a href="{:U('Wechat/WechatAuth',array('type'=>pc,'id'=>session_id()))}" class="wx">微信</a>
+					<!-- <a href="">微博</a> -->
+				</div>
+				<div class="pull-right">
+					<notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="{:U('User/logout')}">退出</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="<?php echo 'http://www.newspost.cn/index.php?m=Home&c=Wechat&a=WechatAuth&type=pc&id='.session_id(); ?>">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    </notempty>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="/"><img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" /></a>
+                </div>
+                <ul class="menu-list pull-left">
+                    <li>
+                        <a href="{:U('home/index/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">阅读 v</a>
+                        <div class="popover fade bottom in" role="tooltip" id="popover232455" style="top:72px; left: -38px;">
+                            <div class="arrow" style="left: 50%;"></div>
+                            <div class="popover-content">
+                                <?php foreach ($one as $v): ?>
+                                    <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                                <?php endforeach ?>
+                            </div>
+                        </div>
+
+                    </li>
+                    <?php foreach ($twotwo as $v): ?>
+                        <li>
+                            <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                        </li>
+                    <?php endforeach ?>
+                    <li>
+                        <a href="{:U('Activity/index')}">活动</a>
+                    </li>
+                </ul>
+                <form class="search pull-right" action="{:U('index/aaa')}" method="post" onsubmit="return checkseach(this)">
+                    <button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+                </form>
+            </div>
+        </div>
+
+		<div class="personer">
+			<section class="activity-banner">
+				<div class="container text-center">
+					<img src="{$activity['activity_logo']}" alt="活动" />
+					<div class="activity-intro">
+						<h4 class="media-heading color-4b">{$activity['title']}</h4>
+						<p class="date text-center">{$activity['start_time']|date="y-m-d",###} | {$activity['activity_address']}</p>
+						<p class="intro text-center">{$activity['description']}</p>
+					</div>
+					<?php 
+						if($activity['activity_time'] > time() || empty($entry)){
+							echo '<a href="'.U('Activity/sign',array('activity_id'=>$activity['activity_id'])).'">立即报名</a>';
+						}elseif( $entry ){
+							echo '<a href="'.U('Activity/detail',array('activity_id'=>$activity['activity_id'])).'">您已报过名</a>';
+						}else{
+							echo '<a href="'.U('Activity/detail',array('activity_id'=>$activity['activity_id'])).'">已结束</a>';
+						}
+					?>
+					<input type="hidden" name="recommend" value="{$activity['activity_id']}">
+				</div>
+			</section>
+			<section class="list last-avtivity">
+				<div class="container">
+					<div class="list-type text-center">往期活动</div>
+					<div class="list-list tab-content">
+						<empty name="aclist">
+							<a class="media clearfix"> 暂无相关活动！</a>
+						<else /> 
+							<volist name="aclist" id="vo">
+								<a class="media clearfix" href="{:U('Activity/detail',array('activity_id'=>$vo['activity_id']))}">
+									<div class="media-body pull-left">
+										<h4 class="media-heading color-4b">{$vo['title']}
+											<?php echo $vo['activity_time'] > time() ? '<span class="wait">报名中</span>':'<span class="bmend">报名结束</span>';?>
+										</h4>
+										<p class="color-a3">{$vo['description']}</p>
+										<div class="article-bottom">
+											<ul class="pull-right">
+												<li>已报名（{$vo['Entry']}）</li>
+												<li>阅读（{$vo['click']}）</li>
+												<li>评论（{$vo['Comment']}）</li>
+												<li>{$vo['end_time']}</li>
+											</ul>
+										</div>
+									</div>
+									<img src="{$vo['activity_logo']}" class="pull-right" />
+								</a>
+							</volist>
+						</empty>
+					</div>
+					<div class="pager">
+						<a class="more-content" href="javascript:void(0)">更多有趣内容</a>
+						<p class="tx" style="font-size:20px;padding-top:30px;display:none;color:#ffa04f">暂时没有更多相关活动信息~ 敬请期待！</p>
+					</div>
+					
+				</div>
+			</section>
+
+		</div>
+		<div class="footer">
+			<div class="footer-footer">
+				<div class="container">
+					<div class="text-center">
+						<img src="__PUBLIC__/new/img/logo.jpg" alt="logo" />
+					</div>
+					<ul class="text-center">
+						<li>
+							<a href="">关于新声</a>
+						</li>
+						<li>
+							<a href="">广告合作</a>
+						</li>
+						<li>
+							<a href="">创业求报道</a>
+						</li>
+						<li>
+							<a href="">移动客户端</a>
+						</li>
+						<li>
+							<a href="">帮助</a>
+						</li>
+						<li>
+							<a href="">RSS订阅</a>
+						</li>
+						<li>
+							<a href="">邮件订阅</a>
+						</li>
+						<li>
+							<a href="">意见与建议</a>
+						</li>
+						<li>
+							<a href="">友情链接</a>
+						</li>
+					</ul>
+					<p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+				</div>
+			</div>
+			<div class="footer-link text-center">
+				<a>合作伙伴：</a>
+				<a href="">平安信托</a>
+				<a href="">招商银行 </a>
+				<a href="">深媒会</a>
+				<a href="">平安银行</a>
+				<a href="">凤凰金融</a>
+			</div>
+		</div>
+
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="__PUBLIC__/new/js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				$('#myTab a:first').tab('show');
+
+				$('.more-content').bind('click',function(){
+					if( $('input[name=recommend]').val() )
+						var limit = ($('.clearfix').length)+1;
+					else
+						var limit = $('.clearfix').length;
+					
+					$.ajax({
+		                type : "POST",
+		                url  : "{:U('Activity/index')}",
+		                dataType: "JSON",
+		                data :{limit:limit},
+		                success : function(data){
+		                   if(data.code == 200 ){
+		                   		var HTML = '';
+								var timestamp = new Date().getTime();
+		                   		$.each(data.result,function(i,item){
+		                   			HTML+= '<a class="media clearfix" href='+"{:U('Activity/detail')}"+'?activity_id='+item.activity_id+">";
+		                   			// HTML+= '<a class="media clearfix" href='+"{:U('Activity/detail',array('activity_id'=>"+item.activity_id+"))}>";
+		                   			HTML+= '<div class="media-body pull-left">';
+									HTML+= '<h4 class="media-heading color-4b">'+item.title;
+									if( item.activity_time < timestamp )
+										HTML+=  '<span class="wait">报名中</span></h4>';
+									else
+										HTML+= 	'<span class="bmend">报名结束</span></h4>';
+									HTML += '<p class="color-a3">'+item.description+'</p>';
+									HTML += '<div class="article-bottom"><ul class="pull-right">';
+									HTML +=	'<li>已报名（'+item.Entry+'）</li>';
+									HTML +=	'<li>阅读（'+item.click+'）</li>';
+									HTML +=	'<li>评论（'+item.Comment+'）</li>';
+									HTML +=	'<li>'+item.end_time+'</li>';
+									HTML += '</ul></div></div>';
+									HTML += '<img src="'+item.activity_logo+'" class="pull-right" />';
+									HTML += '</a>';
+		                   		})
+		                   		$('.list-list').append( HTML );
+		                   }else{
+		                   	 	$('.tx').show();
+		                   	 	setTimeout("Txnone('.tx')",3000)
+		                   } 
+		                }
+		            })
+				})
+
+			})
+			//隐藏提示
+			function Txnone( param ){
+				$( param ).css('display','none')
+			}
+		</script>
+	</body>
+
+</html>

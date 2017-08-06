@@ -1,0 +1,59 @@
+<div class="introduce">
+	<div class="introduce-content text-center">
+		<h3>深圳市胡博士珠宝文化传播有限公司</h3>
+		<p>
+			拥有或与相关内容提供者共同拥有深圳珠宝咨询网站内相关内容（包括文字、图片、音频、视频资料及页面设计、编排、软件等）的版权和其他相关知识产权。 如您对本网站的相关版权有任何异议或认为侵犯了您的合法权益，请及时与我们联系。
+		</p>
+	</div>
+</div>
+
+<div class="link">
+	<h4 class="text-center">友情链接</h4>
+	<ul class="clearfix">
+		<volist name="friend_link" id="vo">
+			<li><a href="{$vo.link_url}" target="_blank">{$vo.link_name}</a></li>
+		</volist>
+	</ul>
+</div>
+<div class="footer text-center">
+	<div class="footer-link">
+		<a href="{:U('Public/contact')}">关于我们</a>
+		<a href="{:U('Public/contact')}">联系我们 </a>
+		<a href="#">在线客服</a>
+		<a href="#" style="border: 0;">加入我们</a>
+	</div>
+	<p>Copyright © 2016 All Rights Reserved 深圳市珠宝职业学院 版权所有 </p>
+	<p>粤ICP备 15050282号 www.shenzhen.cn</p>
+</div>
+<div class="glyphicon glyphicon-chevron-up go-up"></div>
+<script src="__JS__bootstrap.min.js"></script>
+<script src="/Public/js/layer/layer.js"></script>
+<!--
+<script>
+(function($){
+		var url = document.location.href;
+		if(url.search("id") === (-1)){
+			$("#navigation").find("li").eq(0).addClass("active").siblings("li").removeClass("active");
+		}else{
+			var newstr = url.slice(url.search("id"));
+			switch (Number(newstr.slice(3))){
+				case 1:
+					$(".navigation").find("li").eq(1).addClass("active").siblings("li").removeClass("active");
+				break;
+				case 2:
+					$(".navigation").find("li").eq(2).addClass("active").siblings("li").removeClass("active");
+				break;
+				case 12:
+					$(".navigation").find("li").eq(3).addClass("active").siblings("li").removeClass("active");
+				break;
+				case 16:
+					$(".navigation").find("li").eq(4).addClass("active").siblings("li").removeClass("active");
+				break;
+				case 19:
+					$(".navigation").find("li").eq(5).addClass("active").siblings("li").removeClass("active");
+				break;
+			};
+		};
+	})(jQuery);
+</script>
+-->

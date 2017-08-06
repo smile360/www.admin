@@ -1,0 +1,9 @@
+
+<div class="eval-cen-ri fr pa-to-17 pa-ri-25 te-al-ri di-bl"></div>
+<script>
+    // 点击分页触发的事件
+    $("#ajax_comment_return .pagination  a").click(function(){
+        cur_page = $(this).data('p');
+        ajaxComment(commentType,cur_page);
+    });
+</script>

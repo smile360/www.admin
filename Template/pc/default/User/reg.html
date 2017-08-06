@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>新三版指南-注册</title>
+		<link href="__PUBLIC__/new/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/new/css/css.css" />
+	</head>
+
+	<body class="login-bg">
+		<div class="container">
+			<form action="{:U('User/reg')}" method="post" class="login reg-page" onsubmit="return check(this)">
+				<h1 class="color-66 font-30 text-center">创建新用户</h1>
+				<p><input type="text" name="username" id="username" placeholder="用户名" /></p>
+				<p><input type="text" name="email" id="email" placeholder="电子邮箱" /></p>
+				<p><input type="password" name="password" id="password" placeholder="密码" /></p>
+				<p>
+					<input type="text" name="code" id="code" placeholder="不区分大小写" class="yz" />
+					<img class="po-ab to0" width="140" height="50" id="reflsh_code2"  src="/index.php?m=Home&c=User&a=verify&type=user_reg" /> 
+					<!-- <img src="__PUBLIC__/new/img/edit.png" alt="验证码" onClick="verify('reflsh_code2')" />  -->
+					<span class="glyphicon glyphicon-refresh" onClick="verify('reflsh_code2')"></span>
+				</p>
+				<div class="checkbox color-99">
+					<label>
+					<!-- <input type="checkbox"> 记住我 -->
+					</label>
+					<label class="pull-right"><a class="color-99" href="">忘记密码？</a></label>
+				</div>
+				<button type="submit" class="btn btn-lg btn-block">创建新账户</button>
+				<a href="<?php echo 'http://www.newspost.cn/index.php?m=Home&c=Wechat&a=WechatAuth&type=pc&id='.session_id(); ?>" id="weixin" class="weixin">
+					<!-- <div class="popover fade top in" id="popover" style="top: 121px;left:40px;">
+						<div class="arrow" style="left: 50%;"></div>
+						<div class="popover-content" id="popover-content"></div>
+					</div> -->
+				</a>				
+				<p class="question text-center color-99">还没有账号?
+					<a class="color-f0" href="{:U('User/reg')}">立即创建</a>
+				</p>
+				<p class="question text-center color-99">遇到问题?
+					<a class="color-f0" href="">联系我们</a>
+				</p>
+			</form>
+		</div>
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="__PUBLIC__/new/js/bootstrap.min.js"></script>
+		<!-- <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script> -->
+		<script type="text/javascript">
+			// var obj = new WxLogin({
+			// 		id:"popover-content", 
+			// 		appid: "wxc813a99038218b1e", 
+			// 		scope: "snsapi_login", 
+			// 		redirect_uri: "{$login_url}",
+			// 		state: "",
+			// 		style: "black",
+			// 		href: "新三版指南"
+			// 	});
+			// 普通 图形验证码 
+		    function verify(id){
+		        $('#'+id).attr('src','/index.php?m=Home&c=User&a=verify&type=user_reg&r='+Math.random());
+		    }
+			function check() {
+				var uname = $("#username").val();
+				var email = $("#email").val();
+				var psd = $("#password").val();
+				var code = $("#code").val();
+				if(uname == "") {
+					alert("用户名不能为空");
+					$('#username').focus();
+					return false;
+				}
+				if(email == "") {
+					alert("电子邮件不能为空");
+					$('#email').focus();
+					return false;
+				}
+
+				if(!/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.test(email)) {
+					alert("电子邮件输入不正确");
+					$('#email').focus();
+					return false;
+				}
+
+				if(psd == "") {
+					alert("密码不能为空");
+					$('#password').focus();
+					return false;
+				}
+				if(code == "") {
+					alert("验证码不能为空");
+					$('#code').focus();
+					return false;
+				}
+			}
+		</script>
+	</body>
+
+</html>

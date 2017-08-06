@@ -1,0 +1,54 @@
+[ 2017-08-01T05:42:35+08:00 ] 140.205.201.14 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-01T05:42:37+08:00 ] 140.205.201.16 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+
+[ 2017-08-01T07:24:50+08:00 ] 202.108.211.56 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`parent_cat_id`,`logo`,`is_hot` FROM `tp_brand` WHERE ( parent_cat_id>0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0003s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_friend_link` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_friend_link` WHERE `is_show` = 1 ORDER BY orderby desc  [ RunTime:0.0001s ]
+

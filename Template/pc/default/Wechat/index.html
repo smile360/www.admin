@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+	</head>
+	<body>
+		<button id="send">发送</button>
+		<div id="login_container"></div>
+		<script type="text/javascript">
+			$(function (){
+				var obj = new WxLogin({
+                              id:"login_container", 
+                              appid: "login_container", 
+                              appid: "wxcc3c1a38fbfe37b0", 
+                              scope: "snsapi_login", 
+                              redirect_uri: encodeURIComponent("http://" + window.location.host + "/login.php"),
+                              state: "",
+                              style: "black",
+                              href: ""
+                            });
+				 console.log(obj);
+			});
+		</script>
+	</body>
+</html>

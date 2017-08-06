@@ -1,0 +1,35 @@
+<include file="Public/nav" />
+		<div class="mui-content-padded reply">
+			<div class="mui-input-row">
+				<textarea id="question" placeholder="请输入评论内容"></textarea>
+			</div>
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="submit">提交</button>
+		</div>
+		<script type="text/javascript">
+			document.title="活动评论"; 
+			var question = document.getElementById("question");
+			document.getElementById("submit").addEventListener("tap", function() {
+				if(question.value == "") {
+					mui.toast("评论不能为空");
+					return false;
+				}
+				mui.post("{:U('Activity/comment')}", {
+					question: question.value,
+					activity_id:"{$activity_id}",
+				}, function(data) {
+					if(data == 200) {
+						mui.toast("评论成功");
+						setTimeout(function() {
+							location.href = "{:U('Activity/detail')}?activity_id="+{$activity_id};
+							return false;
+						}, 1000);
+						// window.location.href="{:U('Activity/detail')}?activity_id="+{$activity_id};
+						// location.reload();
+					} else {
+						mui.toast("评论失败，请稍后重试");
+					}
+				});
+			})
+		</script>
+
+</html>

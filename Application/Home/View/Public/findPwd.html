@@ -1,0 +1,113 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container sign reg" style="margin-bottom: 290px;">
+			<h2>忘记密码</h2>
+			<form>
+				<div class="info clearfix">
+					<span class="pull-left">手机号</span>
+					<input id="phone" type="text"  onkeyup="if(!/^\d+$/.test(this.value)) {layer.msg('只能输入数字'); this.value=this.value.replace(/[^\d]+/g,'');}" class="pull-left">
+				</div>
+				<div class="info clearfix">
+					<span class="pull-left">验证码</span>
+					<input id="code" type="text" class="pull-left code">
+					<button type="button" id="get-code" class="get-code pull-left">获取手机验证码</button>
+				</div>
+				<button type="button" class="btn btn-default">验证</button>
+			</form>
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					layer.msg("请输入搜索关键字");
+					return false;
+				}
+			}
+			$("#get-code").click(function() {				
+				var phone = $("#phone").val();
+				var myreg = /^1[3|4|5|7|8]\d{9}$/;
+				if(!myreg.test(phone)) {
+					layer.msg('手机号格式不正确！');
+					return false;
+				}
+				$.ajax({
+				  	url: "{:U('Api/SendCode')}",  
+		          	cache:false,
+		          	type: "post",	         
+		          	dataType:'json',	         
+		          	data: {phone: phone},
+		          	success:function(data){
+		          		if(data.msg == 200) {
+							time();
+							layer.msg("短信发送成功");
+							return false;
+						}else {
+							layer.msg(data.msg);
+							return false;
+						}
+		          	}		           		                
+		    	});	
+			})
+			//验证请求
+			$(".btn").bind("click",function(){
+				var Obj = $(this);
+				var phone = $("#phone").val();
+				var code = $("#code").val();
+				var myreg = /^1[3|4|5|7|8]\d{9}$/;
+				if(!myreg.test(phone)) {
+					layer.msg('手机号格式不正确！');
+					return false;
+				}
+				if(code == "") {
+					layer.msg("验证码不能为空");
+					return false;
+				}
+				$(this).attr('disabled',"true");
+				$(this).text("正在验证...");
+				$.ajax({
+				  	url: "{:U('Api/codeVerify')}",  
+		          	cache:false,
+		          	type: "post",	         
+		          	dataType:'json',	         
+		          	data: { phone:phone , code:code ,findpwd:'findpwd'},
+		          	success:function(data){
+		          		if(data.msg == 200) {
+		          			$(Obj).removeAttr('disabled');
+							layer.msg("验证成功！");
+							setTimeout(function() {
+								window.location.href="{:U('Public/resetPwd')}?r="+Math.random();
+							}, 1500)
+						}else {
+							$(Obj).removeAttr('disabled');
+							$(Obj).text("验证");
+							layer.msg(data.msg);
+							return false;
+						}
+		          	}		           		                
+		    	});
+			})
+			var wait = 60;
+			var sendcode = $("#get-code");
+			function time() {
+				if(wait == 0) {
+					sendcode.attr('disabled',false);
+					sendcode.html("获取手机验证码");
+					wait = 60;
+				} else {
+					sendcode.attr('disabled',true);
+					sendcode.html(wait + "S");
+					wait--;
+					setTimeout(function() {
+						time()
+					}, 1000)
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

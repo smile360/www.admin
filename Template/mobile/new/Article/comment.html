@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>回复</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/app.css" />
+	</head>
+
+	<body>
+		<div class="mui-content-padded reply">
+			<div class="mui-input-row">
+				<textarea id="question" placeholder="请输入评论内容"></textarea>
+			</div>
+			<input type="hidden" id="article_id" value="{$article_id}">
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="submit">提交</button>
+		</div>
+		<script src="__PUBLIC__/mobile/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var question = document.getElementById("question");
+			var article_id = document.getElementById("article_id");
+			document.getElementById("submit").addEventListener("tap", function() {
+				if(question.value == "") {
+					mui.toast("评论不能为空");
+					return false;
+				}
+				mui.post("{:U('Article/addComment')}", {
+					question: question.value,
+					article_id: article_id.value,
+				}, function(data) {
+					console.log(data);
+					if(data.status == 1) {
+						mui.toast("评论成功");
+						setTimeout(function(){
+						history.go(-1);
+						location.reload();
+					     },2000);
+					} else {
+						mui.toast("评论失败，请稍后重试");
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

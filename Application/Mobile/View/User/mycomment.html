@@ -1,0 +1,179 @@
+<title>我的评论</title>
+<include file="Public/nav" />
+		<div class="mui-content consult">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control-inverted mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						咨询评论
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						文章评论
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						活动评论
+					</a>
+				</div>
+				<div class="mui-slider-group my-comment">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view comments" style="margin-top: 10px;">
+									<empty name="data">
+										<div style="background:#fff;text-align:center;height:50px;line-height:50px;">
+											<p>暂时无相关评论</p>
+										</div>	
+									<else/>
+										<volist	name="data" id="vo">
+											<li class="mui-table-view-cell mui-media mui-active">
+												<img class="mui-media-object mui-pull-left" src="{$vo.head_pic|default='__IMG__pl_head.png'}">
+												<div class="mui-media-body">
+													<div class="username">{$vo.nickname}</div>
+													<div class="mui-table">
+														<div class="mui-table-cell">{$vo.time}</div>
+														<!-- <div class="mui-table-cell mui-text-right comments-input" data-name="睡觉的猫">回复</div> -->
+													</div>
+													<p class="comments-c">{$vo.comment}</p>
+													<div class="replay">
+														<p>{$vo.title}</p>
+														<p class="replay-c"><span>{$vo.detail}</span></p>
+													</div>
+												</div>
+											</li>
+										</volist>
+									</empty>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view comments" style="margin-top: 10px;">
+									<empty name="data_a">
+										<div style="background:#fff;text-align:center;height:50px;line-height:50px;">
+											<p>暂时无相关评论</p>
+										</div>	
+									<else/>
+										<volist	name="data_a" id="vo">
+											<li class="mui-table-view-cell mui-media mui-active">
+												<img class="mui-media-object mui-pull-left" src="{$vo.head_pic|default='__IMG__pl_head.png'}">
+												<div class="mui-media-body">
+													<div class="username">{$vo.nickname}</div>
+													<div class="mui-table">
+														<div class="mui-table-cell">{$vo.time}</div>
+														<!-- <div class="mui-table-cell mui-text-right comments-input" data-name="睡觉的猫">回复</div> -->
+													</div>
+													<p class="comments-c">{$vo.comment}</p>
+													<div class="replay">
+														<p>{$vo.title}</p>
+														<p class="replay-c"><span>{$vo.detail}</span></p>
+													</div>
+												</div>
+											</li>
+										</volist>
+									</empty>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view comments" style="margin-top: 10px;">
+									<empty name="data_b">
+									<div style="background:#fff;text-align:center;height:50px;line-height:50px;">
+											<p>暂时无相关评论</p>
+										</div
+									<else/>
+										<volist	name="data_b" id="vo">
+											<li class="mui-table-view-cell mui-media mui-active">
+												<img class="mui-media-object mui-pull-left" src="{$vo.head_pic|default='__IMG__pl_head.png'}">
+												<div class="mui-media-body">
+													<div class="username">{$vo.nickname}</div>
+													<div class="mui-table">
+														<div class="mui-table-cell">{$vo.time}</div>
+														<!-- <div class="mui-table-cell mui-text-right comments-input" data-name="睡觉的猫">回复</div> -->
+													</div>
+													<p class="comments-c">{$vo.comment}</p>
+													<div class="replay">
+														<p>{$vo.title}</p>
+														<p class="replay-c"><span>{$vo.detail}</span></p>
+													</div>
+												</div>
+											</li>
+										</volist>
+									</empty>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script src="__JS__mui.pullToRefresh.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+				var deceleration = mui.os.ios ? 0.003 : 0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration: deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有上拉加载
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						var count = 0;
+						$(pullRefreshEl).pullToRefresh({
+							up: {
+								callback: function() {
+									var self = this;
+									isnodata = false;
+									setTimeout(function() {
+									var ul = self.element.querySelector('.comments');
+									var length = ul.querySelectorAll('li').length;
+										mui.ajax("{:U('ajaxComment')}", {
+											data: {
+												start: length,
+												type: index,
+											},
+											dataType: 'json',
+											type: 'get',
+											timeout: 10000,
+											async: true,
+											success: function(data) {
+												var Html = "";
+												if(data.code == 200) {
+													mui.each(data.result, function(i, item) {
+														Html += '<li class="mui-table-view-cell mui-media mui-active">';
+														Html += '<img class="mui-media-object mui-pull-left" src="'+item.head_pic+'">'
+														Html +=	'<div class="mui-media-body">'
+														Html += '<div class="username">'+item.nickname+'</div>'
+														Html += '<div class="mui-table">'
+														Html += '<div class="mui-table-cell">'+item.time+'</div></div>'
+														Html += '<p class="comments-c">'+item.comment+'</p>'
+														Html += '<div class="replay">'
+														Html += '<p>{$vo.title}</p>'
+														Html += '<p class="replay-c"><span>'+item.detail+'</span></p>'
+														Html += '</div></div></li>'	
+													});
+													ul.insertAdjacentHTML('beforeend', Html);
+												}else{
+												  isnodata = true;
+												}
+												self.endPullUpToRefresh(isnodata);
+											}
+										})										
+									}, 1000);
+								}
+							}
+						});
+					});
+
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>

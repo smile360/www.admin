@@ -1,0 +1,82 @@
+<title>系统消息</title>
+<include file="Public/nav" />
+		<div class="mui-content market-msg mui-scroll-wrapper" id="pullrefresh">
+			<div class="mui-scroll">
+				<ul class="system-msg">
+					<empty name="data">
+					<div style="background:#fff;text-align:center;height:50px;line-height:50px;">
+						<p>暂时无相关系统信息！</p>
+					</div>	
+					<else /> 
+						<volist name="data" id="vo">
+							<li class="mui-media ">
+								<a href="#">
+									<p class="title"><if condition="$vo.category eq '0'">系统消息<else/>系统提示信息</if></p>
+									<div class="mui-media-body msg-body">
+										<p class="cont">{$vo.message}
+										</p>
+									</div>
+									<div class="mui-table price">
+										<div class="mui-table-cell mui-navigate-right">{$vo.send_time}</div>
+									</div>
+								</a>
+							</li>
+						</volist>
+					</empty> 
+				</ul>
+
+			</div>
+		</div>
+		<script>
+			//上拉加载
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh(hasMore);
+					var table = document.body.querySelector('.system-msg');
+					var cells = document.body.querySelectorAll('.system-msg li').length;
+					mui.ajax("{:U('mymessages')}", {
+						data: {
+							start: cells,
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							var Html = " ";
+							if(data.code == 200) {
+								mui.each(data.result, function(i, item) {
+									var _msg = item.category == '0' ? '系统消息':'系统提示消息';
+									Html += '<li class="mui-media ">';
+									Html += '<a href="#">';
+									Html += '<p class="title">'+_msg+'</p>';
+									Html += '<div class="mui-media-body msg-body">';
+									Html += '<p class="cont">'+item.message+'</p>';
+									Html += '</div>';
+									Html += '<div class="mui-table price">';
+									Html += '<div class="mui-table-cell mui-navigate-right">'+item.send_time+'</div>';
+									Html += '</div>';
+									Html += '</a>';
+									Html += '</li>';
+									table.insertAdjacentHTML('beforeend', Html);
+								});
+							} else {
+								hasMore = true;
+							}
+						}
+					})
+				}, 1500);
+			}
+		</script>
+</html>

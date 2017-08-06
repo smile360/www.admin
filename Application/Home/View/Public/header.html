@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>枫</title>
+		<link rel="stylesheet" type="text/css" href="__CSS__bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-right">
+						
+				</div>
+			</div>
+		</div>
+
+		<div class="logo">
+			<div class="container">
+				<div class="pull-left">
+					<a href="/"><img src="__IMG__logo.png" alt="logo" /></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="container">
+				<ul class="menu-list">
+					<!-- <li>
+						<a href="/">首页</a>
+					</li>
+					<li>
+						<a href="{:U('Goods/mall')}">珠宝商城</a>
+					</li>
+					<li>
+						<a href="consult_result.html">咨询结果</a>
+					</li>
+					<li>
+						<a href="{:U('Article/news')}">最新动态</a>
+					</li>
+					<li>
+						<a href="{:U('Article/college')}">珠宝学院</a>
+					</li>
+					<li>
+						<a href="{:U('Article/classmate')}">胡博士同学会</a>
+					</li>
+					<li>
+						<a href="{:U('activity/index')}">珠宝培训</a>
+					</li>
+					<li>
+						<a href="{:U('Article/expert')}">专家专栏</a>
+					</li>
+					<li>
+						<a href="{:U('Article/baike')}">珠宝百科</a>
+					</li>
+					<li>
+						<a href="{:U('Article/standard')}">国家标准</a>
+					</li> -->
+					<volist name="nav" id="vo">
+						<empty name="vo.id">
+							<li>
+								<a href="<?php echo U($vo['action']); ?>">{$vo.name}</a>
+							</li>
+						<else />
+							<li>
+								<a href="<?php echo U($vo['action'],'cat_id='.$vo['id']); ?>">{$vo.name}</a>
+							</li>
+						</empty> 
+					</volist>
+				</ul>
+			</div>
+		</div>

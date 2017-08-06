@@ -1,0 +1,72 @@
+<include file="Public/header" />
+		<div class="container sign login">
+			<h2>登陆</h2>
+			<form>
+				<div class="info clearfix">
+					<span class="pull-left">手机号</span>
+					<input type="text" name="username" id="username" class="pull-left" placeholder="请输入手机号">
+				</div>
+				<div class="info clearfix">
+					<span class="pull-left">密　码</span>
+					<input type="password" name="password" id="password" class="pull-left" placeholder="请输入密码">
+				</div>
+				<p class="text-right">
+					<a href="{:U('User/reg')}">注册</a>　　
+					<a href="{:U('Public/findPwd')}">忘记密码</a>
+				</p>
+				<button type="button" id="submit" class="btn btn-default" onClick="checkSubmit()">登陆</button>
+				<a href="<?php echo 'http://www.zbzixun.com/Home/Wechat/WechatAuth?type=pc&id='.session_id();?>" id="weixin" class="weixin" ></a>
+				<input type="hidden" name="referurl" id="referurl" value="{$referurl}">
+			</form>
+		</div>
+		<include file="Public/footer" />
+
+		<script>
+			// $('#weixin').popover({
+			// 	trigger: 'hover',
+			// 	html: true,
+			// })
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+			function checkSubmit(){
+				var username = $("#username").val();
+		        var password = $("#password").val();
+		        if(!(/^1[34578]\d{9}$/.test(username))){ 
+			        alert("手机号码有误，请重填");  
+			        return false; 
+			    }
+		        if(username=="" || password==""){
+		          alert("手机或密码不能为空");
+		          return false;
+		        }
+		        var referurl = $('#referurl').val();
+		        $.ajax({
+		          type : 'post',
+		          url : "{:U('User/do_login')}?t="+Math.random(),
+		          data : {username:username,password:password,referurl:referurl},
+		          dataType : 'json',
+		          success : function(res){
+		            if(res.status == 1){
+		              window.location.href = res.url;
+		            }else{
+		              alert(res.msg);
+		            }
+		          },
+		          	error : function(XMLHttpRequest, textStatus, errorThrown) {
+		           		alert('网络失败，请刷新页面后重试');
+		          	}
+		        })
+
+			}
+			
+			
+		</script>
+
+	</body>
+
+</html>

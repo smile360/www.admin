@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>新三板</title>
+        <link href="__PUBLIC__/newsmedia/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/newsmedia/css/css.css" />
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="" class="wx">微信</a>
+<!--                     <a href="">微博</a> -->
+                </div>
+                <div class="pull-right">
+                    <notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="/index.php?m=Home&c=User&a=logout">退出</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="{:U('User/login')}">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    </notempty>
+                </div>
+            </div>
+        </div>
+<block name="content">    
+        <div class="menu">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="/"><img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" /></a>
+                </div>
+                <ul class="menu-list pull-left">
+                    <li>
+                        <a href="{:U('home/index/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">阅读 v</a>
+                        <div class="popover fade bottom in" role="tooltip" id="popover232455" style="top:72px; left: -38px;">
+                            <div class="arrow" style="left: 50%;"></div>
+                            <div class="popover-content">
+                                <?php foreach ($one as $v): ?>
+                                    <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                                <?php endforeach ?>
+                                <!-- <a href="">快讯</a>
+                                <a href="">涨停榜</a>
+                                <a href="">精华榜</a>
+                                <a href="">实时内情</a> -->
+                            </div>
+                        </div>
+
+                    </li>
+                    <?php foreach ($twotwo as $v): ?>
+                        <li>
+                            <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                        </li>
+                    <?php endforeach ?>
+                    <!-- <li>
+                        <a href="list.html">新声TV</a>
+                    </li>
+                    <li>
+                        <a href="list.html">三板客</a>
+                    </li> -->
+                    <li>
+                        <a href="{:U('Activity/index')}">活动</a>
+                    </li>
+                </ul>
+                <form class="search pull-right" action="{:U('Home/Article/search')}" method="post" onsubmit="return checkseach(this)">
+                    <button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+                </form>
+            </div>
+        </div>
+    
+
+        <div class="index">
+            <div class="i-banner clearfix">
+                <div class="i-banner-l">
+                    <img src="__PUBLIC__/newsmedia/img/static_banner.jpg" />
+                </div>
+                <div class="i-banner-r">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators" style="text-align: right;width: 65%;">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="__PUBLIC__/newsmedia/img/roll_banner.jpg" alt="banner">
+                            </div>
+                            <div class="item">
+                                <img src="__PUBLIC__/newsmedia/img/roll_banner.jpg" alt="banner">
+                            </div>
+                            <div class="item">
+                                <img src="__PUBLIC__/newsmedia/img/roll_banner.jpg" alt="banner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="three-type clearfix">
+                    <?php foreach ($threeinfoRes as $v): ?>
+                        <div class="tv">
+                        <h4 class="color-f0 i1">{$v['cat_id']|getCateName}</h4>
+                        <h3><a href="{:U('Home/Article/detail',array('article_id'=>$v['article_id']))}" class="color-66">{$v['title']}</a></h3>
+                        <p>
+                            <a href="{:U('Home/Article/detail',array('article_id'=>$v['article_id']))}">{$v['description']}</a>
+                        </p>
+                        <span><i class="color-f0">{$v['author']|default="小雅"}</i>　{$v['publish_time']|date="Y-m-d",###}</span>
+                        </div>
+                    <?php endforeach ?>
+                    <!-- <div class="tv">
+                        <h4 class="color-f0 i1">新声TV</h4>
+                        <h3><a href="" class="color-66">大数据时代来临</a></h3>
+                        <p>
+                            <a href="">车车仅靠在网上卖车险，就能成为“中国式共 享经济”样本吗？</a>
+                        </p>
+                        <span><i class="color-f0">小雅</i>　2015-07-10 18:08</span>
+                    </div>
+                    <div class="tv">
+                        <h4 class="color-f0 i2">深度</h4>
+                        <h3 class="color-66"><a href="" class="color-66">大数据时代来临</a></h3>
+                        <p>
+                            <a href="">车车仅靠在网上卖车险，就能成为“中国式共 享经济”样本吗？</a>
+                        </p>
+                        <span><i class="color-f0">小雅</i>　2015-07-10 18:08</span>
+                    </div>
+                    <div class="tv">
+                        <h4 class="color-f0 i3">三板客</h4>
+                        <h3 class="color-66"><a href="" class="color-66">大数据时代来临</a></h3>
+                        <p>
+                            <a href="">车车仅靠在网上卖车险，就能成为“中国式共 享经济”样本吗？</a>
+                        </p>
+                        <span><i class="color-f0">小雅</i>　2015-07-10 18:08</span>
+                    </div> -->
+
+                </div>
+
+                <div class="index-left personer pull-left">
+                    <section class="list">
+                        <ul class="list-type" id="myTab">
+                            <!-- <li class="active">
+                                <a href="#all" data-toggle="tab">全部</a>
+                            </li> -->
+                            <?php foreach ($daoeightinfoRes as $k => $v): ?>
+                                <if condition="$k eq 0 ">
+                                    <li class="active">
+                                <else /> 
+                                    <li>
+                                </if>
+                                
+                                    <a href="#{$v['cat_id']}" data-toggle="tab">{$v['cat_id']|getCateName}</a>
+                                </li>
+                            <?php endforeach ?>
+                            <!-- <li class="active">
+                                <a href="#all" data-toggle="tab">全部</a>
+                            </li>
+                            <li>
+                                <a href="#tv" data-toggle="tab">新声TV</a>
+                            </li>
+                            <li>
+                                <a href="#company" data-toggle="tab">酷公司</a>
+                            </li>
+                            <li>
+                                <a href="#ceo" data-toggle="tab">CEO新声</a>
+                            </li>
+                            <li>
+                                <a href="#inter" data-toggle="tab">互联网金融</a>
+                            </li>
+                            <li>
+                                <a href="#oto" data-toggle="tab">O2O智能硬件</a>
+                            </li>
+                            <li>
+                                <a href="#cytz" data-toggle="tab">创业投资</a>
+                            </li> -->
+                        </ul>
+                        <div class="list-list tab-content">
+                            <!-- <div class="tab-pane " id="all">
+                                <a class="media clearfix">
+                                    <div class="media-body pull-left">
+                                        <h4 class="media-heading color-4b">{$lastAticle['title']}</h4>
+                                        <p class="color-a3">{$lastAticle['description']}</p>
+                                        <div class="article-bottom">
+                                            <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>{$lastAticle['cat_id']|getCateName}</span>
+                                            <ul class="pull-right">
+                                                <li>{$lastAticle['publish_time']|date="Y-m-d",###}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="{$lastAticle['thumb']}" class="pull-right" width="230px">
+                                </a>
+                                <div class="pager">
+                                    <a class="more-content" href="{:U('Home/Article/articleList')}">更多有趣内容</a>
+                                </div>
+                            </div> -->
+                            <?php foreach ($daoeightinfoRes as $k => $v): ?>
+                                <if condition="$k eq 0 ">
+                                    <div class="tab-pane active" id="{$v['cat_id']}">
+                                <else /> 
+                                    <div class="tab-pane " id="{$v['cat_id']}">
+                                </if>
+                                <!-- <div class="tab-pane active" id="{$v['cat_id']}"> -->
+                                    <a class="media clearfix" href="{:U('Home/Article/detail',array('article_id'=>$v['article_id']))}">
+                                        <div class="media-body pull-left">
+                                            <h4 class="media-heading color-4b">{$v['title']}</h4>
+                                            <p class="color-a3">{$v['description']}</p>
+                                            <div class="article-bottom">
+                                                <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>{$v['cat_id']|getCateName}</span>
+                                                <ul class="pull-right">
+                                                    <li>{$v['add_time']|date="Y-m-d",###}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <img src="{$v['thumb']|default='__PUBLIC__/newsmedia/img/list.jpg'}" class="pull-right" width="210px" height="210px">
+                                    </a>
+                                    <div class="pager">
+                                        <a class="more-content" href="{:U('Home/Article/articleList')}">更多有趣内容</a>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <!-- <div class="tab-pane" id="tv">
+                                <a class="media clearfix">
+                                    <div class="media-body pull-left">
+                                        <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                        <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                        <div class="article-bottom">
+                                            <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>栏目名称2</span>
+                                            <ul class="pull-right">
+                                                <li>2016/10/10</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right">
+                                </a>
+                                <div class="pager">
+                                    <a class="more-content" href="{:U('Home/Article/articleList')}">更多有趣内容</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="tab-pane" id="company">
+                                <a class="media clearfix">
+                                    <div class="media-body pull-left">
+                                        <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                        <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                        <div class="article-bottom">
+                                            <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>栏目名称3</span>
+                                            <ul class="pull-right">
+                                                <li>2016/10/10</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right">
+                                </a>
+                                <div class="pager">
+                                    <a class="more-content" href="">更多有趣内容</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="tab-pane" id="ceo">
+                                <a class="media clearfix">
+                                    <div class="media-body pull-left">
+                                        <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                        <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                        <div class="article-bottom">
+                                            <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>栏目名称4</span>
+                                            <ul class="pull-right">
+                                                <li>2016/10/10</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right">
+                                </a>
+                                <div class="pager">
+                                    <a class="more-content" href="">更多有趣内容</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="tab-pane" id="inter">
+                                <a class="media clearfix">
+                                    <div class="media-body pull-left">
+                                        <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                        <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                        <div class="article-bottom">
+                                            <span class="pull-left"><img src="__PUBLIC__/newsmedia/img/arr.png" alt="栏目" style="margin-right: 13px;"/>栏目名称5</span>
+                                            <ul class="pull-right">
+                                                <li>2016/10/10</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right">
+                                </a>
+                                <div class="pager">
+                                    <a class="more-content" href="">更多有趣内容</a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </section>
+
+                </div>
+                <div class="index-right pull-right">
+                    <div class="title">
+                        <a><img src="__PUBLIC__/newsmedia/img/i4.png" alt="热词" /> &nbsp;热词</a>
+                    </div>
+                    <div class="hot-word">
+                        <?php foreach ($hotwords as $v): ?>
+                            <a href="{$v['link']}">{$v['company']}</a>
+                        <?php endforeach ?>
+                        <!-- <a href="">新公司</a>
+                        <a href="">新公司</a>
+                        <a href="">新公司</a>
+                        <a href="">新公司</a>
+                        <a href="">新公司</a>
+                        <a href="">新公司</a> -->
+                    </div>
+                    <div class="title">
+                        <a><img src="__PUBLIC__/newsmedia/img/i5.png" alt="热词" /> &nbsp;48小时热文</a>
+                    </div>
+                    <div class="hot-article">
+                        <?php foreach ($lastAticleFour as $k => $v): ?>
+                            <p>
+                                <a class="color-f0" href="{:U('Home/Article/detail',array('article_id'=>$v['article_id']))}">{$k+1}.{$v['title']}</a>
+                            </p>
+                        <?php endforeach ?>
+                        <!-- <p>
+                            <a class="color-f0" href="">1.一个中国县城的全民电商实验</a>
+                        </p>
+                        <p>
+                            <a class="color-f0" href="">2.一个中国县城的全民电商实验</a>
+                        </p>
+                        <p>
+                            <a class="color-f0" href="">3.一个中国县城的全民电商实验</a>
+                        </p>
+                        <p>
+                            <a href="">4.一个中国县城的全民电商实验</a>
+                        </p> -->
+
+                    </div>
+                    <!-- <div class="title">
+                        <a><img src="__PUBLIC__/newsmedia/img/i6.png" alt="热词" /> &nbsp;三板客</a>
+                    </div>
+                    <div class="sbk">
+
+                        <div class="media">
+                            <a class="media-left">
+                                <img class="media-object" src="__PUBLIC__/newsmedia/img/i7.png" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading color-f0">张三</h4>
+                                <p>第一部很不错，但是口味不符合大众而已</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a class="media-left">
+                                <img class="media-object" src="__PUBLIC__/newsmedia/img/i7.png" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading color-f0">张三</h4>
+                                <p>第一部很不错，但是口味不符合大众而已</p>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <div class="footer-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <img src="__PUBLIC__/newsmedia/img/f_logo.png" alt="logo" />
+                    </div>
+                    <ul class="text-center">
+                        <li>
+                            <a href="">关于新声</a>
+                        </li>
+                        <li>
+                            <a href="">广告合作</a>
+                        </li>
+                        <li>
+                            <a href="">创业求报道</a>
+                        </li>
+                        <li>
+                            <a href="">移动客户端</a>
+                        </li>
+                        <li>
+                            <a href="">帮助</a>
+                        </li>
+                        <li>
+                            <a href="">RSS订阅</a>
+                        </li>
+                        <li>
+                            <a href="">邮件订阅</a>
+                        </li>
+                        <li>
+                            <a href="">意见与建议</a>
+                        </li>
+                        <li>
+                            <a href="">友情链接</a>
+                        </li>
+                    </ul>
+                    <p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+                </div>
+            </div>
+            <div class="footer-link text-center">
+                <a>合作伙伴：</a>
+                <a href="">平安信托</a>
+                <a href="">招商银行 </a>
+                <a href="">深媒会</a>
+                <a href="">平安银行</a>
+                <a href="">凤凰金融</a>
+            </div>
+        </div>
+        
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(function() {
+                $('#myTab a:first').tab('show')
+            })
+
+            function checkseach() {
+                var seach = $("#seach").val();
+                if(seach == "") {
+                    alert("请输入搜索关键字");
+                    return false;
+                }
+
+            }
+        </script>
+
+    </body>
+
+</html>
+</block>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>新三板</title>
+        <link href="__PUBLIC__/newsmedia/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/newsmedia/css/css.css" />
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="" class="wx">微信</a>
+<!--                     <a href="">微博</a> -->
+                </div>
+                <div class="pull-right">
+                    <notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="/index.php?m=Home&c=User&a=logout">退出</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="{:U('User/login')}">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="{:U('Article/write')}" class="wr text-center">写稿</a>
+                    </notempty>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="logo pull-left">
+                    <a href="/"><img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" /></a>
+                </div>
+                <ul class="menu-list pull-left">
+                    <li>
+                        <a href="{:U('home/index/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">阅读 v</a>
+                        <div class="popover fade bottom in" role="tooltip" id="popover232455" style="top:72px; left: -38px;">
+                            <div class="arrow" style="left: 50%;"></div>
+                            <div class="popover-content">
+                                <?php foreach ($one as $v): ?>
+                                    <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                                <?php endforeach ?>
+                            </div>
+                        </div>
+
+                    </li>
+                    <?php foreach ($twotwo as $v): ?>
+                        <li>
+                            <a href="{:U('Home/Article/articleList',array('cat_id'=>$v['cat_id']))}">{$v['cat_name']}</a>
+                        </li>
+                    <?php endforeach ?>
+                    <li>
+                        <a href="{:U('Activity/index')}">活动</a>
+                    </li>
+                </ul>
+                <form class="search pull-right" action="{:U('index/aaa')}" method="post" onsubmit="return checkseach(this)">
+                    <button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+                </form>
+            </div>
+        </div>
+
+        <div class="personer tv-list">
+            <section class="list last-avtivity">
+                <div class="container">
+                    <div class="list-list tab-content">
+                        <?php foreach ($info as $v): ?>
+                            <a href="{:U('Home/Article/detail',array('article_id'=>$v['article_id']))}" class="media clearfix">
+                                <div class="media-body pull-left">
+                                    <h4 class="media-heading color-4b">{$v['title']}</h4>
+                                    <p class="color-a3">{$v['description']}</p>
+                                    <div class="article-bottom">
+                                        <ul class="pull-right">
+                                            <li>阅读（{$v['click']}）</li>
+                                            <li>评论（{$v['commentNum']}）</li>
+                                            <li>{$v['add_time']|date="Y-m-d",###}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img src="{$v['thumb']|default='__PUBLIC__/newsmedia/img/list.jpg'}" class="pull-right" alt="文章" width='210px' height="210px"/>
+                            </a>
+                        <?php endforeach ?>
+                        <!-- <a href="article.html" class="media clearfix">
+                            <div class="media-body pull-left">
+                                <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                <div class="article-bottom">
+                                    <ul class="pull-right">
+                                        <li>阅读（2458）</li>
+                                        <li>评论（2458）</li>
+                                        <li>2016/10/10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right" alt="文章" />
+                        </a>
+                        <a href="article.html" class="media clearfix">
+                            <div class="media-body pull-left">
+                                <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                <div class="article-bottom">
+                                    <ul class="pull-right">
+                                        <li>阅读（2458）</li>
+                                        <li>评论（2458）</li>
+                                        <li>2016/10/10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right" alt="文章" />
+                        </a>
+                        <a href="article.html" class="media clearfix">
+                            <div class="media-body pull-left">
+                                <h4 class="media-heading color-4b">含着金钥匙出生的平安好车，其本质是为了服务自己的金融产业链</h4>
+                                <p class="color-a3">不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场，其野心是以声东击西的方式去服务自己的金融产业链。不管平安打着什么样的口号进入这个市场。</p>
+                                <div class="article-bottom">
+                                    <ul class="pull-right">
+                                        <li>阅读（2458）</li>
+                                        <li>评论（2458）</li>
+                                        <li>2016/10/10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="__PUBLIC__/newsmedia/img/list.jpg" class="pull-right" alt="文章" />
+                        </a> -->
+
+                    </div>
+                    <nav>
+                        <ul class="pager">
+                            {$pages}
+                            <!-- <li>
+                                <a href="#">上一页</a>
+                            </li>
+                            <li>
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">下一页</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+
+                </div>
+            </section>
+
+        </div>
+        <div class="footer">
+            <div class="footer-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <img src="__PUBLIC__/newsmedia/img/logo.jpg" alt="logo" />
+                    </div>
+                    <ul class="text-center">
+                        <li>
+                            <a href="">关于新声</a>
+                        </li>
+                        <li>
+                            <a href="">广告合作</a>
+                        </li>
+                        <li>
+                            <a href="">创业求报道</a>
+                        </li>
+                        <li>
+                            <a href="">移动客户端</a>
+                        </li>
+                        <li>
+                            <a href="">帮助</a>
+                        </li>
+                        <li>
+                            <a href="">RSS订阅</a>
+                        </li>
+                        <li>
+                            <a href="">邮件订阅</a>
+                        </li>
+                        <li>
+                            <a href="">意见与建议</a>
+                        </li>
+                        <li>
+                            <a href="">友情链接</a>
+                        </li>
+                    </ul>
+                    <p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+                </div>
+            </div>
+            <div class="footer-link text-center">
+                <a>合作伙伴：</a>
+                <a href="">平安信托</a>
+                <a href="">招商银行 </a>
+                <a href="">深媒会</a>
+                <a href="">平安银行</a>
+                <a href="">凤凰金融</a>
+            </div>
+        </div>
+
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(function() {
+                $('#myTab a:first').tab('show')
+            })
+        </script>
+    </body>
+
+</html>

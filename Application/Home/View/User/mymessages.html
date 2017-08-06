@@ -1,0 +1,75 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li>
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li>
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					<li>
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycomment')}">评论消息</a>
+					</li>
+					<li class="active">
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li >
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+
+				<div class="standard-list pull-right p-system">
+					<table class="table">
+						<empty name="data">
+							<h3>暂时无相关信息！</h3>
+						<else />
+							<volist name="data" id="vo">
+								<tr>
+									<td class="one"><img src="__IMG__item.png" alt="" /></td>
+									<td class="two">
+										<a href="{:U('Public/messageinfo')}?id={$vo.message_id}">{$vo.message|substr=0,80}</a>
+									</td>
+									<td class="three">{$vo.send_time}</td>
+								</tr>
+							</volist>
+						</empty> 
+					</table>
+
+				</div>
+
+			</div>
+
+			<nav>
+					{$page}
+			</nav>
+
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

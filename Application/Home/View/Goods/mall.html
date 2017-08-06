@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>深圳珠宝-商城</title>
+		<link rel="stylesheet" type="text/css" href="__CSS__bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-right">
+					<!-- if 登陆
+					<a href="p_info.html" class="color66">zhangsan</a>	
+					<a href="" class="color99">退出</a>-->
+					<empty name="Think.session.user">
+						<a class="color66 text-center" href="{:U('User/login')}">登陆</a>
+						<a class="color66 text-center reg" href="{:U('User/reg')}">注册</a>
+					<else />
+						<a href="{:U('User/index')}" class="color66">{$Think.session.user.nickname}</a>	
+						<a href="{:U('User/logout')}" class="color99">退出</a>
+					</empty>
+						
+				</div>
+			</div>
+		</div>
+
+		<div class="logo">
+			<div class="container">
+				<div class="pull-left">
+					<a href="/"><img src="__IMG__logo.png" alt="logo" /></a>
+				</div>
+				<form class="search pull-right" action="{:U('mall')}" method="post" onsubmit="return checkseach()">
+					<button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+					<input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字" value="{$keyword}">
+				</form>
+				<a href="{:U('Consult/index')}" class="btn btn-default pull-right">咨询结果</a>
+				<a href="{:U('User/consultation')}" class="btn btn-default pull-right">我要咨询</a>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="container">
+				<ul class="menu-list">
+					<!-- <li>
+						<a href="/">首页</a>
+					</li>
+					<li>
+						<a href="{:U('Goods/mall')}">珠宝商城</a>
+					</li>
+					<li>
+						<a href="consult_result.html">咨询结果</a>
+					</li>
+					<li>
+						<a href="{:U('Article/news')}">最新动态</a>
+					</li>
+					<li>
+						<a href="{:U('Article/college')}">珠宝学院</a>
+					</li>
+					<li>
+						<a href="{:U('Article/classmate')}">胡博士同学会</a>
+					</li>
+					<li>
+						<a href="{:U('activity/index')}">珠宝培训</a>
+					</li>
+					<li>
+						<a href="{:U('Article/expert')}">专家专栏</a>
+					</li>
+					<li>
+						<a href="{:U('Article/baike')}">珠宝百科</a>
+					</li>
+					<li>
+						<a href="{:U('Article/standard')}">国家标准</a>
+					</li> -->
+					<volist name="nav" id="vo">
+						<empty name="vo.id">
+							<li>
+								<a href="<?php echo U($vo['action']); ?>">{$vo.name}</a>
+							</li>
+						<else />
+							<li>
+								<a href="<?php echo U($vo['action'],'cat_id='.$vo['id']); ?>">{$vo.name}</a>
+							</li>
+						</empty> 
+					</volist>
+				</ul>
+			</div>
+		</div>
+<!--------头部结束-------------->
+		<div class="i-banner">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators" style="text-align: right;width: 65%;">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<empty name="banner">
+						<div class="item active">
+							<img src="__IMG__banner.jpg" alt="banner">
+						</div>
+						<div class="item">
+							<img src="__IMG__banner.jpg" alt="banner">
+						</div>
+						<div class="item">
+							<img src="__IMG__banner.jpg" alt="banner">
+						</div>
+					<else />
+						<div class="item active">
+							<a href="{$banner.0.ad_link}">
+								<img src="{$banner.0.ad_code}" alt="banner">
+							</a>
+						</div>
+						<volist name="banner" id="vo" offset="1">
+							
+							<div class="item">
+								<a href="{$vo.ad_link}">
+									<img src="{$vo.ad_code}" alt="banner">
+								</a>
+							</div>
+							
+						</volist>
+					</empty>
+				</div>
+			</div>
+		</div>
+		<div class="container i-content">
+			<h2><span>最新商品 <em>NEW Goods</em></span></h2>
+			<ul class="mall clearfix">
+				<notempty name="goods">
+					<volist name="goods" id="v">
+						<li>
+							<p>{$v.goods_sn}</p>
+							<a href="{:U('Goods/goodsInfo',array('id'=>$v['goods_id']))}">
+								<img src="{$v['original_img']|default='__IMG__p2.jpg'}" />
+								<p>{$v.goods_name}</p>
+								<span>￥{$v.shop_price}</span>
+							</a>
+						</li>
+					</volist>
+				<else/>
+					<h4>官方暂未推出相关产品！</h4>
+				</notempty>
+				
+			</ul>
+			<nav class="text-center">
+				{$page}
+			</nav>
+		</div>
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+			//定位背景 class="active"
+			$(".menu-list li").eq(1).attr("class","active");
+			// 返回顶部
+			$(".go-up").click(function() {
+				$("html,body").animate({
+					'scrollTop': '0px'
+				}, 300)
+			});
+		</script>
+
+	</body>
+
+</html>

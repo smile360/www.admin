@@ -1,0 +1,183 @@
+<include file="Public/nav" />
+		<div class="mui-content mui-scroll-wrapper activity-detail" id="pullrefresh">
+			<div class="mui-scroll">
+				<div class="title">
+					<h5>{$data['data']['title']}</h4>
+					<p><span>精彩活动</span><em class="mui-pull-right">{$data['data']['start_time']|date="Y-m-d H:i",###}</em></p>
+				</div>				
+				<div class="content">
+					<h5>{$data['data']['description']}</h5>
+					<p>{$data['data']['content']}</p>
+				    <img src="{$data['data']['activity_logo']}"/>				    			    				    
+				    <div class="mui-text-center sign"> 
+				     	<?php 
+							if($data['data']['activity_time'] > time() && ($sign['is_status'] == '2' || empty($sign['is_status'])) ){
+								echo '<button type="button" class="mui-btn mui-btn-warning" id="immediately-sign">立即报名</button>';
+							}elseif( $sign['is_status'] == '1' ){
+								echo '<button type="button" class="mui-btn mui-btn-warning" id="immediately-sign" disabled="disabled">您已报过名</button>';
+							}elseif( $sign['is_status'] == '0' ){
+								echo '<button type="button" class="mui-btn mui-btn-warning" id="immediately-sign" disabled="disabled">您已提交报名申请</button>';
+							}else{
+								echo '<button type="button" class="mui-btn mui-btn-warning" id="immediately-sign" disabled="disabled">已结束</button>';
+							}
+						?>
+				    </div>
+				</div>
+				<div class="copyright mui-text-center">
+					本文文字内容归本站版权所有，转载请注明来自<span>新三板指南</span>
+				</div>
+				<div class="mui-table zan">
+					<div class="mui-table-cell mui-text-center" id="zan">
+						<notempty name="like.is_like">
+							<i class="iconfont" style="color:#f08200" id="zan-code">&#xe603;</i>赞(<span id="zan-num">{$like['num']}</span>)
+						<else/>
+							<i class="iconfont" id="zan-code">&#xe603;</i>赞(<span id="zan-num">{$like['num']}</span>)
+						</notempty>
+					</div>
+					<div class="mui-table-cell mui-text-center" id="pinglun">
+						<i class="iconfont">&#xe629;</i> 评论({$data['Comment']})
+					</div>
+					<!-- <div class="mui-table-cell mui-text-center"><i class="mui-icon mui-icon-map">&#xe629;</i> 阅读({$data['data']['click']})</div> -->
+				</div>
+				<ul class="mui-table-view comments">
+					<empty name="comment">
+						<div class="copyright mui-text-center">
+							<span>暂无相关评论信息！</span>
+						</div>
+					<else />
+						<volist name="comment" id="vo">
+							<li class="mui-table-view-cell mui-media">
+								<img class="mui-media-object mui-pull-left" onerror="onerror=null;src='__PUBLIC__/new/img/pl_head.png'" src="{$vo['head_pic']}">
+								<div class="mui-media-body">
+									<div class="username">{$vo['username']}</div>
+										<p class="comments-c">{$vo['content']}</p>
+									<div class="mui-table">
+										<div class="mui-table-cell">{$vo['add_time']|date="Y-m-d H:i",###}</div>
+										<!-- <div class="mui-table-cell mui-text-right">回复</div> -->
+									</div>
+									<notempty name="vo.reply">
+										<div class="replay">
+											<p>{$vo['reply']['username']} <span>回复</span> {$vo['username']}</p>
+											<p class="replay-c">
+												<span>{$vo['reply']['content']}</span>
+											</p>
+										<div class="mui-table">
+											<div class="mui-table-cell">{$vo['reply']['add_time']|date="Y-m-d H:i",###}</div>
+											<!-- <div class="mui-table-cell mui-text-right">回复</div> -->
+										</div>
+										</div>
+									</notempty>
+								</div>
+							</li>
+						</volist>
+					</empty>
+					<!-- <li class="mui-table-view-cell mui-media">
+						<img class="mui-media-object mui-pull-left" src="__PUBLIC__/mobile/img/pl_head.png">
+						<div class="mui-media-body">
+							<div class="username">睡觉的猫</div>
+							<p class="comments-c">用户评论内容，显示所有评论文字。用户评论内容，显示所有评论文字。</p>
+							<div class="mui-table">
+								<div class="mui-table-cell">2016-06-07 18:33</div>
+								<div class="mui-table-cell mui-text-right">回复</div>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//上拉加载
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+			function pullupRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.comments');
+					var cells = document.body.querySelectorAll('.comments li').length;
+					mui.ajax("{:U('Activity/getComment')}", {
+						data: {
+							start: cells,
+							activity_id:"{$data['data']['activity_id']}"
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							if(data.code == 200) {
+								var Html = "";
+								mui.each(data.result, function(i, item) {																		
+									Html += '<li class="mui-table-view-cell mui-media">';
+									Html += '<img class="mui-media-object mui-pull-left" onerror="onerror=null;src=\'__PUBLIC__/new/img/pl_head.png\'" src="'+item.head_pic+'">';
+									Html += '<div class="mui-media-body">';
+									Html += '<div class="username">'+item.username+'</div>';
+									Html += '<p class="comments-c">'+item.content+'</p>';
+									Html += '<div class="mui-table">';
+									Html += '<div class="mui-table-cell">'+item.add_time+'</div>';
+									// Html += '<div class="mui-table-cell mui-text-right">回复</div>';
+									Html += '</div>';
+										if(item.reply){
+											Html += '<div class="replay">';
+											Html += '<p>'+item.reply.username+'<span>回复</span>'+item.username+'</p>';
+											Html += '<p class="replay-c"><span>'+item.reply.content+'</span></p>';
+											Html += '<div class="mui-table">';
+											Html += '<div class="mui-table-cell">'+item.reply.add_time+'</div>';
+											// Html += '<div class="mui-table-cell mui-text-right">回复</div>';
+											Html += '</div>';
+											Html += '</div>';
+										}
+									Html += '</div>';
+									Html += '</li>';									
+								});
+								table.insertAdjacentHTML('beforeend', Html);
+							} else {
+								hasMore = true;
+							}
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(hasMore);
+						}
+					})
+				}, 1500);
+			}
+			//立即报名
+			document.getElementById("immediately-sign").addEventListener('tap',function(){
+				location.href="{:U('Activity/sign')}?activity_id="+"{$data['data']['activity_id']}";				
+			})
+			//赞
+			var is_zan = ({$like['is_like']} == 0 ) ? true : false;
+			document.getElementById("zan").addEventListener('tap',function(){
+				if(is_zan){
+					mui.post("{:U('Home/Activity/Is_like')}", {
+						id: {$data['data']['activity_id']},
+					},function(data) {
+						if(data.code == 200) {
+							document.getElementById("zan-code").innerHTML="&#xe65d;";
+					        document.getElementById("zan-code").style.color="#f08200";
+					        document.getElementById("zan-num").innerText=data.result;
+					        is_zan = false;
+						}else{
+							mui.toast("点赞失败，请稍后再试");
+							return false;
+						}
+					})
+				}else{
+					mui.toast("您已点赞过！");
+				}
+			    	
+			})
+			//评论
+			document.getElementById("pinglun").addEventListener('tap',function(){			
+				location.href="{:U('Activity/comment')}?activity_id="+"{$data['data']['activity_id']}"
+			})
+			
+		</script>
+
+	</body>
+
+</html>

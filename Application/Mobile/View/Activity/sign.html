@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>填写报名信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__CSS__mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+	</head>
+
+	<body style="background: #fff;">
+		<div class="activity-sign">
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>姓　名</label>
+					<input id="name" type="text" placeholder="请输入姓名">
+				</div>
+				<div class="mui-input-row">
+					<label>性　别</label>
+					<input id="sex" type="text" placeholder="请输入性别">
+				</div>
+				<div class="mui-input-row">
+					<label>手　机</label>
+					<input id="tel" type="text" placeholder="请输入手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>年　龄</label>
+					<input id="age" type="text" placeholder="请输入年龄">
+				</div>
+				<div class="mui-input-row">
+					<label>邮　箱</label>
+					<input id="mail" type="text" placeholder="请输入邮箱">
+				</div>
+
+				<div class="mui-input-row">
+					<label>城　市</label>
+					<input id="city" type="text" placeholder="请选择城市">
+				</div>
+				<div class="mui-input-row">
+					<label>工作单位</label>
+					<input id="company" type="text" placeholder="请输入工作单位">
+				</div>
+			</div>
+			<div class="mui-content-padded mui-text-center">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="submit">提交</button>
+			</div>
+			<p class="mui-text-center notice">报名须遵守<br>
+				<a href="#">《关于“枫zakka”课程报名协议》</a>
+			</p>
+
+		</div>
+		<script src="__JS__mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__JS__mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__JS__city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($, doc) {
+				$.init();
+				var name = doc.getElementById("name");
+				var sex = doc.getElementById("sex");
+				var tel = doc.getElementById("tel");
+				var age = doc.getElementById("age");
+				var mail = doc.getElementById("mail");
+				var city = doc.getElementById("city");
+				var company = doc.getElementById("company");
+				var sub = doc.getElementById("submit");
+				sub.addEventListener('tap', function() {
+					if(name.value == "") {
+						$.toast("姓名不能为空");
+						return false;
+					}
+					if(sex.value == "") {
+						$.toast("性别不能为空");
+						return false;
+					}
+					if(tel.value == "") {
+						$.toast("手机号不能为空");
+						return false;
+					}
+					var myreg = /^1[3|4|5|7|8]\d{9}$/;
+					if(!myreg.test(tel.value)) {
+						$.toast('手机号格式不正确！');
+						return false;
+					}
+					if(age.value == "") {
+						$.toast("年龄不能为空");
+						return false;
+					}
+					if(mail.value == "") {
+						$.toast("邮箱不能为空");
+						return false;
+					}
+					if(city.value == "") {
+						$.toast("所在城市不能为空");
+						return false;
+					}
+					$.post("{:U('sign')}", {
+						name: name.value,
+						sex: sex.value,
+						age: age.value,
+						mail: mail.value,
+						tel: tel.value,
+						city: doc.getElementById("city").value,
+						company: company.value,
+						activity_id:"{$activity_id}",
+					}, function(data) {
+						if(data.msg == 200) {
+							$.toast("报名成功");
+							setTimeout(function() {
+								location.href = "{:U('Activity/detail')}?activity_id="+{$activity_id};
+								//window.history.go(-1);
+								return false;
+							}, 1000);
+						}else{
+							$.toast(data.msg);
+							return false;
+						}
+					});
+				})
+
+				//城市选择
+				var city = new $.PopPicker({
+					layer: 3
+				});
+				city.setData(cityData3);
+				var showCityPicker = doc.getElementById('city');
+				showCityPicker.addEventListener('tap', function(event) {
+					city.show(function(items) {
+						doc.getElementById("city").value = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+					});
+				}, false);
+
+			}(mui, document));
+		</script>
+	</body>
+
+</html>

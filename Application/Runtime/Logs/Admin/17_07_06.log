@@ -1,0 +1,752 @@
+[ 2017-07-06T17:01:52+08:00 ] 202.105.102.250 /Admin/System/cleanCache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: cleanCache /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000129s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+
+[ 2017-07-06T17:01:53+08:00 ] 202.105.102.250 /Admin/System/cleanCache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: cleanCache /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000131s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000162s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000334s ]
+
+[ 2017-07-06T17:01:54+08:00 ] 113.91.150.174 /index.php?m=Admin&c=Uploadify&a=upload&num=1&input=imagetext&path=article&func=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000102s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2017-07-06T17:01:54+08:00 ] 202.105.102.250 /Admin/Activity/activity_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( is_del=1 ) ORDER BY activity_id desc LIMIT 0,20   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_activity` WHERE ( is_del=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000152s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2017-07-06T17:01:56+08:00 ] 202.105.102.250 /Admin/Activity/activity/activity_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( activity_id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000134s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: URL_upload /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 115 行.
+NOTIC: [8] Undefined variable: URL_fileUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 116 行.
+NOTIC: [8] Undefined variable: URL_scrawlUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 117 行.
+NOTIC: [8] Undefined variable: URL_getRemoteImage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 118 行.
+NOTIC: [8] Undefined variable: URL_imageManager /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 119 行.
+NOTIC: [8] Undefined variable: URL_imageUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 120 行.
+NOTIC: [8] Undefined variable: URL_getMovie /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 121 行.
+NOTIC: [8] Undefined variable: URL_home /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 122 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 160 行.
+NOTIC: [8] Undefined index: course /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 166 行.
+NOTIC: [8] Undefined index: keywords /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 180 行.
+NOTIC: [8] Use of undefined constant people_num - assumed 'people_num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 204 行.
+NOTIC: [8] Undefined index: course_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 224 行.
+NOTIC: [8] Undefined index: lunch_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 230 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 250 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 253 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-07-06T17:01:57+08:00 ] 202.105.102.250 /index.php?m=Admin&c=Uploadify&a=upload&num=1&input=imagetext&path=article&func=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000109s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-07-06T17:01:59+08:00 ] 113.91.150.174 /Admin/Ueditor/imageUp/savepath/article/pictitle/banner/dir/images
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/ueditor /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/ueditor /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+NOTIC: [8] Undefined index: pictitle /data/wwwroot/www.fengzakka.cn/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /data/wwwroot/www.fengzakka.cn/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-07-06T17:02:08+08:00 ] 202.105.102.250 /Admin/Activity/activity_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( is_del=1 ) ORDER BY activity_id desc LIMIT 0,20   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_activity` WHERE ( is_del=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000105s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000304s ]
+
+[ 2017-07-06T17:02:08+08:00 ] 202.105.102.250 /Admin/Activity/activity_applicant_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity_entry` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.title FROM tp_activity_entry as a INNER JOIN tp_activity as b ON a.activity_id=b.activity_id  WHERE ( a.is_del=1 ) ORDER BY a.add_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tp_activity_entry as a WHERE ( a.is_del=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000116s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2017-07-06T17:02:09+08:00 ] 202.105.102.250 /Admin/Activity/activity_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity_comment` [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.title FROM tp_activity_comment as a INNER JOIN tp_activity as b ON a.activity_id=b.activity_id  WHERE (  a.parent_id = 0 ) ORDER BY a.add_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tp_activity_comment as a WHERE (  a.parent_id = 0 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000104s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000142s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007104s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000311s ]
+
+[ 2017-07-06T17:03:25+08:00 ] 202.105.102.250 /Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000113s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+
+[ 2017-07-06T17:03:27+08:00 ] 202.105.102.250 /Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: login /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000199s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000253s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-07-06T17:03:27+08:00 ] 202.105.102.250 /Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: vertify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-07-06T17:03:32+08:00 ] 116.24.95.124 /Admin/Admin/login?t=0.8654972050834717
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: login /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_admin` INNER JOIN tp_admin_role ON tp_admin.role_id=tp_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '519475228fe35ad067744465c42a19b2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_admin_log` [ RunTime:0.0003s ]
+SQL: SELECT `log_time` FROM `tp_admin_log` WHERE ( admin_id = 1 and log_info = '后台登录' ) ORDER BY log_id desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `tp_admin` SET `last_login`='1499331812',`last_ip`='116.24.95.124' WHERE ( admin_id = 1 ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1499331812','1','后台登录','116.24.95.124','/Admin/Admin/login') [ RunTime:0.0003s ]
+
+[ 2017-07-06T17:03:32+08:00 ] 116.24.95.124 /Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_admin` WHERE ( admin_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE ( order_status=0 and (pay_status=1 or pay_code='cod') ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000132s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000186s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-07-06T17:03:32+08:00 ] 202.105.102.250 /Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: welcome /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE ( order_status=0 and (pay_status=1 or pay_code='cod') ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE ( add_time>1499245412 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_users` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_users` WHERE ( last_login>1499245412 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_users` WHERE ( reg_time>1499245412 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show=0 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult` WHERE ( is_show=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000124s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2017-07-06T17:03:32+08:00 ] 202.105.102.250 /Admin/System/login_task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: login_task /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_cart` [ RunTime:0.0005s ]
+SQL: DELETE FROM `tp_cart` WHERE ( user_id = 0 and  add_time < 1499328212 ) [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_config` WHERE ( inc_type='shopping' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_order` [ RunTime:0.0005s ]
+SQL: SELECT `order_id` FROM `tp_order` WHERE ( order_status = 1 and shipping_status = 1 and (1499331812 - shipping_time) >  86400 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Admin/Controller/SystemController.class.php 第 247 行.
+SQL: SELECT * FROM `tp_config` WHERE ( inc_type='distribut' )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-07-06T17:03:34+08:00 ] 202.105.102.250 /Admin/Activity/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000114s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: URL_upload /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 115 行.
+NOTIC: [8] Undefined variable: URL_fileUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 116 行.
+NOTIC: [8] Undefined variable: URL_scrawlUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 117 行.
+NOTIC: [8] Undefined variable: URL_getRemoteImage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 118 行.
+NOTIC: [8] Undefined variable: URL_imageManager /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 119 行.
+NOTIC: [8] Undefined variable: URL_imageUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 120 行.
+NOTIC: [8] Undefined variable: URL_getMovie /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 121 行.
+NOTIC: [8] Undefined variable: URL_home /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 122 行.
+NOTIC: [8] Undefined index: title /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 154 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 160 行.
+NOTIC: [8] Undefined index: course /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 166 行.
+NOTIC: [8] Undefined index: activity_logo /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 172 行.
+NOTIC: [8] Undefined index: keywords /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 180 行.
+NOTIC: [8] Undefined index: activity_address /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 198 行.
+NOTIC: [8] Use of undefined constant people_num - assumed 'people_num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 204 行.
+NOTIC: [8] Undefined index: people_num /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 204 行.
+NOTIC: [8] Undefined index: course_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 224 行.
+NOTIC: [8] Undefined index: lunch_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 230 行.
+NOTIC: [8] Undefined index: end_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 241 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 250 行.
+NOTIC: [8] Undefined index: is_show /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 250 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 253 行.
+NOTIC: [8] Undefined index: is_show /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 253 行.
+NOTIC: [8] Undefined index: description /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 260 行.
+NOTIC: [8] Undefined index: content /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 267 行.
+NOTIC: [8] Undefined index: activity_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 273 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-07-06T17:03:34+08:00 ] 202.105.102.250 /Admin/Activity/activity_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( is_del=1 ) ORDER BY activity_id desc LIMIT 0,20   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_activity` WHERE ( is_del=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000111s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008839s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-07-06T17:03:35+08:00 ] 202.105.102.250 /Admin/Activity/activity/activity_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( activity_id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000152s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: URL_upload /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 115 行.
+NOTIC: [8] Undefined variable: URL_fileUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 116 行.
+NOTIC: [8] Undefined variable: URL_scrawlUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 117 行.
+NOTIC: [8] Undefined variable: URL_getRemoteImage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 118 行.
+NOTIC: [8] Undefined variable: URL_imageManager /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 119 行.
+NOTIC: [8] Undefined variable: URL_imageUp /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 120 行.
+NOTIC: [8] Undefined variable: URL_getMovie /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 121 行.
+NOTIC: [8] Undefined variable: URL_home /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 122 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 160 行.
+NOTIC: [8] Undefined index: course /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 166 行.
+NOTIC: [8] Undefined index: keywords /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 180 行.
+NOTIC: [8] Use of undefined constant people_num - assumed 'people_num' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 204 行.
+NOTIC: [8] Undefined index: course_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 224 行.
+NOTIC: [8] Undefined index: lunch_time /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 230 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 250 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/95f019fca6abc2e418bab0c6facad1b8.php 第 253 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000311s ]
+
+[ 2017-07-06T17:03:36+08:00 ] 202.105.102.250 /index.php?m=Admin&c=Uploadify&a=upload&num=1&input=imagetext&path=article&func=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/uploadify /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000117s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
+
+[ 2017-07-06T17:03:46+08:00 ] 202.105.102.250 /Admin/Ueditor/imageUp/savepath/article/pictitle/banner/dir/images
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/ueditor /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/ueditor /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+NOTIC: [8] Undefined index: pictitle /data/wwwroot/www.fengzakka.cn/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /data/wwwroot/www.fengzakka.cn/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2017-07-06T17:04:05+08:00 ] 202.105.102.250 /Admin/Activity/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: UPDATE `tp_activity` SET `title`='田山手艺家园',`activity_logo`='/Public/upload/article/2017/07-06/595dfcf2dcae2.jpg',`activity_time`='0',`activity_address`='福田区福强路金地工业区110栋二楼205',`people_num`='20',`start_time`='1499331360',`is_show`='1',`description`='手工',`content`='&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;田山手艺家园公司全名叫深圳市田山手工有限公司，成立于2011年11月21日，位于深圳市福田区红荔路深圳书城中心城N211。&lt;span style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important； color: rgb(136, 136, 136)；&quot;&gt;&lt;strong style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;&gt;（公司办公地址：福田区福强路金地工业区110栋二楼205）&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;span style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important； color: rgb(136, 136, 136)；&quot;&gt;&lt;strong style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;&gt;&lt;br style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;/&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;田山手工经过多年发展，自有注册商标“枫FENG ZAKKA”品牌有11家店面，手工教室一间，公司先后在深圳市政府举办的文博会举办过两届深圳拼布展，一届会展中心拼布展和数次学校手工展，并将继续举行下去，敬请期待～&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;br style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;span style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important； color: rgb(255, 104, 39)；&quot;&gt;&lt;strong style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;&gt;田山公司是集手工原材料，工具，材料包，手工成品，手工培训课程为一体的公司&lt;/strong&gt;&lt;/span&gt;，有最新式的产品，最新颖的手工类成品，最有趣的教学。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;br style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;span style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important； color: rgb(255, 104, 39)；&quot;&gt;&lt;strong style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;&gt;公司培训过拼布人才2000人以上，并为商场，社区，学校，政府单位提供手工培训课程超过5000个课时，公司有专业的培训团队人才30余名&lt;/strong&gt;&lt;/span&gt;，所有教师经过公司专业的培训，曾师从台湾，日本，美国等地的名师，都具有超强的教学水平，其中已取得国际手工毕业证书的有十几人。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;br style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 0px； margin-bottom: 0px； padding: 0px； max-width: 100%； clear: both； min-height: 1em； color: rgb(62, 62, 62)； font-family: &amp;amp；#39；Helvetica Neue&amp;amp；#39；, Helvetica, &amp;amp；#39；Hiragino Sans GB&amp;amp；#39；, &amp;amp；#39；Microsoft YaHei&amp;amp；#39；, Arial, sans-serif； line-height: 25.6px； white-space: normal； box-sizing: border-box !important； word-wrap: break-word !important； background-color: rgb(255, 255, 255)；&quot;&gt;&lt;strong style=&quot;margin: 0px； padding: 0px； max-width: 100%； box-sizing: border-box !important； word-wrap: break-word !important；&quot;&gt;田山手工已摸索出适应中国手工培训习惯的课程，学员通过本次短期学习，基本能达到国际证书班的中级水平，并拥有良好的实操性，对生活品质的改善有显著意义。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',`activity_id`='2',`admin_id`='1' WHERE ( activity_id=2 ) [ RunTime:0.0049s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000158s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000188s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+
+[ 2017-07-06T17:04:06+08:00 ] 202.105.102.250 /Admin/Activity/activity_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_activity` WHERE ( is_del=1 ) ORDER BY activity_id desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_activity` WHERE ( is_del=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000113s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: teacher /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 169 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 175 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 183 行.
+NOTIC: [8] Use of undefined constant article_id - assumed 'article_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+NOTIC: [8] Undefined index: article_id /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Admin/5c98de065379332d05b4644824ab8a94.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000309s ]
+
+[ 2017-07-06T17:04:08+08:00 ] 202.105.102.250 /Admin/Activity/activityDel
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `tp_config` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_config`  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 68 行.
+NOTIC: [8] Undefined index: admin/activity /data/wwwroot/www.fengzakka.cn/Application/Admin/Common/function.php 第 69 行.
+SQL: SHOW COLUMNS FROM `tp_activity` [ RunTime:0.0004s ]
+SQL: UPDATE `tp_activity` SET `is_del`='2' WHERE ( activity_id=1 ) [ RunTime:0.0003s ]
+

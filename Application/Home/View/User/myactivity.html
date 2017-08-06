@@ -1,0 +1,72 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li>
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li >
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					<li class="active">
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li >
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycomment')}">评论消息</a>
+					</li>
+					<li>
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li >
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+
+				<div class="standard-list pull-right">
+					<table class="table">
+						<notempty name="data">
+							<volist	name="data" id="item" key="k">
+								<tr>
+									<td class="one"><img src="__IMG__item.png" alt="" /></td>
+									<td class="two">[ 0{$k+1} ] <span class="color66">{$item.title}</span></td>
+									<td class="three">
+										<a href="{:U('Activity/detail',array('activity_id'=>$item['activity_id']))}">详情 >></a>
+									</td>
+								</tr>
+							</volist>
+						</notempty>
+					</table>
+
+				</div>
+
+			</div>
+
+			<nav class="text-center">
+				{$page}
+			</nav>
+
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li>
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li >
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					<li>
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li class="active">
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycomment')}">评论消息</a>
+					</li>
+					<li>
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li >
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+
+				<ul class="comment-tab pull-right" id="myTab">
+					<li class="active">
+						<a class="consultType" href="#article-collect" data-type="1" data-toggle="tab">文章收藏</a>
+					</li>
+					<li>
+						<a class="consultType" href="#activity-collect" data-type="2" data-toggle="tab">咨询收藏</a>
+					</li>
+				</ul>
+				<div class="tab-content pull-right" style="margin-bottom:100px;">	
+                      <if condition="$type eq 1 ">					
+					<div class="tab-pane standard-list pull-right active" id="article-collect">	                     				
+						<table class="table">
+							<notempty name="data">
+								<volist	name="data" id="item" key="k">
+									<tr>
+										<td class="one"><img src="__IMG__item.png" alt="" /></td>
+										<td class="two">[ 0{$k+1} ] <span class="color66">{$item.title}</span></td>
+										<td class="three">
+											<a href="{:U('article_id/detail',array('article_id'=>$item['article_id']))}">详情 >></a>
+										</td>
+									</tr>
+								</volist>
+							</notempty>
+						</table>					  
+					</div>										
+					 <else />
+					 <div class="tab-pane classmate-activity pull-right active" id="activity-collect">
+						<volist	name="data" id="item" key="k">
+							<div class="all-consulting">
+								<a class="media-left" href="{:U('Consult/detail',array('id'=>$item['consult_id']))}">
+									<img src="{$item.path.0|default='__IMG__classmate_active.jpg'}" alt="">
+								</a>
+								<div class="media-body" style="">
+									<h4 class="media-heading">{$item.tittle}</h4>
+									<p style="width:585px;overflow: hidden;word-wrap:break-word; word-break: normal;">{$item.detail|getSubstr=0,100}</p>
+									<ul class="clearfix">
+										<li class="pull-left"><span>{$item.createtime}</span></li>
+										<li class="pull-right">
+											<a href="{:U('Consult/detail',array('id'=>$item['consult_id']))}">详情>></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</volist>
+						</div>
+						</if>
+					
+					
+				  
+				</div>
+			</div>
+			<nav class="text-center">
+				{$page}
+			</nav>
+
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<script>
+		var type = "{$_GET['type']}";
+		$(".consultType").click(function (){
+			type = $(this).attr('data-type');
+			window.location.href = "{:U('mycollect')}?type="+type;
+		});
+
+		$(function (){
+			for(var i=0;i < $(".consultType").length;i++){
+				var $elem = $(".consultType").eq(i);
+				if("{$_GET['type']}" == ""){
+					return ;
+				}
+				if($elem.attr("data-type") == "{$_GET['type']}"){
+					$elem.parent().addClass("active");
+				}else{
+					$elem.parent().removeClass();
+				}
+			}
+		});
+
+		$('#myTab a:first').tab('show');
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

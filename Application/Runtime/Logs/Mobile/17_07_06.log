@@ -1,0 +1,130 @@
+[ 2017-07-06T17:01:54+08:00 ] 113.91.150.174 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000143s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000171s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2017-07-06T17:03:37+08:00 ] 202.105.102.250 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000123s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-07-06T17:07:07+08:00 ] 101.226.66.174 /Mobile/Consult/detail/id/1499329169.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499329169' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499329169 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499329169 AND `user_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499329169 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000121s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2017-07-06T17:12:08+08:00 ] 61.151.226.16 /Mobile/User/myactivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+NOTIC: [8] Constant SESSION_ID already defined /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/MobileBaseController.class.php 第 36 行.
+
+[ 2017-07-06T17:12:13+08:00 ] 61.151.226.16 /Mobile/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8] Constant SESSION_ID already defined /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/MobileBaseController.class.php 第 36 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000116s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/8fe3e33b8da2d26b506eede69834f8c5.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/8fe3e33b8da2d26b506eede69834f8c5.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/8fe3e33b8da2d26b506eede69834f8c5.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000322s ]
+

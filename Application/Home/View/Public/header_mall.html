@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>深圳珠宝咨询网</title>
+		<link rel="stylesheet" type="text/css" href="__CSS__bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+		<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+		<link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+        <link rel="stylesheet" href="__STATIC__/css/jqzoom.css" type="text/css">
+        <link rel="stylesheet" href="__STATIC__/css/location.css" type="text/css">
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="__PUBLIC__/js/global.js"></script>
+		<script src="__PUBLIC__/js/pc_common.js"></script>
+		<script src="__STATIC__/js/jquery.jqzoom.js"></script>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-right">
+					<!-- if 登陆
+					<a href="p_info.html" class="color66">zhangsan</a>	
+					<a href="" class="color99">退出</a>-->
+					<empty name="Think.session.user">
+						<a class="color66 text-center" href="{:U('User/login')}">登陆</a>
+						<a class="color66 text-center reg" href="{:U('User/reg')}">注册</a>
+					<else />
+						<a href="{:U('Home/Cart/cart')}" >购物车</a>
+						<a href="{:U('User/index')}" class="color66">{$Think.session.user.nickname}</a>	
+						<a href="{:U('User/logout')}" class="color99">退出</a>
+					</empty>
+						
+				</div>
+			</div>
+		</div>
+
+		<div class="logo">
+			<div class="container">
+				<div class="pull-left">
+					<a href="/"><img src="__IMG__logo.png" alt="logo" /></a>
+				</div>
+				<form class="search pull-right" action="{:U('Article/search')}" method="post" onsubmit="return checkseach()">
+					<button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+					<input type="text" name="seach" id="seach" class="pull-right input" placeholder="请输入搜索关键字">
+				</form>
+				<a href="{:U('User/consult_result')}" class="btn btn-default pull-right">咨询结果</a>
+				<a href="{:U('User/consultation')}" class="btn btn-default pull-right">我要咨询</a>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="container">
+				<ul class="menu-list">
+					<volist name="nav" id="vo">
+						<empty name="vo.id">
+							<li>
+								<a href="<?php echo U($vo['action']); ?>">{$vo.name}</a>
+							</li>
+						<else />
+							<li>
+								<a href="<?php echo U($vo['action'],'cat_id='.$vo['id']); ?>">{$vo.name}</a>
+							</li>
+						</empty> 
+					</volist>
+				</ul>
+			</div>
+		</div>

@@ -1,0 +1,299 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<style type="text/css">
+	.story_time{
+			font-size:1em;
+			float:left;
+			color:rgba(154,154,154,1);
+			padding:15px 0 0 0;
+		}
+	.story_hf{
+		width: 90%;
+		background:rgb(245,245,245);
+		font-size:1em;
+		border:1px solid rgba(204,204,204,0.2);
+		border-radius:2px;color:rgba(110,110,110,1);
+		padding:10px;
+		margin-bottom:5px;
+		margin-left:10%;
+	}
+	.reply-btn{
+		float:right;
+		padding-right: 10px;
+	}
+	/*清除浮动*/
+	.clear::after{
+	    content:'';
+	    display:block;
+	    height:0;
+	    visibility:hidden;
+	    clear:both;
+	}
+
+	.consulting-detail .comment .media{
+		padding:20px 0 10px 0;
+	}
+</style>
+<!--------头部结束-------------->
+		<div class="consulting-detail">
+
+			<div class="media user">
+				<a class="media-left">
+					<img src="{$consult['head_pic']}" class="media-object">
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading">{$consult['nickname']}</h4>
+					<p>{$consult.createtime|date='Y-m-d H:i:s',###} <span class="pull-right">{$consult['status']}</span></p>
+				</div>
+			</div>
+
+			<h1>{$consult['tittle']}</h1>
+			<div class="content">
+				<foreach name="consult['path']" item="v">
+					<img src="{$v}" alt="" width="100%" />
+				</foreach>
+				<p>{$consult['detail']}</p>
+			</div>
+
+			<div class="collect text-right">
+				<if condition="$like == 1">
+					<span class="zan" href="javascript:void(0)"><img src="__IMG__zan_hover.png" /> 赞（{$consult['like']}）</span>
+					<else/>
+					<a data-id="{$consult.consult_id}" class="zan like" href="javascript:void(0)"><img id="zanImg" src="__IMG__zan.png" /> 赞（<span class="like-num">{$consult['like']}</span>）</a>
+				</if>
+				<if condition="$collect == 1">
+					<span class="sc" href="javascript:void(0)"><img src="__IMG__collect_hover.png" /> 收藏（{$consult['collect']}）</span>
+					<else/>
+					<a data-id="{$consult.consult_id}" data-value="{$consult.tittle}" class="sc collectbtn" href="javascript:void(0)"><img id="collectImg" src="__IMG__collect.png" /> 收藏（<span class="collect-num">{$consult['collect']}</span>）</a>
+				</if>
+				
+			</div>
+			<div id="Comment4Admin">
+				<!-- <div class="replay clearfix">
+					<div class="replay-name pull-left text-center">胡博士 回复：</div>
+					<p class="pull-right">这个翡翠的成色还是不错的，虽然是圆桶状的珠粒，但整体看外象还是打磨的不错。如果可以的话，可以用手电打光透 看珠粒，如果非常透，能看到黄色晕光，那成色还是不错的。这个翡翠的成色还是不错的，虽然是圆桶状的珠粒，但整 体看外象还是打磨的不错。如果可以的话，可以用手电打光透看珠粒，如果非常透，能看到黄色晕光，那成色还是不错 的。
+						<span class="text-right">回复</span>
+					</p>
+				</div>
+				<div class="re-replay">
+					<span>青云志上仙UP 回复：</span>那我怎么去看光晕呢？这个我还没有试过。
+					<div class="text-right">回复</div>
+				</div> -->
+			</div>
+
+			<div class="comment">
+				<p class="text-center title"><a name="replyTips" href=""></a>评论 ( {$count} )</p>
+
+				<notempty name="Think.session.user">
+					<form action="{:U('Comment/Handle')}" method="post">
+						<input id="parentName" type="hidden" name="parentName" value="" />
+						<input id="consultId" type="hidden" name="consultId" value="{$_GET['id']}" />
+						<input id="parentId" type="hidden" name="parentId" value="" />
+						<input id="type" type="hidden" name="type" value="0" />
+
+						<textarea id="text-area" name="comment" placeholder="请输入评论内容"></textarea>
+						<input type="submit" class="sub" value="发表评论" />
+					</form>
+	            <else/>
+	                <p class="need-reg text-center color-99">需要登录</p>
+					<a href="{:U('User/login.html')}" class="sub text-center log">登录</a>	
+	            </notempty>
+				
+				<div id="Comment4User">
+					
+				</div>
+			</div>
+		</div>
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+
+		<script>
+		$(".menu-list li").eq(3).attr("class","active");
+			var selfID = "{$Think.session.user.user_id}";
+			var consult_id = "{$consult['user_id']}";
+
+
+			function addZERO(value){
+				if(value < 10){
+					value = '0'+value.toString();
+				}
+				return value;
+			}
+
+			function formatDate(now) {
+				var d = new Date(now*1000);  
+				var year = d.getYear()+1900;
+				var month = addZERO(d.getMonth()+1); 
+				var date = addZERO(d.getDate()); 
+				var hour = addZERO(d.getHours()); 
+				var minute = addZERO(d.getMinutes()); 
+				var second = addZERO(d.getSeconds());
+
+				return year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second; 
+			}
+
+			function Consult4Admin(){
+				$.post("{:U('Comment/Comment4Admin')}",{consultId:"{$_GET['id']}"},
+					function (data){
+						var html = '';
+						if(data == 'NULL'){
+							/*应该设置无评论样式*/
+							html += '<div class="replay clearfix text-center">';
+							html += '暂无专家评论';
+							html += '</div>';
+							$("#Comment4Admin").html(html);
+							return ;
+						}
+						data = eval("("+data+")");
+						for (var i = 0; i < data.length; i++) {
+							html += '<div class="replay clearfix">';
+							html += '<div class="replay-name pull-left text-center">';
+							html += data[i]['nickname']+' 回复 :</div>';
+							html += '<p class="pull-right">';
+							html += data[i]['comment'];
+
+							if(selfID == consult_id){
+								html += '<span data-type="1" data-name="'+data[i]['nickname'];
+								html += '" data-id="'+data[i]['comment_id'];
+								html += '" class="text-right reply-comment">回复</span>';
+							}
+
+							html += '</p>';
+							html += '</div>';
+
+							for(var j=0;j < data[i]['reply'].length;j++){
+								html += '<div class="re-replay">';
+								html += data[i]['reply'][j]['nickname'] + ' 回复 :</span>';
+								html += '<span style="margin:0 15px;color:#eb7350">'+data[i]['reply'][j]['parent_name']+'</span>';
+								html += data[i]['reply'][j]['comment'];
+
+								if(selfID == consult_id){
+									html += '<div data-type="1" data-name="'+data[i]['reply'][j]['nickname'];
+									html += '" data-id="'+data[i]['comment_id'];
+									html += '" class="text-right reply-comment">回复</div>';
+								}
+
+								html += '</div>';
+							}
+						};
+						$("#Comment4Admin").html(html);
+					});
+			}
+
+			function Comment4User(){
+				$.post("{:U('Comment/Comment4User')}",{consultId:"{$_GET['id']}"},
+					function (data){
+						var html = '';
+						if(data == 'NULL'){
+							/*应该设置无评论样式*/
+							html += '<div class="replay clearfix text-center">';
+							html += '暂无用户评论';
+							html += '</div>';
+							$("#Comment4User").html(html);
+							return ;
+						};
+
+						data = eval("("+data+")");
+						for (var i = 0; i < data.length; i++) {
+							html += '<div class="media clearfix">';
+							html += '<img class="media-object media-left pull-left" ';
+							html += 'src="'+data[i]['head_pic']+'">';
+							html += '<div class="media-body pull-left">';
+							html += '<div class="media-heading">';
+							html += '<span style="margin-right:30px" class="color-f0">';
+							html += data[i]['nickname']+'</span> '+ formatDate(data[i]['createtime']) +'</div>';
+							html += '<p class="weiguan">';
+							html += data[i]['comment']+'</p>';
+							html += '<ul class="list-type text-right">';
+							html += '<li class="text-right">';
+
+							html += '<span data-type="0" data-id="'+data[i]['comment_id'];
+							html += '" data-name="'+data[i]['nickname'];
+							html += '" class="reply-comment">';
+
+							html += '<img src="__IMG__replay.png" /> 回复</span>';
+							html += '</li>';
+							html += '</ul>';
+							html += '</div></div>';
+
+							for (var j = 0; j < data[i]['reply'].length; j++) {
+								html += '<div class="story_hf"><span>';
+								html += data[i]['reply'][j]['nickname']+' </span>: <span style="color:#CC0066 ">';
+								html += data[i]['reply'][j]['parent_name']+' </span> ';
+								html += data[i]['reply'][j]['comment'];
+								html += '<div class="time-btn clear">';
+								html += '<p class="story_time">'+ formatDate(data[i]['reply'][j]['createtime'])+'</p>';
+								html += '<span data-type="0" data-id="';
+								html += data[i]['comment_id'];
+								html += '" data-name="'+data[i]['reply'][j]['nickname'];
+								html += '" class="reply-btn reply-comment">';
+								html += '<img src="__IMG__replay.png" /> 回复</span>';
+								html += '</div></div>';
+							};
+						}
+
+						$("#Comment4User").html(html);
+					});
+			}
+
+			/*动态拉取评论数据*/
+			$(function (){
+				Consult4Admin();
+				Comment4User();
+			});
+
+			/*限制一次刷新只点击一次*/
+			$(document).on("click",".collectbtn",function (){
+				var $elem = $(this);
+				$.post("{:U('collectThis')}",
+					{consultId:$(this).attr("data-id"),tittle:$(this).attr("data-value")},
+					function (data){
+					data = eval('('+data+')');
+					if(data['errCode'] != undefined){
+						alert('Error Code :'+data['errCode']+'\n'+data['errMsg']);
+						return ;
+					}
+					var num = $elem.find('.collect-num').html();
+					$elem.find('.collect-num').html(parseInt(num) + 1);
+					$elem.removeClass();
+					$elem.addClass('sc');
+					$("#collectImg").attr('src','__IMG__collect_hover.png');
+				});
+			});
+
+			/*限制一次刷新只点击一次*/
+			$(document).on("click",".like",function (){
+				var $elem = $(this);
+				$.post("{:U('LikeThis')}",{consultId:$(this).attr("data-id")},function (data){
+					data = eval('('+data+')');
+					if(data['errCode'] != undefined){
+						alert('Error Code :'+data['errCode']+'\n'+data['errMsg']);
+						return ;
+					}
+					var num = $elem.find('.like-num').html();
+					$elem.find('.like-num').html(parseInt(num) + 1);
+					$elem.removeClass();
+					$elem.addClass('zan');
+					$("#zanImg").attr('src','__IMG__zan_hover.png');
+				});
+			});
+
+			$(document).on("click",".reply-comment",function (){
+				window.location.href = "#replyTips";
+				
+				var type = $(this).attr("data-type");
+				var name = $(this).attr("data-name");
+				var id = $(this).attr("data-id");
+
+				$("#parentName").val("@"+name);
+				$("#parentId").val(id);
+				$("#type").val(type);
+
+				$("#text-area").attr('placeholder',"回复 @"+name);
+			})
+		</script>
+
+	</body>
+
+</html>

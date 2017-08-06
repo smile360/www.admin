@@ -1,0 +1,71 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<!--------头部结束-------------->
+<style>
+	.text-center{
+		text-align: center;
+	}
+</style>
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<notempty name="list.0">
+						<li>
+							<a href="{:U('Article/college',array('cat_id'=>$parent_id))}" data-id="{$list[0]['cat_id']}">{$list.0.cat_name}</a>
+						</li>
+					</notempty>
+					
+					<volist name="list" id="vo" offset="1">
+						<li id="list_{$vo.cat_id}">
+							<a href="{:U('Article/collegeList',array('cat_id'=>$vo['cat_id'],'parent_id'=>$parent_id))}" data-id="{$vo['cat_id']}">{$vo.cat_name}</a>
+						</li>
+					</volist>
+				</ul>
+				<!--同学会活动-->
+				<div class="classmate-activity pull-right">
+					<notempty name="data">
+						<volist name="data" id="vo">
+							<div class="media all-consulting">
+								<a class="media-left" href="{:U('Article/detail',array('article_id'=>$vo['article_id']))}">
+									<notempty name="vo.thumb">
+										<img src="{$vo.thumb}" alt="">
+									<else/>
+										<img src="__IMG__classmate_active.jpg" alt="">
+									</notempty>
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">{$vo.title}</h4>
+									<p> 
+										<?php echo getSubstr(htmlspecialchars_decode($vo['content']),0,180,'...');?>
+									</p>
+									<ul class="clearfix">
+										<li class="pull-left"><span>{$vo.publish_time}</span></li>
+										<li class="pull-right">
+											<a href="{:U('Article/detail',array('article_id'=>$vo['article_id']))}">详情>></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</volist>
+					<else/>
+						<h2>官方暂无推出，敬请关注！</h2>
+					</notempty>
+				</div>
+				<nav class="text-center">
+					{$page}
+				</nav>
+			</div>
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			$("#list_"+{$cat_id}).attr("class","active");
+			$(".menu-list li").eq(5).attr("class","active");
+		</script>
+
+	</body>
+
+</html>

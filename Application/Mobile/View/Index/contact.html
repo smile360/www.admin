@@ -1,0 +1,27 @@
+<title>联系我们</title>
+<include file="Public/nav" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/mui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/app.css" />	
+	<body>
+		<div class="mui-content contact">
+			<div class="top">
+				<div class="head"><img src="__PUBLIC__/mobile/img/contact.png" /></div>
+				<p class="mui-text-center by">新三板指南，指引你的方向</p>
+			</div>
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell">
+					<a><i class="iconfont color-3a">&#xe6c8;</i> Phone<span class="mui-pull-right">{$info['phone']}</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a><i class="iconfont color-3a">&#xe6c7;</i> Email<span class="mui-pull-right">{$info['email']}</span></a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px;">
+				<li class="mui-table-view-cell">
+					<a href="{:U(Index/feedback)}" class="mui-navigate-right"><i class="iconfont color-3a">&#xe6c9;</i> 意见反馈</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

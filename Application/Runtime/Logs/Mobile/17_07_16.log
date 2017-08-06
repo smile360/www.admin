@@ -1,0 +1,2145 @@
+[ 2017-07-16T00:09:35+08:00 ] 140.205.205.4 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000123s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000317s ]
+
+[ 2017-07-16T00:19:09+08:00 ] 101.226.65.107 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000119s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000305s ]
+
+[ 2017-07-16T05:41:29+08:00 ] 140.205.205.1 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000130s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000158s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-07-16T05:47:46+08:00 ] 140.205.205.1 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000121s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2017-07-16T06:48:08+08:00 ] 140.205.205.3 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000119s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000296s ]
+
+[ 2017-07-16T16:01:35+08:00 ] 183.61.38.55 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000141s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000169s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2017-07-16T17:37:07+08:00 ] 183.61.38.55 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000134s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-07-16T17:40:18+08:00 ] 183.61.38.55 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-07-16T17:40:21+08:00 ] 183.61.38.55 /Mobile/Goods/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000132s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: order /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 35 行.
+NOTIC: [8] Undefined index: where /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 37 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 8 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT `position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_ad` WHERE ( pid=400  and enabled = 1 and start_time < 1500195600 and end_time > 1500195600  ) ORDER BY orderby desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2017-07-16T17:40:31+08:00 ] 101.226.33.240 /Mobile/Goods/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000135s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: order /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 35 行.
+NOTIC: [8] Undefined index: where /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 37 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 8 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT `position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_ad` WHERE ( pid=400  and enabled = 1 and start_time < 1500195600 and end_time > 1500195600  ) ORDER BY orderby desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000310s ]
+
+[ 2017-07-16T17:40:33+08:00 ] 183.61.38.55 /Mobile/Goods/goodsList/id/864.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 864 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 864 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(864)  )  [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 319 行.
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (0) )  [ RunTime:0.0001s ]
+NOTIC: [2] rsort() expects parameter 1 to be array, null given /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 323 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(0)) ) LIMIT 30   [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 64 行.
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(0) [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(0) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: goods_list /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: goods_images /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 125 行.
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000135s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-07-16T17:40:40+08:00 ] 183.61.38.55 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000119s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-07-16T17:40:43+08:00 ] 101.226.99.197 /Mobile/Goods/goodsList/id/864.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 864 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 864 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(864)  )  [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 319 行.
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (0) )  [ RunTime:0.0001s ]
+NOTIC: [2] rsort() expects parameter 1 to be array, null given /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 323 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 334 行.
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(0)) ) LIMIT 30   [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 64 行.
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(0) [ RunTime:0.0001s ]
+NOTIC: [2] implode(): Invalid arguments passed /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(0) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: goods_list /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 123 行.
+NOTIC: [8] Undefined variable: goods_images /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 125 行.
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000142s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2017-07-16T17:40:47+08:00 ] 183.61.38.55 /Mobile/Goods/index.html?search=%E9%BE%99%E7%8C%AB&__hash__=5d001a7d46058e72cbd318f12ff6190c_6faa567b5e324863cfb861dab7d53259
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` WHERE ( goods_name like '%龙猫%' ) GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0003s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000148s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-07-16T17:40:50+08:00 ] 183.61.51.208 /Mobile/Goods/ajaxGoods.html?start=0&num=6&keyword=%E9%BE%99%E7%8C%AB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` WHERE ( goods_name like '%龙猫%' ) GROUP BY goods_id ORDER BY sort desc LIMIT 0,6   [ RunTime:0.0003s ]
+
+[ 2017-07-16T17:40:57+08:00 ] 101.226.89.116 /Mobile/Goods/index.html?search=%E9%BE%99%E7%8C%AB&__hash__=5d001a7d46058e72cbd318f12ff6190c_6faa567b5e324863cfb861dab7d53259
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` WHERE ( goods_name like '%龙猫%' ) GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000137s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-07-16T17:40:57+08:00 ] 180.163.2.118 /Mobile/Goods/index.html?search=%E9%BE%99%E7%8C%AB&__hash__=5d001a7d46058e72cbd318f12ff6190c_6faa567b5e324863cfb861dab7d53259
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0004s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` WHERE ( goods_name like '%龙猫%' ) GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000129s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2017-07-16T19:21:22+08:00 ] 120.41.161.126 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0004s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000117s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000306s ]
+
+[ 2017-07-16T19:25:06+08:00 ] 113.89.99.181 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000139s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000315s ]
+
+[ 2017-07-16T19:25:07+08:00 ] 113.89.99.181 /Mobile/MobileBase/Userinfo?code=041QlaLD08kW0f2DieND0pkmLD0QlaLy&state=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 815 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 842 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 863 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tp_users` WHERE `openid` = 'o6pmpxByXk4q925d_hi75-tSj844' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `tp_users` SET `last_ip`='113.89.99.181',`last_login`='1500204307' WHERE `openid` = 'o6pmpxByXk4q925d_hi75-tSj844' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tp_user_log` [ RunTime:0.0004s ]
+SQL: INSERT INTO `tp_user_log` (`web`,`info`,`addtime`,`flag`) VALUES ('wx','{\"user_id\":\"3444\",\"account\":\"\",\"email\":\"\",\"password\":\"\",\"sex\":\"2\",\"birthday\":\"0\",\"user_money\":\"0.00\",\"frozen_money\":\"0.00\",\"distribut_money\":\"0.00\",\"pay_points\":\"0\",\"address_id\":\"0\",\"reg_time\":\"1498034906\",\"last_login\":\"1500088255\",\"last_ip\":\"14.20.91.53\",\"qq\":\"\",\"mobile\":\"\",\"mobile_validated\":\"0\",\"oauth\":\"wx_mobile\",\"unionid\":null,\"openid\":\"o6pmpxByXk4q925d_hi75-tSj844\",\"head_pic\":\"http:\\/\\/wx.qlogo.cn\\/mmopen\\/rKoEQoDIT5icke17aiaicUP9gYn3mdyaQqPMMibziaEMYnwKdZ8OWaVkfnNRMqZoWxW6V7MYHbs4TEFLVD5WDSjAZBRpeZQTULric1\\/96\",\"province\":\"\\u5e7f\\u4e1c\",\"city\":\"\\u6df1\\u5733\",\"district\":null,\"email_validated\":\"0\",\"nickname\":\"\\u5c0f\\u5c71\\u4e1cSally\",\"level\":\"1\",\"discount\":\"1.00\",\"total_amount\":\"0.00\",\"is_lock\":\"0\",\"is_distribut\":\"0\",\"first_leader\":\"0\",\"second_leader\":\"0\",\"third_leader\":\"0\",\"token\":\"\",\"write_role\":null,\"introduce\":null,\"detail_address\":null}','1500204307','old') [ RunTime:0.0003s ]
+
+[ 2017-07-16T19:25:07+08:00 ] 113.89.99.181 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0006s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0004s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000163s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2017-07-16T19:25:29+08:00 ] 113.89.99.181 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000124s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+
+[ 2017-07-16T19:28:01+08:00 ] 113.89.99.181 /Mobile/Goods/ajaxGoods.html?start=12&num=6&keyword=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12,6   [ RunTime:0.0001s ]
+
+[ 2017-07-16T21:39:03+08:00 ] 117.136.31.249 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000125s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-07-16T21:39:03+08:00 ] 117.136.31.249 /Mobile/MobileBase/Userinfo?code=011rKuQd04OcUy1cC2Qd02czQd0rKuQv&state=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 815 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 842 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 863 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_users` WHERE `openid` = 'o6pmpxCFkV3jLLg10fZf24uabB2I' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `tp_users` SET `last_ip`='117.136.31.249',`last_login`='1500212343' WHERE `openid` = 'o6pmpxCFkV3jLLg10fZf24uabB2I' [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `tp_user_log` [ RunTime:0.0004s ]
+SQL: INSERT INTO `tp_user_log` (`web`,`info`,`addtime`,`flag`) VALUES ('wx','{\"user_id\":\"3430\",\"account\":\"\",\"email\":\"\",\"password\":\"\",\"sex\":\"2\",\"birthday\":\"0\",\"user_money\":\"0.00\",\"frozen_money\":\"0.00\",\"distribut_money\":\"0.00\",\"pay_points\":\"0\",\"address_id\":\"0\",\"reg_time\":\"1497782158\",\"last_login\":\"1499648626\",\"last_ip\":\"119.137.90.190\",\"qq\":\"\",\"mobile\":\"\",\"mobile_validated\":\"0\",\"oauth\":\"wx_mobile\",\"unionid\":null,\"openid\":\"o6pmpxCFkV3jLLg10fZf24uabB2I\",\"head_pic\":\"http:\\/\\/wx.qlogo.cn\\/mmopen\\/w08JWicUDKkDmwJWKXqMibnwlxPx7vG4icGs90wwibqfBg2z4VcTnUW5IXencJqCwQNSJ8lhAnwtBNXEuhGrcYUfBGSlfEMicfBzT\\/96\",\"province\":\"\\u5e7f\\u4e1c\",\"city\":\"\\u6885\\u5dde\",\"district\":null,\"email_validated\":\"0\",\"nickname\":\"\\u5029\",\"level\":\"1\",\"discount\":\"1.00\",\"total_amount\":\"0.00\",\"is_lock\":\"0\",\"is_distribut\":\"0\",\"first_leader\":\"0\",\"second_leader\":\"0\",\"third_leader\":\"0\",\"token\":\"\",\"write_role\":null,\"introduce\":null,\"detail_address\":null}','1500212343','old') [ RunTime:0.0003s ]
+
+[ 2017-07-16T21:39:04+08:00 ] 117.136.31.249 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000132s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2017-07-16T21:39:09+08:00 ] 117.136.31.249 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = 3430 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = 3430 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000121s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2017-07-16T21:39:10+08:00 ] 117.136.31.249 /Mobile/Comment/Comment4Admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 1 ORDER BY comment_id DESC  [ RunTime:0.0001s ]
+
+[ 2017-07-16T21:39:10+08:00 ] 101.226.33.206 /Mobile/Goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0005s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id`,`goods_sn`,`goods_name`,`shop_price`,`original_img` FROM `tp_goods` GROUP BY goods_id ORDER BY sort desc LIMIT 12   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000123s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-07-16T21:39:13+08:00 ] 101.226.64.177 /Mobile/MobileBase/Userinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 842 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+NOTIC: [2] Missing argument 2 for Common\Normal\Httpclient::quickGet(), called in /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Wechat.class.php on line 863 and defined /data/wwwroot/www.fengzakka.cn/Application/Common/Normal/Httpclient.class.php 第 298 行.
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tp_users` WHERE `openid` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `tp_users` (`last_ip`,`sex`,`nickname`,`city`,`province`,`head_pic`,`openid`,`unionid`,`reg_time`,`last_login`,`oauth`) VALUES ('101.226.64.177','0',NULL,NULL,NULL,'96',NULL,NULL,'1500212353','1500212353','wx_mobile') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_user_log` [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_user_log` (`web`,`info`,`addtime`,`flag`) VALUES ('wx','{\"last_ip\":\"101.226.64.177\",\"sex\":\"0\",\"nickname\":null,\"city\":null,\"province\":null,\"head_pic\":\"96\",\"openid\":null,\"unionid\":null,\"reg_time\":1500212353,\"last_login\":1500212353,\"oauth\":\"wx_mobile\"}','1500212353','new') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tp_users` WHERE `user_id` = 3483 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-07-16T21:39:14+08:00 ] 101.226.64.177 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0007s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0004s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000147s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000181s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-07-16T21:39:18+08:00 ] 117.136.31.249 /Mobile/Goods/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0002s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000137s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000173s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: order /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 35 行.
+NOTIC: [8] Undefined index: where /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 37 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 8 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 28 行.
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0004s ]
+SQL: SELECT `position_id`,`position_name`,`ad_width`,`ad_height` FROM `tp_ad_position`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_ad` WHERE ( pid=400  and enabled = 1 and start_time < 1500210000 and end_time > 1500210000  ) ORDER BY orderby desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+NOTIC: [8] Use of undefined constant edit_ad - assumed 'edit_ad' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Undefined index: edit_ad /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 35 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 40 行.
+NOTIC: [8] Undefined index: sub_tmenu /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/56100e2ee68da1c55bb7048b88cc0a95.php 第 43 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000301s ]
+
+[ 2017-07-16T21:39:19+08:00 ] 180.163.2.117 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000207s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000254s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2017-07-16T21:39:19+08:00 ] 101.226.33.216 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000127s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-07-16T21:39:19+08:00 ] 101.226.33.225 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000164s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000214s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-07-16T21:39:19+08:00 ] 101.226.66.178 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2017-07-16T21:39:22+08:00 ] 101.226.65.108 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000128s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2017-07-16T21:41:37+08:00 ] 117.136.31.249 /Mobile/Goods/goodsList/id/873.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 873 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 873 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(873)  )  [ RunTime:0.0001s ]
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (172) )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(172)) ) LIMIT 30   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(172) [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `tp_spec` WHERE `search_index` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_item` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`spec_id`,`item` FROM `tp_spec_item` WHERE `spec_id` IN (28,29,30,31,32,33,34,35)  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: spec /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(172) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id in (172) ) ORDER BY goods_id asc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id in (172) )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 49 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 67 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-07-16T21:41:47+08:00 ] 101.226.33.202 /Mobile/Goods/goodsList/id/873.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 873 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 873 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(873)  )  [ RunTime:0.0001s ]
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (172) )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(172)) ) LIMIT 30   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0004s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(172) [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `tp_spec` WHERE `search_index` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_item` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`spec_id`,`item` FROM `tp_spec_item` WHERE `spec_id` IN (28,29,30,31,32,33,34,35)  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: spec /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(172) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id in (172) ) ORDER BY goods_id asc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id in (172) )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000131s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000158s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 49 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 67 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-07-16T21:41:55+08:00 ] 117.136.31.249 /Mobile/Goods/goodsList/id/878.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 878 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 878 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(878)  )  [ RunTime:0.0001s ]
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (177) )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(177)) ) LIMIT 30   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(177) [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `tp_spec` WHERE `search_index` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_item` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`spec_id`,`item` FROM `tp_spec_item` WHERE `spec_id` IN (28,29,30,31,32,33,34,35)  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: spec /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(177) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id in (177) ) ORDER BY goods_id asc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id in (177) )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000131s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 49 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 67 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 154 行.
+NOTIC: [8] Use of undefined constant value - assumed 'value' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 154 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2017-07-16T21:41:57+08:00 ] 117.136.31.249 /Mobile/Goods/goodsInfo/id/177.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id =351 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `tp_spec_goods_price` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_image` [ RunTime:0.0004s ]
+SQL: SELECT `spec_image_id`,`src` FROM `tp_spec_image` WHERE ( goods_id = 177 and src != ''  )  [ RunTime:0.0001s ]
+SQL: SELECT a.name,a.order,b.* FROM tp_spec AS a INNER JOIN tp_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(213,214,215) ORDER BY b.id [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0004s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `tp_spec_goods_price` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2) ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 234 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 235 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 237 行.
+SQL: SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE ( goods_id=177 and is_send=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 212 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000143s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000169s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: level /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 155 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 9 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Undefined variable: prom_goods /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Undefined variable: prom_order /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 339 行.
+NOTIC: [8] Undefined index: flash_sale /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 393 行.
+NOTIC: [8] Undefined variable: signPackage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-07-16T21:41:58+08:00 ] 117.136.31.249 /index.php?m=Mobile&c=goods&a=ajaxComment&goods_id=177&commentType=1&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( goods_id = 177 and parent_id = 0 and ceil((deliver_rank + goods_rank + service_rank) / 3) in(0,1,2,3,4,5) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_comment` WHERE ( goods_id = 177 and parent_id = 0 and ceil((deliver_rank + goods_rank + service_rank) / 3) in(0,1,2,3,4,5) ) ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_comment` WHERE ( goods_id = 177 and parent_id > 0 ) ORDER BY add_time desc  [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-07-16T21:42:01+08:00 ] 117.136.31.249 /Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `tp_article_cat` [ RunTime:0.0005s ]
+SQL: SELECT `cat_name`,`cat_id` FROM `tp_article_cat` WHERE `show_in_nav` = 1 AND `parent_id` = 0  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_ad_position` [ RunTime:0.0003s ]
+SQL: SELECT b.* FROM tp_ad_position a INNER JOIN tp_ad b ON a.position_id=b.pid  WHERE ( a.position_name LIKE '%mobile%' ) ORDER BY b.orderby desc LIMIT 3   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult` WHERE `is_show` = 0 GROUP BY consult_id ORDER BY createtime desc LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000296s ]
+
+[ 2017-07-16T21:42:05+08:00 ] 101.226.89.121 /Mobile/Goods/goodsList/id/878.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( id = 878 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_goods_category` WHERE ( is_show = 1 ) ORDER BY sort_order  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`parent_id` FROM `tp_goods_category`  [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `tp_goods_category` WHERE ( parent_id = 878 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/wwwroot/www.fengzakka.cn/Application/Common/Common/common.php 第 401 行.
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT `goods_id` FROM `tp_goods` WHERE ( is_on_sale=1 and cat_id in(878)  )  [ RunTime:0.0001s ]
+SQL: SELECT `shop_price` FROM `tp_goods` WHERE ( goods_id in (177) )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id in(select brand_id from tp_goods where brand_id > 0 and goods_id in(177)) ) LIMIT 30   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0004s ]
+SQL: select group_concat(`key` separator  '_') as `key` from tp_spec_goods_price where goods_id in(177) [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `tp_spec` WHERE `search_index` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_item` [ RunTime:0.0003s ]
+SQL: SELECT `id`,`spec_id`,`item` FROM `tp_spec_item` WHERE `spec_id` IN (28,29,30,31,32,33,34,35)  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: spec /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id in(177) and attr_value != '' )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0004s ]
+SQL: SELECT `attr_id`,`attr_name`,`attr_index` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id in (177) ) ORDER BY goods_id asc LIMIT 0,4   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id in (177) )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name`,`parent_id`,`level` FROM `tp_goods_category` WHERE ( is_show=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: is_ajax /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000136s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 9 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 37 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 38 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 39 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 40 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 49 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 67 行.
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant sort_asc - assumed 'sort_asc' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Undefined index: sort_asc /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 85 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 128 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 134 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant key - assumed 'key' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant val - assumed 'val' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 135 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 154 行.
+NOTIC: [8] Use of undefined constant value - assumed 'value' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 154 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2b8c6080e455e089a54776d19e1bfb4b.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2017-07-16T21:42:07+08:00 ] 101.226.89.116 /Mobile/Goods/goodsInfo/id/177.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id =351 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `tp_spec_goods_price` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_image` [ RunTime:0.0003s ]
+SQL: SELECT `spec_image_id`,`src` FROM `tp_spec_image` WHERE ( goods_id = 177 and src != ''  )  [ RunTime:0.0001s ]
+SQL: SELECT a.name,a.order,b.* FROM tp_spec AS a INNER JOIN tp_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(213,214,215) ORDER BY b.id [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `tp_spec_goods_price` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2) ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 234 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 235 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 237 行.
+SQL: SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE ( goods_id=177 and is_send=1 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 212 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000129s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000172s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: level /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 155 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 9 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Undefined variable: prom_goods /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Undefined variable: prom_order /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 339 行.
+NOTIC: [8] Undefined index: flash_sale /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 393 行.
+NOTIC: [8] Undefined variable: signPackage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2017-07-16T21:42:07+08:00 ] 180.163.2.118 /Mobile/Goods/goodsInfo/id/177.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id =351 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id = 177 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0004s ]
+SQL: SELECT `attr_id`,`attr_name` FROM `tp_goods_attribute`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id = 177 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `tp_spec_goods_price` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_spec_image` [ RunTime:0.0005s ]
+SQL: SELECT `spec_image_id`,`src` FROM `tp_spec_image` WHERE ( goods_id = 177 and src != ''  )  [ RunTime:0.0004s ]
+SQL: SELECT a.name,a.order,b.* FROM tp_spec AS a INNER JOIN tp_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(213,214,215) ORDER BY b.id [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `tp_spec_goods_price` WHERE ( goods_id = 177 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5) ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2) ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 234 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 235 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 237 行.
+SQL: SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE ( goods_id=177 and is_send=1 ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 212 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: level /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 155 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 9 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Undefined variable: prom_goods /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Undefined variable: prom_order /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 339 行.
+NOTIC: [8] Undefined index: flash_sale /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 393 行.
+NOTIC: [8] Undefined variable: signPackage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-07-16T21:42:07+08:00 ] 101.226.66.174 /Mobile/Goods/goodsInfo/id/177.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011951s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id =351 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id = 177 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name` FROM `tp_goods_attribute`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id = 177 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0007s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `tp_spec_goods_price` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_spec_image` [ RunTime:0.0005s ]
+SQL: SELECT `spec_image_id`,`src` FROM `tp_spec_image` WHERE ( goods_id = 177 and src != ''  )  [ RunTime:0.0004s ]
+SQL: SELECT a.name,a.order,b.* FROM tp_spec AS a INNER JOIN tp_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(213,214,215) ORDER BY b.id [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0007s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `tp_spec_goods_price` WHERE ( goods_id = 177 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3) ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2) ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 234 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 235 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 237 行.
+SQL: SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE ( goods_id=177 and is_send=1 ) LIMIT 1   [ RunTime:0.0106s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 212 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000131s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: level /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 155 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 9 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Undefined variable: prom_goods /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Undefined variable: prom_order /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 339 行.
+NOTIC: [8] Undefined index: flash_sale /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 393 行.
+NOTIC: [8] Undefined variable: signPackage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-07-16T21:42:07+08:00 ] 101.226.66.192 /Mobile/Goods/goodsInfo/id/177.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tp_goods` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_brand` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_brand` WHERE ( id =351 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_images` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_images` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attribute` [ RunTime:0.0003s ]
+SQL: SELECT `attr_id`,`attr_name` FROM `tp_goods_attribute`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_goods_attr` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') FROM `tp_spec_goods_price` WHERE ( goods_id = 177 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_image` [ RunTime:0.0003s ]
+SQL: SELECT `spec_image_id`,`src` FROM `tp_spec_image` WHERE ( goods_id = 177 and src != ''  )  [ RunTime:0.0001s ]
+SQL: SELECT a.name,a.order,b.* FROM tp_spec AS a INNER JOIN tp_spec_item AS b ON a.id = b.spec_id WHERE b.id IN(213,214,215) ORDER BY b.id [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_spec_goods_price` [ RunTime:0.0003s ]
+SQL: SELECT `key`,`price`,`store_count` FROM `tp_spec_goods_price` WHERE ( goods_id = 177 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3) ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_comment` WHERE ( is_show = 1 and  goods_id = 177 and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2) ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 234 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 235 行.
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Home/Logic/GoodsLogic.class.php 第 237 行.
+SQL: SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE ( goods_id=177 and is_send=1 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Division by zero /data/wwwroot/www.fengzakka.cn/Application/Mobile/Controller/GoodsController.class.php 第 212 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000167s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000193s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: level /data/wwwroot/www.fengzakka.cn/ThinkPHP/Library/Think/Template/TagLib/Tpshop.class.php 第 155 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 8 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 9 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 102 行.
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Use of undefined constant goods_id - assumed 'goods_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 103 行.
+NOTIC: [8] Undefined variable: prom_goods /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Undefined variable: prom_order /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 129 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant src - assumed 'src' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 160 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 162 行.
+NOTIC: [8] Use of undefined constant item_id - assumed 'item_id' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 163 行.
+NOTIC: [8] Use of undefined constant item - assumed 'item' /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 164 行.
+NOTIC: [8] Undefined variable: tpshop_config /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 339 行.
+NOTIC: [8] Undefined index: flash_sale /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 393 行.
+NOTIC: [8] Undefined variable: signPackage /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/2360c3546ee568807e87bc9f49eb91c1.php 第 431 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2017-07-16T21:48:54+08:00 ] 180.153.160.24 /Mobile/Consult/detail/id/1499328710.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `tp_consult` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.nickname,b.head_pic,count(c.consult_id) as collect FROM tp_consult as a INNER JOIN tp_users as b ON a.user_id=b.user_id LEFT JOIN tp_consult_collect as c ON c.consult_id=a.consult_id  WHERE a.consult_id = '1499328710' GROUP BY a.consult_id LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_like` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_like` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_collect` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tp_consult_collect` WHERE `consult_id` = 1499328710 AND `user_id` = null LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `tp_consult_comment` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_consult_comment` WHERE `consult_id` = 1499328710 AND `type` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: user /data/wwwroot/www.fengzakka.cn/Application/Runtime/Cache/Mobile/dfd6d9df5df21293af7321667bed8563.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+

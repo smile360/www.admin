@@ -1,0 +1,105 @@
+<title>深圳珠宝咨询网-用户中心</title>
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li class="active">
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li>
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					
+					<li>
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li>
+						<a href="{:U('User/mycomment')}">评论消息</a>
+					</li>
+					<li>
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li>
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+
+				<div class="personer pull-right">
+					<h2 class="text-center">个人资料</h2>
+					<p class="text-center">
+						<img src="{$user.head_pic|default='__IMG__p_head.png'}" />
+					</p>
+					<p class="text-center name color66">{$user.account}</p>
+					<div class="sign">
+						<form action="{:U('User/index')}" method="post" onsubmit="return checkreg()">
+							<input type="hidden" name="user_id" value="{$user.user_id}">
+							<div class="info clearfix">
+								<span class="pull-left">昵　称</span>
+								<input type="text" id="name" name="nickname" class="pull-left" value="{$user.nickname}">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">性　别</span>
+								<select class="form-control pull-left" name="sex">
+									 <if condition="$user.sex eq '0'">
+                                        <option value="0">女</option>
+                                        <option value="1">男</option>
+                                        <option value="2">未知</option>
+                                    <elseif condition="$user.sex eq 1" />
+										<option value="0">女</option>
+										<option value="1">男</option>
+										<option value="2">未知</option>
+									<else/>
+										<option value="2">未知</option>
+                                        <option value="0">女</option>
+                                        <option value="1">男</option>
+									</if>
+								</select>
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">年　龄</span>
+								<input type="text" name="birthday" class="pull-left" value="{$user.birthday}">
+							</div>
+							<div class="info clearfix">
+								<span class="pull-left">安全手机</span>
+								<input type="text" style="background:#ccc" name="mobile" class="pull-left" value="{$user.mobile}" readonly="true">
+							</div>
+							<button type="submit" class="btn btn-default">修改</button>
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<!--------头部结束-------------->
+		<script>
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+			function checkreg(){
+				var nickname = $.trim($("#name").val());
+				if( nickname == ''){
+					layer.msg("昵称不能为空");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+<title>消息列表</title>
+<include file="Public/nav" />
+	<body>
+		<div class="mui-content message">
+			<ul class="mui-table-view" style="margin-top: 0 !important;">
+				<li class="mui-table-view-cell">
+					<notempty name="data.sytmsg">
+						<span class="mui-badge message-num">{$data['sytmsg']}</span>
+					</notempty>
+					<a class="mui-navigate-right" href="{:U('User/systemMsg')}">系统消息</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px !important;">
+				<li class="mui-table-view-cell">
+					<notempty name="data.commsg">
+						<span class="mui-badge message-num">{$data['sytmsg']}</span>
+					</notempty>
+					<a class="mui-navigate-right" href="{:U('User/commentMsg')}">文章消息</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px !important;">
+				<li class="mui-table-view-cell">
+					<notempty name="data.actmsg">
+						<span class="mui-badge message-num">{$data['actmsg']}</span>
+					</notempty>
+					<a class="mui-navigate-right" href="{:U('User/activityMsg')}">活动消息</a>
+				</li>
+			</ul>
+		</div>

@@ -1,0 +1,108 @@
+<title>培训</title>
+<include file="Public/nav" />
+	<body>
+		<div class="mui-content consult training">
+			<div id="pullrefresh" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="consult-card">
+						<volist name="data" id="vo">
+							<li>
+								<a href="{:U('detail',array('activity_id'=>$vo['activity_id']))}">
+									<div class="consult-body mui-clearfix">
+										<div class="title">{$vo.title}</div>
+										<div class="cont mui-clearfix">
+											<img src="{$vo.activity_logo}">
+											<p>主讲导师：{$vo.teacher}</p>
+											<p>主要内容：{$vo.course}</p>
+											<p>上课时间：{$vo.course_time}</p>
+										</div>
+									</div>
+									<div class="mui-table">
+										<div class="mui-table-cell">{$vo.lunch_time}
+											<if condition="$vo.sign eq '2'">
+												<button class="mui-pull-right">立即报名</button>
+											<else />
+												<button class="mui-pull-right" style="background:#8a8a8a;color:#fff;border-color:#8a8a8a">报名结束</button>
+											</if>
+											
+										</div>
+									</div>
+								</a>
+							</li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+
+			function pullupRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.consult-card');
+					var cells = document.body.querySelectorAll('.consult-card li').length;
+					mui.ajax("{:U('index')}", {
+						data: {
+							start: cells,
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							var Html = "";
+							if(data.code == 200) {
+								mui.each(data.result, function(i, item) {
+									if(item.sign == '2'){
+										var _sign = '<button class="mui-pull-right">立即报名</button>';
+									}else{
+										var _sign = '<button class="mui-pull-right">报名已结束</button>';
+									}
+									Html += '<li>';
+									Html += '<a href="'+"{:U('detail')}?activity_id="+item.activity_id+'">';
+									Html += '<div class="consult-body mui-clearfix">';
+									Html += '<div class="title">'+item.title+'</div>';
+									Html += '<div class="cont mui-clearfix">';
+									Html += '<img src="'+item.activity_logo+'">';
+									Html += '<p>主讲导师：'+item.teacher+'</p>';
+									Html += '<p>主要内容：'+item.course+'</p>';
+									Html += '<p>上课时间：'+item.course_time+'</p>';
+									Html += '</div>';
+									Html += '</div>';
+									Html += '<div class="mui-table">';
+									Html += '<div class="mui-table-cell">'+item.lunch_time+_sign+'</div>';
+									Html += '</div>';
+									Html += '</a>';
+									Html += '</li>';
+									table.insertAdjacentHTML('beforeend', Html);
+								});
+							} else {
+								hasMore = true;
+							}
+							mui('#pullrefresh').pullRefresh().endPullupToRefresh(hasMore);
+						}
+					})
+				}, 1500);
+			}
+
+			mui('.mui-scroll').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				mui.openWindow({
+					url: targetTab,
+					id: targetTab,
+				})
+			});
+		</script>
+	</body>
+
+</html>

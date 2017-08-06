@@ -1,0 +1,55 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<!--------头部结束-------------->
+		<!-- <div class="train-banner">
+			<a href="">
+				<img src="__IMG__train_banner.jpg" alt="" />
+			</a>
+		</div> -->
+		<div class="container train">
+			<notempty name="data">
+				<volist name="data" id="vo">
+					<div class="media">
+						<a href="{:U('Activity/detail',array('activity_id'=>$vo['activity_id']))}">
+							<div class="media-left">
+								<img src="{$vo.activity_logo}" alt="">
+							</div>
+							<div class="media-body" style="width:100%;">
+								<h4 class="media-heading">{$vo.title}</h4>
+								<p class="date">{$vo.add_time|date="Y-m-d",###}</p>
+								<p>主讲导师：{$vo.teacher}</p>
+								<p>主要课程：{$vo.course}</p>
+								<p>上课时间：{$vo.lunch_time}</p>
+								<p>午休时间：{$vo.course_time}</p>
+								<p>开课时间：{$vo.add_time|date="Y年m月d日",###}
+									<?php 
+										if($vo['activity_time'] > time()){
+											echo '<span class="baoming pull-right">立即报名</span>';
+										}else{
+											echo '<span class="baoming pull-right endbaoming">报名结束</span>';
+										}
+									?>
+								</p>
+							</div>
+						</a>
+					</div>	
+				</volist>
+			</notempty>
+			<nav class="text-center">
+				{$page}
+			</nav>
+
+		</div>
+
+		<!--------底部开始-------------->
+		<include file="Public/footer" />
+		<!--------底部结束-------------->
+		<script>
+			$(".menu-list li").eq(2).attr("class","active");
+			var _url = "{:U('index')}";
+			$('.search').attr("action", _url);
+		</script>
+
+	</body>
+
+</html>

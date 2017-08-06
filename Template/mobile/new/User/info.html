@@ -1,0 +1,144 @@
+<title>个人资料</title>
+<include file="Public/nav" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" type="text/css" href="__PUBLIC__/mobile/css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/app.css" />
+		<div class="mui-content u-info input-r" id="u-info">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" id="uploadpic">
+						<img class="mui-media-object mui-pull-right" id="head-img" onerror="onerror=null;src=src='__PUBLIC__/mobile/img/pl_head.png'" src="{$user_info.head_pic}">
+						<div class="mui-media-body">头　像</div>
+						<input id="imageHead" type="file" name="fileInput" style="position:absolute;left:0;opacity:0;width:100%;height:100%;top:0;">
+					</a>
+				</li>
+			</ul>
+			<div class="mui-table-view" style="margin-top: 10px;">
+				<div class="mui-input-row">
+					<label>用户名</label>
+					<input id="username" type="text" value="{$user_info['nickname']}" disabled="disabled" class="defult" />
+				</div>
+			</div>
+			<div class="mui-table-view" style="margin-top: 10px;">
+				<div class="mui-input-group">
+					<div class="mui-input-row">
+						<label>性　别</label>
+						<input id="sex" type="text" value="{$user_info['sex']}" class="defult" disabled="disabled" />
+					</div>
+					<div class="mui-input-row">
+						<label>邮　箱</label>
+						<input id="mail" type="text" value="{$user_info['email']}" class="defult" disabled="disabled" />
+					</div>
+				</div>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<span id="city-data">{$user_info.province} {$user_info.city} {$user_info.district}</span>
+					<a class="mui-navigate-right" id="showCity">地　区</a>
+				</li>
+			</ul>
+			<div class="mui-content-padded mui-text-center">
+				<button type="button" class="mui-btn mui-btn-outlined" id="modify">修改资料</button>
+				<button type="button" class="mui-btn mui-btn-outlined save" id="save">保存</button>
+			</div>
+		</div>
+
+		<script src="__PUBLIC__/mobile/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__/mobile/js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//上传头像
+					document.getElementById("imageHead").addEventListener('change', function(e) {
+							var a = e.target.files[0];
+							var r = new FileReader;
+							r.readAsDataURL(a), r.onload = function(e) {
+								$.post("{:U('User/u_headimg')}", {
+									data: e.target.result, //base64图片编码
+								}, function(data) {
+									if(data.code == 200) {
+										document.getElementById("head-img").src = data.path;
+										$.toast("头像修改成功");
+										return false;
+									} else {
+										$.toast("头像上传失败,请稍后再试");
+										return false;
+									}
+								});
+							}
+						})
+						//城市选择
+					var city = new $.PopPicker({
+						layer: 3
+					});
+					city.setData(cityData3);
+					var showCityPicker = doc.getElementById('showCity');
+					showCityPicker.addEventListener('tap', function(event) {
+						city.show(function(items) {
+							doc.getElementById("city-data").innerText = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+						});
+					}, false);
+
+					var uname = doc.getElementById("username");
+					var sex = doc.getElementById("sex");
+					var mail = doc.getElementById("mail");
+					var address =doc.getElementById("city-data");
+					doc.getElementById("modify").addEventListener("tap", function() {
+						doc.getElementById("u-info").classList.remove("input-r");
+						uname.removeAttribute("disabled");
+						sex.removeAttribute("disabled");
+						mail.removeAttribute("disabled");
+						doc.getElementById("modify").style.display = "none";
+						doc.getElementById("save").style.display = "block";
+						doc.getElementById("save").style.margin = "auto";
+					})
+
+					doc.getElementById("save").addEventListener("tap", function() {
+						// $.post("{:U('User/info')}", {
+						// 	data: {
+						// 		'username': uname.value,
+						// 		'sex': sex.value,
+						// 		'mail': mail.value,
+						// 		'addr': address.innerText,
+						// 	}
+						// }, function(data) {
+						// 	if(data.code == 200) {
+						// 		$.toast("更新成功");
+						// 	} else {
+						// 		$.toast("更新成功,请稍后再试");
+						// 		return false;
+						// 	}
+						// });
+						if(uname.value == "") {
+							$.toast("名字不能为空");
+							return false;
+						}
+						
+						var regex = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+						if(!regex.test(mail.value)) {
+							$.toast('邮箱格式不正确！');
+							return false;
+						}
+						mui.post("{:U('User/info')}",{
+								'username': uname.value,
+								'sex': sex.value,
+								'mail': mail.value,
+								'addr': address.innerText,
+							},function(data){
+								if(data.code == 200) {
+									$.toast("更新成功");
+
+								} else {
+									$.toast("更新成功,请稍后再试");
+									return false;
+								}
+							},'json'
+						);
+
+					})
+
+				})
+
+			}(mui, document));
+		</script>

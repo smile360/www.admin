@@ -1,0 +1,1 @@
+a:9:{s:7:"is_mark";s:1:"0";s:8:"mark_txt";s:0:"";s:8:"mark_img";s:50:"/Public/upload/Public/2016/09-23/57e4cf2422904.jpg";s:10:"mark_width";s:3:"200";s:11:"mark_height";s:3:"100";s:11:"mark_degree";s:2:"53";s:12:"mark_quality";s:2:"55";s:3:"sel";s:1:"9";s:9:"mark_type";s:3:"img";}

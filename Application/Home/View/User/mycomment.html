@@ -1,0 +1,123 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<li>
+						<a href="{:U('User/index')}">个人资料</a>
+					</li>
+					<li >
+						<a href="{:U('User/info')}">用户中心</a>
+					</li>
+					<li >
+						<a href="{:U('User/myconsult')}">我的咨询</a>
+					</li>
+					<li>
+						<a href="{:U('User/myactivity')}">我的活动</a>
+					</li>
+					<li >
+						<a href="{:U('User/mycollect')}">我的收藏</a>
+					</li>
+					<li class="active">
+						<a href="{:U('User/mycomment')}">我的评论</a>
+					</li>
+					<li>
+						<a href="{:U('User/mymessages')}">系统消息</a>
+					</li>
+					<li >
+						<a href="{:U('User/accountSet')}">账户设置</a>
+					</li>
+				</ul>
+
+				<ul class="comment-tab pull-right" id="myTab">
+					<li class="active">
+						<a class="consultType" href="#consult-comment" data-type="1" data-toggle="tab">咨询评论</a>
+					</li>
+					<li>
+						<a class="consultType" href="#article-comment" data-type="2" data-toggle="tab">文章评论</a>
+					</li>
+					<li>
+						<a class="consultType" href="#activity-comment" data-type="3" data-toggle="tab">活动评论</a>
+					</li>
+				</ul>
+				<div class="tab-content comment-tab-cell pull-right personer consulting-detail p-comment">
+					<div class="tab-pane comment active" id="consult-comment">
+						<!--type=1 咨询评论-->
+						<if condition="$type eq 1 "> 
+							<volist name="data" id="item">
+								<div class="media clearfix">
+									<img class="media-object media-left pull-left" src="{$item.head_pic|default='__IMG__head3.png'}">
+									<div class="media-body pull-left">
+										<div class="media-heading">
+											<span class="color-f0">{$item.nickname}</span> {$item.createtime|date='Y-m-d H:i:s',###}
+										</div>
+										<p class="weiguan">{$item.comment}</p>
+										<div class="pull-right p-comment-c">
+											<h5>{$item.tittle}</h5>
+											<p>{$item.detail|getSubstr=0,80,'...'}</p>
+										</div>
+									</div>
+								</div>
+							</volist>
+						<else />
+							<volist name="data" id="item">
+								<div class="media clearfix">
+									<img class="media-object media-left pull-left" src="{$item.head_pic|default='__IMG__head3.png'}">
+									<div class="media-body pull-left">
+										<div class="media-heading">
+											<span class="color-f0">{$item.nickname}</span> {$item.add_time|date='Y-m-d H:i:s',###}
+										</div>
+										<p class="weiguan">{$item.content}</p>
+										<div class="pull-right p-comment-c">
+											<h5>{$item.title}</h5>
+											<p><?php echo preg_replace ('/\<p\>|\<\/p\>|\<p\>|<br\/>|\<\/p\>/','',mb_substr( htmlspecialchars_decode($item['detail']),0,90)).'...';?></p>
+										</div>
+									</div>
+								</div>
+							</volist>
+						</if>
+					</div>
+				</div>
+			</div>
+			<nav class="text-center">
+				{$page}
+			</nav>
+
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<script>
+			var type = "{$_GET['type']}";
+			$(".consultType").click(function (){
+				type = $(this).attr('data-type');
+				window.location.href = "{:U('mycomment')}?type="+type;
+			});
+
+			$(function (){
+				for(var i=0;i < $(".consultType").length;i++){
+					var $elem = $(".consultType").eq(i);
+					if("{$_GET['type']}" == ""){
+						return ;
+					}
+					if($elem.attr("data-type") == "{$_GET['type']}"){
+						$elem.parent().addClass("active");
+					}else{
+						$elem.parent().removeClass();
+					}
+				}
+			});
+			$('#myTab a:first').tab('show');
+			function checkseach() {
+				var seach = $("#seach").val();
+				if(seach == "") {
+					alert("请输入搜索关键字");
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

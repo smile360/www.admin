@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>新三板</title>
+		<link href="__PUBLIC__/new/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/new/css/css.css" />
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<div class="pull-left">
+					<a href="{:U('Wechat/WechatAuth',array('type'=>pc,'id'=>session_id()))}" class="wx">微信</a>
+					<!-- <a href="">微博</a> -->
+				</div>
+				<div class="pull-right">
+					<notempty name="userInfo">
+                        <a href="">{$userInfo['nickname']}</a>
+                        <a href="{:U('User/logout')}">退出</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    <else/>
+                        <a href="{:U('User/login')}">登陆</a>
+                        <a href="{:U('User/reg')}" class="reg text-right">注册</a>
+                        <a href="" class="wr text-center">写稿</a>
+                    </notempty>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="container">
+				<div class="logo pull-left">
+					<a href="/"><img src="__PUBLIC__/new/img/logo.jpg" alt="logo" /></a>
+				</div>
+				<ul class="menu-list pull-left">
+					<li>
+						<a href="{:U('Index/index')}">首页</a>
+					</li>
+					<li>
+						<a href="list.html">阅读</a>
+					</li>
+					<li>
+						<a href="list.html">新声TV</a>
+					</li>
+					<li>
+						<a href="list.html">三板客</a>
+					</li>
+					<li>
+						<a href="{:U('Activity/index')}">活动</a>
+					</li>
+				</ul>
+				<form class="search pull-right">
+					<button type="submit" class="pull-right submit"><span class="glyphicon glyphicon-search"></span></button>
+					<input type="text" class="pull-right input" placeholder="请输入搜索关键字">
+				</form>
+			</div>
+		</div>
+
+		<div class="article">
+			<h1>{$data['data']['title']}</h1>
+			<div class="edit-name">
+				<img src="__PUBLIC__/new/img/edit.png" />　<span class="color-f0">{$data['data']['user_name']} </span> {$data['data']['add_time']|date="Y-m-d",###}
+				<span class="pull-right"><img src="__PUBLIC__/new/img/arr.png" alt="栏目" style="margin-right: 13px;">活动</span>
+			</div>
+			<div class="content">
+				<img src="{$data['data']['activity_logo']}" alt="" width="100%" />
+				<p>
+					{$data['data']['description']}
+				</p>
+				<p>
+					{$data['data']['content']}
+				</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;margin-top: 40px;">文章为作者独立观点，不代表虎嗅网立场</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;">转载此文章须经作者同意，并请附上出处(新声)及本页链接</p>
+				<p style="line-height: 26px;font-size: 12px;color:#999999;">原文链接 {$data['url']}</p>
+				
+			</div>
+			<div class="collect clearfix" style="margin-top: 90px;">
+				<notempty name="like.is_like">
+					<a class="pull-right sc" id="is_like" href="javascript:void(0)">
+						<img style="background:#f08200; " src="__PUBLIC__/new/img/zan.png" /> 赞（ <span class="like">{$like['num']}</span> ）
+					</a>
+				<else/>
+					<a class="pull-right sc" id="is_like" onclick="Is_like({$data['data']['activity_id']})" href="javascript:void(0)">
+						<img src="__PUBLIC__/new/img/zan.png" /> 赞（ <span class="like">{$like['num']}</span> ）
+					</a>
+				</notempty>
+			</div>
+			<div class="comment">
+				<p class="text-center title">评论 ( {$data['Comment']} )</p>
+				<p class="text-center title">报名 ( {$data['Entry']} )</p>
+				<?php 
+					if( $data['data']['activity_time'] > time()){
+						echo '<a class="sub text-center log" href="'.U('Activity/sign',array('activity_id'=>$data['data']['activity_id'])).'">立即报名</a>';
+					}elseif( $sign['is_status'] == '1' ){
+						echo '<a class="sub text-center log" href="javascript:void(0)">您已报过名</a>';
+					}elseif( $sign['is_status'] == '0' ){
+						echo '<a class="sub text-center log" href="javascript:void(0)">您已提交报名申请</a>';
+					}else{
+						echo '<a class="sub text-center log" href="javascript:void(0)">已结束</a>';
+					}
+				?>
+				<!--if 没有登录-->
+				<notempty name="userInfo">
+					<p class="color-f0 uname">{$userInfo['nickname']}</p>
+					<form action="{:U('Activity/comment')}" method="post">
+						<textarea name="comment" placeholder="请输入评论内容"></textarea>
+						<input type="submit" class="sub" value="发表评论" />
+						<input type="hidden" name="activity_id" value="{$data['data']['activity_id']}">
+					</form>
+	            <else/>
+	                <p class="need-reg text-center color-99">需要登录</p>
+					<a href="{:U('User/login')}" class="sub text-center log">登陆</a>	
+	            </notempty>
+				 <!--end if-->
+				 
+				
+				<!--登录后
+					<p class="color-f0 uname">用户名</p>
+				<form action="" method="post">
+					<textarea name="comment" placeholder="请输入评论内容"></textarea>
+					<input type="submit" class="sub" value="发表评论" />
+				</form>
+				-->
+				
+				
+				<volist name="comment" id="vo">
+					<div class="media clearfix">
+						<img class="media-object media-left pull-left" onerror="onerror=null;src='__PUBLIC__/new/img/pl_head.png'" src="{$vo['head_pic']}">
+						<div class="media-body pull-left">
+							<div class="media-heading"><span class="color-f0">{$vo['username']}</span>{$vo['add_time']|date="Y-m-d H:i",###}</div> 
+							<p class="weiguan">{$vo['content']}</p>
+							<ul class="list-type">
+								<!-- <li class="br">
+									<a href="#article" ><img src="__PUBLIC__/new/img/zan.png"/></a>
+								</li> -->
+								<!-- <li class="text-right">
+									<a href="#activity"><img src="__PUBLIC__/new/img/hf.png"/> 回复</a>
+								</li> -->
+							</ul>
+						</div>
+						<notempty name="vo.reply">
+							<img class="media-object media-left pull-left" onerror="onerror=null;src='__PUBLIC__/new/img/pl_head.png'" src="{$vo['reply']['head_pic']}">
+							<div class="media-body pull-left">
+								<div class="media-heading"><span class="color-f0">{$vo['reply']['username']}</span>{$vo['reply']['add_time']|date="Y-m-d H:i",###}</div> 
+								<p class="weiguan">{$vo['reply']['content']}</p>
+								<ul class="list-type">
+									<!-- <li class="br">
+										<a href="#article" ><img src="__PUBLIC__/new/img/zan.png"/></a>
+									</li> -->
+									<!-- <li class="text-right">
+										<a href="#activity"><img src="__PUBLIC__/new/img/hf.png"/> 回复</a>
+									</li> -->
+								</ul>
+							</div>
+						</notempty>
+					</div>
+				</volist>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-footer">
+				<div class="container">
+					<div class="text-center">
+						<img src="__PUBLIC__/new/img/logo.jpg" alt="logo" />
+					</div>
+					<ul class="text-center">
+						<li>
+							<a href="">关于新声</a>
+						</li>
+						<li>
+							<a href="">广告合作</a>
+						</li>
+						<li>
+							<a href="">创业求报道</a>
+						</li>
+						<li>
+							<a href="">移动客户端</a>
+						</li>
+						<li>
+							<a href="">帮助</a>
+						</li>
+						<li>
+							<a href="">RSS订阅</a>
+						</li>
+						<li>
+							<a href="">邮件订阅</a>
+						</li>
+						<li>
+							<a href="">意见与建议</a>
+						</li>
+						<li>
+							<a href="">友情链接</a>
+						</li>
+					</ul>
+					<p>©2010-2015 www.newspost.cn 深圳市前海新声传媒科技有限公司 版权所有 粤ICP备 15050282号</p>
+				</div>
+			</div>
+			<div class="footer-link text-center">
+				<a>合作伙伴：</a>
+				<a href="">平安信托</a>
+				<a href="">招商银行 </a>
+				<a href="">深媒会</a>
+				<a href="">平安银行</a>
+				<a href="">凤凰金融</a>
+			</div>
+		</div>
+
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="__PUBLIC__/new/js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				$('#myTab a:first').tab('show')
+			})
+
+			function Is_like( obj ){
+				$.ajax({
+	                type : "POST",
+	                url  : "{:U('Activity/Is_like')}",
+	                dataType: "JSON",
+	                data :{id:obj},
+	                success : function(data){
+	                   if(data.code == 200){
+	                   		document.getElementById('is_like').onclick=function(){};
+	                   		$('.like').html(data.result);
+	                   		$("#is_like img").css("background","#f08200")
+	                   }else{
+	                   		alert('点赞失败,网络故障请稍候再试！');
+	                   }
+	                }
+	            })
+			}
+		</script>
+	</body>
+
+</html>

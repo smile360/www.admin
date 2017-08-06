@@ -1,0 +1,132 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+<!--------头部结束-------------->
+		<div class="article">
+			<h1>他在麦肯锡干了四十多年，开创了私募投资，如今觉得中国机会来了</h1>
+			<div class="edit-name">
+				<img src="__IMG__edit.png" />　<span class="color-f0">{$data['data']['user_name']}</span> {$data['data']['add_time']|date="Y-m-d H:i:s",###}
+				<span class="pull-right"><img src="__IMG__arr.png" alt="栏目" style="margin-right: 13px;">珠宝课程</span>
+			</div>
+			<div class="content">
+				<img src="{$data['data']['activity_logo']}" />
+				<p>{$data['data']['content']}</p>
+				<div class="read-all">
+					<?php 
+						if(empty($sign)){
+							if($data['data']['activity_time'] >time() ){
+								echo '<a class="btn btn-lg btn-block" href="'.U('Activity/sign',array('activity_id'=>$data['data']['activity_id'])).'">立即报名</a>';
+							}else{
+								echo '<a class="btn btn-lg btn-block" href="javascript:void(0)">已结束</a>';
+							}
+						}else{
+							if($data['data']['activity_time'] >time() && $sign['is_status'] != '1' && $sign['is_status'] == '0'){
+								echo '<a class="btn btn-lg btn-block" href="'.U('Activity/sign',array('activity_id'=>$data['data']['activity_id'])).'">立即报名</a>';
+							}elseif($sign['is_status'] == '1'){
+								echo '<a class="sub text-center log" href="javascript:void(0)">您已报过名</a>';
+							}elseif($sign['is_status'] != '0'){
+								echo '<a class="sub text-center log" href="javascript:void(0)">您已提交报名申请</a>';
+							}else{
+								echo '<a class="sub text-center log" href="javascript:void(0)">已结束</a>';
+							}
+						}
+					?>
+				</div>
+			</div>
+			<div class="collect clearfix" style="margin-top: 90px;">
+				<!-- <a class="pull-right sc" id="is_like" href="javascript:void(0)" onclick="Is_like()">
+					<img src="__IMG__zan.png" /> 赞（<span class="like">{$like['num']}</span>）
+				</a> -->
+				<notempty name="like.is_like">
+					<a class="pull-right sc" id="is_like" href="javascript:void(0)">
+						<img src="__IMG__zan_al.png" style="vertical-align: sub;" /> 赞（ <span class="like">{$like['num']}</span> ）
+					</a>
+				<else/>
+					<a class="pull-right sc" id="is_like" onclick="Is_like({$data['data']['activity_id']})" href="javascript:void(0)">
+						<img src="__IMG__zan.png" /> 赞（ <span class="like">{$like['num']}</span> ）
+					</a>
+				</notempty>
+			</div>
+			<div class="comment">
+				<p class="text-center title">评论 ( {$data['Comment']} )</p>
+
+				<!--登录后-->
+				<!-- <p class="color-f0 uname">用户名</p>
+				<form action="" method="post">
+					<textarea name="comment" placeholder="请输入评论内容"></textarea>
+					<input type="submit" class="sub" value="发表评论" />
+				</form> -->
+				<!--if 没有登录-->
+				<notempty name="Think.session.user">
+					<p class="color-f0 uname">{$Think.session.user.nickname}</p>
+					<form action="{:U('Activity/comment')}" method="post">
+						<textarea name="comment" placeholder="请输入评论内容"></textarea>
+						<input type="submit" class="sub" value="发表评论" />
+						<input type="hidden" name="activity_id" value="{$data['data']['activity_id']}">
+					</form>
+	            <else/>
+	                <p class="need-reg text-center color-99">需要登录</p>
+					<a href="{:U('User/login')}" class="sub text-center log">登陆</a>	
+	            </notempty>
+	            <volist name="comment" id="vo">
+					<div class="media clearfix">
+						<if condition="$vo['head_pic'] eq '' ">
+							<img class="media-object media-left pull-left" src="__IMG__ds_head.png">
+						<else />
+							<img class="media-object media-left pull-left" src="{$vo['head_pic']}" style="width:100px;height:100px;border-radius:50px;padding:0;margin-right:15px">
+						</if>
+						
+						<div class="media-body pull-left">
+							<div class="media-heading">{$vo['username']}</span>　{$vo['add_time']|date="Y-m-d H:i",###}</div>
+							<p class="weiguan">{$vo['content']}</p>
+						</div>
+						<!-- <notempty name="vo.reply">
+							<div class="media-body pull-left">
+								<div class="media-heading">
+									<span class="color-f0">
+										{$vo['reply']['user_name']}</span>{$vo['reply']['add_time']|date="Y-m-d H:i",###}
+									</div> 
+								<p class="weiguan">{$vo['reply']['content']}</p>
+								<ul class="list-type">
+								</ul>
+							</div>
+						</notempty> -->
+					</div>
+				</volist>
+			</div>
+		</div>
+
+
+
+
+		<!--------底部开始-------------->
+		<include file="Public/footer" />
+		<!--------底部结束-------------->
+		<script>
+		$(".menu-list li").eq(2).attr("class","active");
+			var _url = "{:U('index')}";
+			$('.search').attr("action", _url);
+			function Is_like(obj) {
+				
+				$.ajax({
+					type: "POST",
+					url: "{:U('Activity/Is_like')}",
+					dataType: "JSON",
+					data: {
+						id: obj
+					},
+					success: function(data) {
+						if(data.code == 200) {
+							document.getElementById('is_like').onclick = function() {};
+							layer.msg('点赞成功');
+							$('.like').html(data.result);
+							$("#is_like img").attr("src", "__IMG__zan_al.png");
+						} else {
+							layer.msg('点赞失败,网络故障请稍候再试！');
+						}
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

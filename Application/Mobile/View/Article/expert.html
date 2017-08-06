@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>专家专栏</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" type="text/css" href="__CSS__mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__css.css" />
+		<script src="__JS__mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="mui-content market-msg consult">
+			<div id="picScroll" class="picScroll">
+				<div class="bd">
+					<ul>
+						<volist	name="list" id="vo" key="k">
+						  <if condition="($k eq 1)">						
+							<li class="active" cid="{$vo.cat_id}">
+								<a href="#"><img src="{$vo.cat_logo|default='__IMG__expert.jpg'}" /></a>
+							</li>
+						   <else />	
+						   	<li cid="{$vo.cat_id}">
+								<a href="#"><img src="{$vo.cat_logo|default='__IMG__expert.jpg'}" /></a>
+							</li>						   
+						   </if>
+						</volist>
+					</ul>
+				</div>
+				<div class="hd">
+					<span class="next"></span>
+					<ul></ul>
+					<span class="prev"></span>
+				</div>
+			</div>
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control-inverted mui-segmented-control expert-tab">
+				<a class="mui-control-item c-line mui-active" href="#item1mobile" id="per">
+					个人简介
+				</a>
+				<a class="mui-control-item" href="#item2mobile" id="jxwz">
+					精选文章
+				</a>
+			</div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div class="expert-intr" id="expert-intr">
+						{$info}
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<ul id="expert-art">
+						<volist name="alist" id="vo">
+							<li class="mui-media">
+								<a href="{:U('detail',array('article_id'=>$vo['article_id']))}">
+									<p class="title">{$vo.title}</p>
+									<div class="mui-media-body msg-body">
+										<p class="cont">{$vo.content}
+										</p>
+									</div>
+									<div class="mui-table price">
+										<div class="mui-table-cell mui-navigate-right">{$vo.publish_time}</div>
+									</div>
+								</a>
+							</li>
+						</volist>
+					</ul>
+					<div class="mui-text-center" id="no-data" style="font-size: 14px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="__JS__TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+			var _id = {$id} ? {$id} :'';
+                        if(mui("#picScroll li").length) {
+			TouchSlide({
+				slideCell: "#picScroll",
+				titCell: ".hd ul",
+				autoPage: true,
+				pnLoop: "true",
+				effect: "leftLoop",
+				interTime: 4000,
+				delayTime: 800,
+			});
+                        }
+			hasMore = true;
+			mui('.bd').on('tap', 'li', function(e) {
+				var lis = document.body.querySelectorAll('.bd li');
+				for(i = 0; i < lis.length; i++) {
+					lis[i].classList.remove('active');
+				}
+				this.classList.add('active')
+				cid = this.getAttribute('cid');
+				mui.ajax("{:U('expert')}", {
+					data: {
+						cid: cid,
+					},
+					dataType: 'json',
+					type: 'get',
+					timeout: 10000,
+					async: true,
+					success: function(data) {
+						var Html = " ";
+						if(data.code == 200) {
+							document.getElementById("expert-intr").innerHTML = data.expert.content;
+							_id = data.id;
+							mui.each(data.article, function(i, item) {
+								Html += '<li class="mui-media">';
+								Html += '<a href="'+"{:U('detail')}?article_id="+item.article_id+'">';
+								Html += '<p class="title">'+item.title+'</p>';
+								Html += '<div class="mui-media-body msg-body">';
+								Html += '<p class="cont">'+item.content+'</p>';
+								Html += '</div>';
+								Html += '<div class="mui-table price">';
+								Html += '<div class="mui-table-cell mui-navigate-right">'+item.publish_time+'</div>';
+								Html += '</div>';
+								Html += '</a>';
+								Html += '</li>';
+							});
+							document.getElementById("expert-art").innerHTML = Html;
+						} else {
+						    document.getElementById("expert-intr").innerHTML = "暂无数据";
+							document.getElementById("expert-art").innerHTML = '<li style="height:80px;padding:30px 15px;background:#fff">暂无数据</li>';
+							hasMore = false;
+						}
+					}
+				})
+
+			})
+
+			//滚动条到底部加载更多			
+			$(window).scroll(function() {　　
+				var scrollTop = $(this).scrollTop();　　
+				var scrollHeight = $(document).height();　　
+				var windowHeight = $(this).height();　
+				var act = $("#jxwz").is('.mui-active');　
+				if(scrollTop + windowHeight == scrollHeight) {　　　　
+					if(act && hasMore) {
+						pullupRefresh()
+					}
+				}
+			});
+
+			/*
+			document.getElementById("per").addEventListener('tap', function() {
+				document.getElementById("pullrefresh").classList.remove('mui-scroll-wrapper');
+			})
+			document.getElementById("jxwz").addEventListener('tap', function() {
+				document.getElementById("pullrefresh").classList.add('mui-scroll-wrapper');
+			})
+			
+			
+			//上拉加载
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var hasMore = false;
+			*/
+			function pullupRefresh() {
+				setTimeout(function() {
+					var table = document.getElementById('expert-art');
+					var cells = document.body.querySelectorAll('#expert-art li').length;
+					mui.ajax("{:U('ajaxArticle')}", {
+						data: {
+							start: cells,
+							cat_id:_id,
+						},
+						dataType: 'json',
+						type: 'get',
+						timeout: 10000,
+						async: true,
+						success: function(data) {
+							var Html = " ";
+							if(data.status == 1) {
+								mui.each(data.result, function(i, item) {
+									Html += '<li class="mui-media ">';
+									Html += '<a href="'+"{:U('detail')}?article_id="+item.article_id+'">';
+									Html += '<p class="title">'+item.title+'</p>';
+									Html += '<div class="mui-media-body msg-body">';
+									Html += '<p class="cont">'+item.content+'</p>';
+									Html += '</div>';
+									Html += '<div class="mui-table price">';
+									Html += '<div class="mui-table-cell mui-navigate-right">'+item.publish_time+'</div>';
+									Html += '</div>';
+									Html += '</a>';
+									Html += '</li>';
+								});
+								table.insertAdjacentHTML('beforeend', Html);
+							} else {
+								hasMore = false;
+                                document.getElementById("no-data").innerHTML = "没有更多数据了"
+							}
+						}
+					})
+				}, 1500);
+			}
+		</script>
+	</body>
+
+</html>

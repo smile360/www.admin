@@ -1,0 +1,46 @@
+<!--------头部开始-------------->
+<include file="Public/header" />
+		<div class="container expert standard">
+
+			<div class="expert-content clearfix">
+				<ul class="expert-c-menu pull-left">
+					<volist name="list" id="item">
+						<li class="active_{$item.cat_id}">
+							<a href="{:U('standard',array('cat_id'=>$parent_id,'id'=>$item['cat_id']))}">{$item.cat_name}</a>
+						</li>
+					</volist>
+				</ul>
+
+				<div class="standard-list pull-right">
+					<table class="table">
+						<volist name="data" id="vo">
+							<tr>
+								<td class="one"><img src="__IMG__item.png" alt="" /></td>
+								<td class="two">{$vo.title}</td>
+								<td class="three">
+									<a href="{:U('detail',array('article_id'=>$vo['article_id']))}">详情 >></a>
+								</td>
+							</tr>
+						</volist>	
+					</table>
+
+				</div>
+
+			</div>
+
+			<nav class="text-center">
+				{$page}
+			</nav>
+
+		</div>
+
+		<!--------头部开始-------------->
+		<include file="Public/footer" />
+		<script>
+			$(".menu-list li").eq(9).attr("class","active");
+			$(".active_"+{$id}).attr("class","active");
+		</script>
+
+	</body>
+
+</html>

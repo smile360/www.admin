@@ -1,0 +1,97 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-list"></i> 咨询详情
+                        <a data-original-title="返回" class="btn btn-default pull-right" style="margin-top:-8px;" title="" data-toggle="tooltip" href="javascript:history.go(-1)"><i class="fa fa-reply"></i></a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <!-- DIRECT CHAT PRIMARY -->
+                            <div class="box direct-chat direct-chat-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">咨询用户</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                    <!-- Conversations are loaded here -->
+                                    <div class="">
+                                        <!-- Message. Default to the left -->
+                                        <div class="direct-chat-msg">
+                                            <div class="direct-chat-info clearfix">
+                                                <h5 class="direct-chat-name pull-left">{$data.nickname}<!--用户名 --></h5>
+                                                <span class="direct-chat-timestamp pull-right">{$data.createtime|date="Y-m-d H:i",###}</span>
+                                            </div><!-- /.direct-chat-info -->
+                                            <img alt="{$data.nickname}" src="{$data.head_pic|default='__PUBLIC__/dist/img/user2-160x160.jpg'}" class="direct-chat-img">
+                                            <div class="box-header with-border">
+                                            	<label style="font-size:20px;padding:0px 20px;">标题:</label>
+			                                    <h3 class="box-title">{$data.tittle}</h3>
+			                                </div><!-- /.box-header -->
+                                            <div class="direct-chat">
+                                            	{$data.detail}
+                                            </div>
+                                            <div class="col-md-8" style="padding-top:10px">
+                                                <?php
+                                                    foreach ($data['path'] as $key => $value) {
+                                                        echo "<img style='padding:10px 0px' src='$value'>";
+                                                     } 
+                                                ?>
+                                            </div>
+                                        </div>
+
+                                       <foreach name="comment" item="v" >
+                                            <div class="direct-chat-msg right">
+                                                <div class="direct-chat-info clearfix">
+                                                    <span class="direct-chat-name pull-right">{$v.nickname}<!--管理员 --></span>
+                                                    <span class="direct-chat-timestamp pull-left">{$v.createtime|date="Y-m-d H:i",###}</span>
+                                                </div><!-- /.direct-chat-info -->
+                                                <img alt="管理员" src="{$v['head_pic']|default='__PUBLIC__/dist/img/user2-160x160.jpg'}" class="direct-chat-img">
+                                                <div class="direct-chat-text">
+                                                    <notempty name="v.parent_name">{$v.parent_name} ：</notempty>{$v.comment}
+                                                </div>
+                                            </div>
+                                        </foreach>                                                                                
+                                    </div> 
+                                    <!-- /.direct-chat-pane -->
+                                </div><!-- /.box-body -->
+                                <!-- /.box-footer-->
+                            </div><!--/.direct-chat -->
+                        </div>       
+                        <div class="col-md-2"></div>
+                     <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                <form method="post" action="{:U('adminReply')}" >
+                                    <input type="hidden" name="nickname" value="{$data['nickname']}">
+                                    <input type="hidden" name="consult_id" value="{$data['consult_id']}">
+                                    <input type="hidden" name="parent_id" value="{$comment[0]['comment_id']?$comment[0]['comment_id']:0}">
+                                    <textarea class="form-control" rows="3" placeholder="请输入回复内容" name="content"></textarea>
+                                    <div class="form-group"><button type="submit" class="btn btn-primary pull-right margin">回复</button></div>
+                                </form>             
+                                </div>
+                                <div class="col-md-2"></div>   
+                                                                                             
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+</body>
+</html>
